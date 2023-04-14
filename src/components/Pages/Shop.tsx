@@ -1,11 +1,12 @@
 import React from 'react';
 import { Container, Row, Col, Image, Card } from 'react-bootstrap';
-import tasha  from '../../resources/images/tasha-1.webp'
 import inventor from '../../resources/images/inventor-1.webp'
 import bard from '../../resources/images/bard-1.webp'
 import bladesinger from '../../resources/images/bladesinger-1.webp'
 import "../../resources/styles/css/shop.css"
 import { Product } from '../shopComponents/Product';
+import { ShopBanner } from '../shopComponents/ShopBanner';
+
 interface Props {
   // add any props here
 }
@@ -80,15 +81,7 @@ const products = [
 const Shop: React.FC<Props> = (props) => {
   return (
     <div>
-      {/* Banner */}
-      <Container className='p-0' fluid>
-        <Row className='w-100 m-0'>
-          <Col className='col-lg-12 p-0 shop-banner'>
-            <Image src={tasha} className="shop-banner-img w-100"/>
-          </Col>
-        </Row>
-      </Container>
-
+      <ShopBanner />
  {/* Product rows */}
   <div className="album py-5 mx-5">
       <Container fluid>
