@@ -4,7 +4,7 @@ import Image from 'react-bootstrap/Image'
 import flag from '../../resources/images/Finland.webp'
 import smileface from '../../resources/images/smileface.webp'
 import checkmark from '../../resources/images/checkmark.webp'
-import "./ShopBannerInfo.css"
+import "./ShopBannerInfo.scss"
 
 
 const info = [
@@ -31,7 +31,7 @@ export const ShopBannerInfo = (props : {}) => {
             return (
               <Col className='col-auto mx-4' key={i}>
                 <Image src={item.img} className='banner__icon me-2' />
-                <span>{item.text}</span>
+                <span className='fw-semibold'>{item.text}</span>
               </Col>
             )
           })

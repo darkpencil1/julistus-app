@@ -19,11 +19,12 @@ type ProductProps = {
 }
 
 export const Product = (props : ProductProps ) => {
+  const [show, setShow] = React.useState(false)
   return (
     <Col className='col-md-3'>
       <Card className='border-0'>
         <div className="card-img-top">
-          <div style={PRODUCT_BG as React.CSSProperties} className="justify-content-center align-items-center d-flex rounded-top">
+          <div style={PRODUCT_BG as React.CSSProperties} className="justify-content-center align-items-center d-flex rounded-top" onClick={()=>setShow(true)}>
             <Image src={props.image} className="p-3 img-fluid w-auto h-75" />
           </div>
         </div>
