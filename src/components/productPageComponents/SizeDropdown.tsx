@@ -1,6 +1,6 @@
 import React from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
+import "./SizeDropdown.scss"
 
 type SizeOption = {
   id: Number,
@@ -11,17 +11,17 @@ const sizeOptions:Array<SizeOption> = [
   {
     id: 0,
     name: "A4",
-    dimensions: "29.7 x 21",
+    dimensions: "30 X 21",
   },  
   {
     id: 1,
     name: "A3",
-    dimensions: "42.0 x 29.7",
+    dimensions: "42 X 30",
   },  
   {
     id: 2,
     name: "A2",
-    dimensions: "59.4 x 42.0",
+    dimensions: "59 X 42",
   }  
 
 ]
@@ -29,23 +29,24 @@ const sizeOptions:Array<SizeOption> = [
 export const SizeDropdown = (props : {}) => {
   const [selected, setSelected] = React.useState<SizeOption>(sizeOptions[0])
 
-  const setDropdownTitle = () => {
-    const title = selected.name + " " + selected.dimensions + " cm"  
-    return title
-  }
-
   return (
-    <DropdownButton id="dropdown-item-button" title={setDropdownTitle()}>
-      { sizeOptions.map((option:SizeOption, i:number) => {
-          return(
-            <Dropdown.Item as="button" onClick={()=>setSelected(sizeOptions[i])} key={i}>
-              <span className='fw-bold'>{option.name}</span>
-              <span className=''>({option.dimensions} cm)</span>
-            </Dropdown.Item>
-          )
-        }) 
-      }
-    </DropdownButton>
+    <Dropdown>
+      <Dropdown.Toggle className='sizeDropdown__toggle'>
+        <span className='fw-bold fs-4'>{selected.name}</span> 
+        &nbsp; &nbsp; ({selected.dimensions}&nbsp;cm)
+      </Dropdown.Toggle>
+      <Dropdown.Menu>
+        { sizeOptions.map((option:SizeOption, i:number) => {
+            return(
+              <Dropdown.Item as="button" onClick={()=>setSelected(sizeOptions[i])} key={i}>
+                <span className='fw-bold fs-4'>{option.name}</span>
+                <span className=''>&nbsp;({option.dimensions} cm)</span>
+              </Dropdown.Item>
+            )
+          }) 
+        }
+      </Dropdown.Menu>
+    </Dropdown>
   );
 }
 

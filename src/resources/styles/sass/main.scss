@@ -1,0 +1,16 @@
+// Include any default variable overrides here (though functions won't be available)
+
+@import "./_root.scss";
+@import "./_variables.scss";
+
+$primary: #1C33FF;
+$secondary: #1C33FF;
+$nav-link-color: $primary;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "altsecondary": #FF416E
+);
+
+@import "../../../../node_modules/bootstrap/scss/bootstrap";

@@ -5,6 +5,7 @@ import tasha from '../../resources/images/tasha-1.webp'
 import './ImgPicker.scss';
 
 export const ImgPicker = (props : {}) => {
+
   return (
     <Col className='col-2'>
       <Row className='gy-3 h-100 justify-content-center'>    

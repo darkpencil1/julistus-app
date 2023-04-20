@@ -7,7 +7,7 @@ import { ImgPicker } from './ImgPicker';
 
 export const ProductImgDisplay = (props : {}) => {
   return (
-    <Col className='col-7 productImg__container px-2 py-4'>
+    <Col className='col-12 productImg__container px-2 py-4'>
       <Row className='mx-2'>    
         <ImgPicker />
         <Col className='col-10'>

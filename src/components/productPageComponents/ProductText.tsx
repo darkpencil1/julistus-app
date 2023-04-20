@@ -3,7 +3,7 @@ const lorem ='Lorem ipsum dolor sit amet, consectetur adipiscing elit. phasellus
 
 export const ProductText = (props : {}) => {
   return (
-    <Col className='col-7 px-4 my-4'>
+    <Col className='col-12 px-4 my-4'>
       <h2 className='border-bottom text-center'>Title</h2> 
       <p>{lorem}</p>
       <p>{lorem}</p>
