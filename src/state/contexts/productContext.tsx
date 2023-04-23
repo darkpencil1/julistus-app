@@ -5,6 +5,7 @@ import productReducer, { productActionType } from "../reducers/productReducer";
 
 const initialState = {
   product: null,
+  selectProduct: () => {},
 };
 
 const ProductContext = createContext<ProductContextType>(initialState);
@@ -15,6 +16,7 @@ const ProductProvider = ({ children }) => {
   const [product, dispatch] = useReducer(productReducer, null);
 
   const selectProduct = (product: Product) => {
+    console.log("Product SELECTED:", product);
     dispatch({
       type: productActionType.VIEW_PRODUCT,
       payload: product,

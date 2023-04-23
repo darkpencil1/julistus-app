@@ -19,11 +19,11 @@ const productReducer = (
   const { type, payload } = action;
   switch (type) {
     case productActionType.VIEW_PRODUCT:
-      return { ...payload.product };
+      return { ...payload };
     case productActionType.ADD_PRODUCT:
-      return { ...payload.product };
+      return { ...payload };
     case productActionType.REMOVE_PRODUCT:
-      return { ...payload.product };
+      return { ...payload };
     default:
       throw new Error(`No case for type ${type} found in productReducer.`);
   }
