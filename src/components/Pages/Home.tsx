@@ -1,5 +1,6 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
+import React from "react";
+import { Promotion } from "../FrontPageComponents/Promotion";
+import { Welcome } from "../FrontPageComponents/Welcome";
 
 interface Props {
   // add any props here
@@ -8,16 +9,10 @@ interface Props {
 const Home: React.FC<Props> = (props) => {
   return (
     <div>
-      <h1>Tervetuloa Julistukseen</h1>
-      <p>Tähän rakennetaan kotisivut.</p>
-      <div className="d-flex justify-content-center">
-        <Button  variant="outline-success">
-          Aloitetaan Rock! 
-        </Button>
-      </div>
+      <Welcome />
+      <Promotion />
     </div>
   );
 };
 
 export default Home;
-

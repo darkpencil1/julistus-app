@@ -1,16 +1,22 @@
-// Include any default variable overrides here (though functions won't be available)
+@charset "UTF-8";
 
-@import "./_root.scss";
-@import "./_variables.scss";
+// 1. Configuration and helpers
+@import "abstracts/all";
 
-$primary: #1C33FF;
-$secondary: #1C33FF;
-$nav-link-color: $primary;
+// 3. Base stuff
+@import "base/all";
 
-$theme-colors: (
-  "primary": $primary,
-  "secondary": $secondary,
-  "altsecondary": #FF416E
-);
+// 2. Vendors
+@import "vendors/all";
 
-@import "../../../../node_modules/bootstrap/scss/bootstrap";
+// 4. Layout-related sections
+@import "layout/all";
+
+// 5. Components
+@import "components/all";
+
+// 6. Page-specific styles
+@import "pages/all";
+
+// 7. Themes
+@import "themes/default";

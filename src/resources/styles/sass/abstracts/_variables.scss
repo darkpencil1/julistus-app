@@ -1,0 +1,13 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+$primary: #1c33ff;
+$secondary: #1c33ff;
+$nav-link-color: $primary;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "altsecondary": #ff416e,
+);

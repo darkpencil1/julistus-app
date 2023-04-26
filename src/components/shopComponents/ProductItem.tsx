@@ -7,6 +7,7 @@ import Image from "react-bootstrap/Image";
 import { PRODUCT_BG, CATEGORY_COL } from "./ProductStyles";
 import { useProduct } from "../../state/contexts/productContext";
 import { Product } from "../../resources/interfaces/ProductInterface";
+import "./ProductItem.scss";
 
 type ProductProps = {
   id: number;
@@ -19,7 +20,6 @@ type ProductProps = {
 
 export const ProductItem = (props: ProductProps) => {
   const { id, images, name, price, description, categories } = props;
-  const [show, setShow] = React.useState(false);
   const { selectProduct } = useProduct();
   const navigate = useNavigate();
 
@@ -38,13 +38,14 @@ export const ProductItem = (props: ProductProps) => {
 
   return (
     <Col className="col-md-3">
-      <Card className="border-0">
+      <Card className="border-0 product__card">
         <div className="card-img-top">
           <div
             style={PRODUCT_BG as React.CSSProperties}
             className="justify-content-center align-items-center d-flex rounded-top"
             onClick={() => handleClick()}
           >
+            {" "}
             <Image
               src={props.images[0]}
               className="p-3 img-fluid w-auto h-75"
@@ -68,8 +69,8 @@ export const ProductItem = (props: ProductProps) => {
               );
             })}
           </Row>
-          <div className="d-flex flex-row-reverse">
-            <p className="text-body-secondary">alkaen {props.price}</p>
+          <div className="d-flex flex-row-reverse me-2">
+            <p className="text-body-secondary">alkaen {props.price}€</p>
           </div>
         </div>
       </Card>
