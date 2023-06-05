@@ -1,14 +1,14 @@
-import Col from "react-bootstrap/Col";
 import { SizeDropdown } from "./SizeDropdown";
 import { AdditionalCartInfo } from "./AdditionalCartInfo";
 import { AddToCartBtn } from "./AddToCartBtn";
 import { useProduct } from "../../state/contexts/productContext";
+import StyledAddToCartPanel from "./AddToCartPanel.style";
 
 export const AddToCartPanel = (props: {}) => {
   const { product } = useProduct();
   return (
-    <Col className="col-4 ms-4 mt-4">
-      <p className="small mb-0">juliste</p>
+    <StyledAddToCartPanel>
+      <p className="product__type">juliste</p>
       <h2>{product?.name}</h2>
       <div className="mb-4">
         <span className="small">Materiaali: </span>
@@ -21,6 +21,6 @@ export const AddToCartPanel = (props: {}) => {
       <h2 className="border-bottom mb-4">{product?.price}€</h2>
       <AddToCartBtn />
       <AdditionalCartInfo />
-    </Col>
+    </StyledAddToCartPanel>
   );
 };

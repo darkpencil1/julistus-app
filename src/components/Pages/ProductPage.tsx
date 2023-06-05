@@ -1,24 +1,24 @@
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import { ProductImgDisplay } from '../productPageComponents/ProductImgDisplay'
-import Container from 'react-bootstrap/Container'
-import { ProductText } from '../productPageComponents/ProductText'
-import { AddToCartPanel } from '../productPageComponents/AddToCartPanel'
+import { ProductImgDisplay } from "../productPageComponents/ProductImgDisplay";
+import { ProductText } from "../productPageComponents/ProductText";
+import { AddToCartPanel } from "../productPageComponents/AddToCartPanel";
+import StyledProductPage from "./Product.style";
+import Col from "../baseComponents/Col.style";
+import Row from "../baseComponents/Row.style";
 
-export const ProductPage = (props : {}) => {
+export const ProductPage = (props: {}) => {
   return (
-    <Container fluid>
+    <StyledProductPage>
       <Row>
-        <Col className="col-7">
-          <Row className='mt-4 ms-4 justify-content-between'>
+        <Col className="product__col">
+          <Row className="product__container">
             <ProductImgDisplay />
             <ProductText />
-          </Row> 
+          </Row>
         </Col>
         <AddToCartPanel />
-      </Row> 
-    </Container>
-  )
-}
+      </Row>
+    </StyledProductPage>
+  );
+};
 
 export default ProductPage;

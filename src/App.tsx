@@ -4,16 +4,20 @@ import Header from "./components/sharedComponents/Header";
 import Router from "./Router";
 import { ProductProvider } from "./state/contexts/productContext";
 import "./resources/styles/css/main.css";
+import { ThemeProvider } from "styled-components";
+import theme from "./resources/theme";
 
 const App: React.FC = () => {
   return (
-    <ProductProvider>
-      <div className="App">
-        <Header />
-        <Router />
-        <Footer />
-      </div>
-    </ProductProvider>
+    <ThemeProvider theme={theme}>
+      <ProductProvider>
+        <div className="App">
+          <Header />
+          <Router />
+          <Footer />
+        </div>
+      </ProductProvider>
+    </ThemeProvider>
   );
 };
 
