@@ -5,13 +5,15 @@ import Router from "./Router";
 import { ProductProvider } from "./state/contexts/productContext";
 import "./resources/styles/css/main.css";
 import { ThemeProvider } from "styled-components";
-import theme from "./resources/theme";
+import GlobalStyle from "./resources/styles/GlobalStyle";
+import theme from "./resources/styles/theme";
 
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <ProductProvider>
         <div className="App">
+          <GlobalStyle />
           <Header />
           <Router />
           <Footer />
