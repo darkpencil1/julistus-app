@@ -39,14 +39,18 @@ export const ProductItem = (props: ProductProps) => {
     <StyledProductItem>
       <Card className="product__container" onClick={() => handleClick()}>
         <Row className="product__content-container">
-          <Image className="product__img" src={props.images[0]} />
+          <Col className="product__img-container">
+            <Image className="product__img" src={props.images[0]} />
+          </Col>
           <Row className="product__text-container">
             <h3 className="product__title">{props.name}</h3>
             <div className="product__text">{props.description}</div>
             <div className="product__price">alkaen {props.price}€</div>
+            <Button className="product__cta" secondary>
+              Katso lisää
+            </Button>
           </Row>
         </Row>
-        <Button className="product__cta">Katso lisää</Button>
       </Card>
     </StyledProductItem>
   );

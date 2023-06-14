@@ -1,7 +1,6 @@
-import inventor from "../../resources/images/inventor-1.webp";
-import bard from "../../resources/images/bard-1.webp";
-import bladesinger from "../../resources/images/bladesinger-1.webp";
-import tasha from "../../resources/images/tasha-1.webp";
+import wide1 from "../../resources/images/wide1.png";
+import tall1 from "../../resources/images/tall1.png";
+import tall2 from "../../resources/images/tall2.png";
 
 const products = [
   {
@@ -11,7 +10,7 @@ const products = [
     description:
       "Product 1Product 1Product 1Product 1Product 1Product 1Product 1Product 1Product 1Product 1Product 1Product 1Product 1",
     price: 10.0,
-    image: [inventor, bard, bladesinger, tasha],
+    image: [wide1, tall2, tall1, wide1],
   },
   {
     id: 2,
@@ -20,7 +19,7 @@ const products = [
     description:
       "Product 2, Product 2, Product 2Product 2Product 2Product 2Product 2Product 2",
     price: 12.0,
-    image: [bard, inventor, bladesinger, tasha],
+    image: [tall2, wide1, tall1, wide1],
   },
   {
     id: 3,
@@ -29,7 +28,7 @@ const products = [
     description:
       "Product 3, Product 3, Product 3Product 3Product 3Product 3Product 3Product 3",
     price: 15.0,
-    image: [bladesinger, inventor, tasha, bard],
+    image: [tall1, wide1, wide1, tall2],
   },
   {
     id: 4,
@@ -38,7 +37,7 @@ const products = [
     description:
       "Product 4, Product 4, Product 4Product 4Product 4Product 4Product 4Product 4",
     price: 20.0,
-    image: [inventor, tasha, bladesinger, bard],
+    image: [wide1, wide1, tall1, tall2],
   },
   {
     id: 5,
@@ -47,7 +46,7 @@ const products = [
     description:
       "Product 1Product 1Product 1Product 1Product 1Product 1Product 1Product 1",
     price: 10.0,
-    image: [tasha, inventor, bladesinger, bard],
+    image: [wide1, wide1, tall1, tall2],
   },
   {
     id: 6,
@@ -56,7 +55,7 @@ const products = [
     description:
       "Product 2, Product 2, Product 2Product 2Product 2Product 2Product 2Product 2",
     price: 12.0,
-    image: [inventor, bard, bladesinger, tasha],
+    image: [wide1, tall2, tall1, wide1],
   },
   {
     id: 7,
@@ -65,7 +64,7 @@ const products = [
     description:
       "Product 3, Product 3, Product 3Product 3Product 3Product 3Product 3Product 3",
     price: 15.0,
-    image: [bladesinger, inventor, tasha, bard],
+    image: [tall1, wide1, wide1, tall2],
   },
   {
     id: 8,
@@ -74,7 +73,7 @@ const products = [
     description:
       "Product 4, Product 4, Product 4Product 4Product 4Product 4Product 4Product 4",
     price: 20.0,
-    image: [tasha, inventor, bladesinger, bard],
+    image: [wide1, wide1, tall1, tall2],
   },
   // Add more products here if needed
 ];

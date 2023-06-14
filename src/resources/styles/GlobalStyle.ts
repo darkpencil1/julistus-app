@@ -16,8 +16,8 @@ const GlobalStyle = createGlobalStyle<GlobalProps>`
   box-sizing: border-box;
 }
 body {
-  font-family: ${(props) => props.theme.fontFamily},
-  font-color: ${(props) => props.theme.fontColor},
+  font-family: ${(props) => props.theme.fontFamily};
+  color: ${(props) => props.theme.fontColor};
 }
 /* Margin classes */
 .mt-1 {
