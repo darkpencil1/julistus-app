@@ -44,7 +44,7 @@ const StyledProductItem = styled.div`
   .product__text-container {
     width: calc(${(p) => p.theme.column.col_6} - ${content_gap});
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
   }
 
   .product__title {
@@ -56,6 +56,8 @@ const StyledProductItem = styled.div`
     width: ${(p) => p.theme.column.col_6};
     margin-left: auto;
     margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 0;
   }
 `;
 

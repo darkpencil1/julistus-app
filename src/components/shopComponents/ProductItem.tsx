@@ -3,10 +3,10 @@ import Col from "../baseComponents/Col.style";
 import Row from "../baseComponents/Row.style";
 import Card from "../baseComponents/Card.style";
 import Image from "../baseComponents/Image.style";
+import Button from "../baseComponents/Button.style";
 import { useProduct } from "../../state/contexts/productContext";
 import { Product } from "../../resources/interfaces/ProductInterface";
 import StyledProductItem from "./ProductItem.style";
-import Button from "../baseComponents/Button.style";
 
 type ProductProps = {
   id: number;
@@ -45,7 +45,7 @@ export const ProductItem = (props: ProductProps) => {
           <Row className="product__text-container">
             <h3 className="product__title">{props.name}</h3>
             <div className="product__text">{props.description}</div>
-            <div className="product__price">alkaen {props.price}€</div>
+            {/*<div className="product__price">alkaen {props.price}€</div>*/}
             <Button className="product__cta" secondary>
               Katso lisää
             </Button>
