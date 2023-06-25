@@ -5,14 +5,17 @@ import productReducer, { productActionType } from "../reducers/productReducer";
 
 const initialState = {
   product: null,
-  selectProduct: () => {},
+  selectProduct: () => null,
 };
 
 const ProductContext = createContext<ProductContextType>(initialState);
 
+type ProviderProps = {
+  children: any;
+};
+
 //Provider allows its children to subscribe to context's changes
-//@ts-ignore
-const ProductProvider = ({ children }) => {
+const ProductProvider = ({ children }: ProviderProps) => {
   const [product, dispatch] = useReducer(productReducer, null);
 
   const selectProduct = (product: Product) => {

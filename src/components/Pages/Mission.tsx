@@ -1,7 +1,7 @@
 import React from "react";
-import Col from "react-bootstrap/Col";
+import Col from "../baseComponents/Col.style";
 
-const Mission: React.FC = (props) => {
+const Mission: React.FC = () => {
   return (
     <Col className="col-lg-8 col-md-8 col-sm-11 p-lg-2 mx-auto ">
       <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">

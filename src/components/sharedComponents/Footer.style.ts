@@ -1,22 +1,21 @@
 import styled from "styled-components";
-import Container from "../baseComponents/Container.style";
 
-const StyledFooter = styled(Container)`
+const StyledFooter = styled.footer`
   margin: 0;
   padding: 0;
-
-  footer {
-    padding: ${(p) => p.theme.spacing.spacing_3} 0;
-    margin: ${(p) => p.theme.spacing.spacing_4}
-      ${(p) => p.theme.spacing.spacing_5};
-  }
-
+  background-color: ${(p) => p.theme.colors.primary};
+  display: flex;
+  align-items: center;
   ul {
     display: flex;
     justify-content: center;
-    border-bottom: solid ${(p) => p.theme.colors.primary};
+    flex-direction: column;
     padding-bottom: ${(p) => p.theme.spacing.spacing_3};
     margin-bottom: ${(p) => p.theme.spacing.spacing_3};
+  }
+  .footer__link > a {
+    color: ${(p) => p.theme.colors.white_muted};
+    text-decoration: none;
   }
 
   .social-media-container {
@@ -26,6 +25,8 @@ const StyledFooter = styled(Container)`
     align-items: center;
     padding: ${(p) => p.theme.spacing.spacing_3} 0;
     margin-top: ${(p) => p.theme.spacing.spacing_4};
+    margin-left: auto;
+    margin-right: 0;
     width: ${(p) => p.theme.column.col_4};
   }
 

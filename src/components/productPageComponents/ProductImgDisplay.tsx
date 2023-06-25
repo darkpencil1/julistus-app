@@ -6,7 +6,7 @@ import { ImgPicker } from "./ImgPicker";
 import { useProduct } from "../../state/contexts/productContext";
 import StyledProductImgDisplay from "./ProductImgDisplay.style";
 
-export const ProductImgDisplay = (props: {}) => {
+export const ProductImgDisplay = () => {
   const { product } = useProduct();
   const [selectedImg, setSelectedImg] = React.useState(product?.images[0]);
   return (

@@ -5,7 +5,7 @@ import { ShopBanner } from "../shopComponents/ShopBanner";
 import StyledShop from "./Shop.style";
 import products from "../../resources/misc/products";
 
-const Shop: React.FC = (props) => {
+const Shop: React.FC = () => {
   return (
     <StyledShop>
       <ShopBanner />
@@ -15,6 +15,7 @@ const Shop: React.FC = (props) => {
           <ProductItem
             id={product.id}
             images={product.image}
+            title_img={product.title_img}
             name={product.name}
             price={product.price}
             categories={product.categories}

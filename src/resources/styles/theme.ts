@@ -6,7 +6,6 @@ import fontWeight from "./fontWeight";
 import fontSize from "./fontSize";
 
 const theme = {
-  //Import color scheme
   colors: colors,
   column: column,
   br: br,

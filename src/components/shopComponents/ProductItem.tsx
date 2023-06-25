@@ -11,6 +11,7 @@ import StyledProductItem from "./ProductItem.style";
 type ProductProps = {
   id: number;
   images: Array<string>;
+  title_img: string;
   name: string;
   price: number;
   description: string;
@@ -18,7 +19,7 @@ type ProductProps = {
 };
 
 export const ProductItem = (props: ProductProps) => {
-  const { id, images, name, price, description, categories } = props;
+  const { id, images, name, price, description, categories, title_img } = props;
   const { selectProduct } = useProduct();
   const navigate = useNavigate();
 
@@ -27,6 +28,7 @@ export const ProductItem = (props: ProductProps) => {
       id: id,
       name: name,
       images: images,
+      title_img: title_img,
       price: price,
       description: description,
       categories: categories,
@@ -43,7 +45,7 @@ export const ProductItem = (props: ProductProps) => {
             <Image className="product__img" src={props.images[0]} />
           </Col>
           <Row className="product__text-container">
-            <h3 className="product__title">{props.name}</h3>
+            <Image className="product__title" src={props.title_img} />
             <div className="product__text">{props.description}</div>
             {/*<div className="product__price">alkaen {props.price}€</div>*/}
             <Button className="product__cta" secondary>

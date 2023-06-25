@@ -2,7 +2,7 @@ import Image from "../baseComponents/Image.style";
 import StyledHeader from "./Header.style";
 import logo from "../../resources/images/logo1.png";
 
-const Header: React.FC = (props: any) => {
+const Header: React.FC = () => {
   return (
     <StyledHeader>
       <div className="nav__logo">

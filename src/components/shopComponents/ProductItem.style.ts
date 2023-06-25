@@ -45,19 +45,21 @@ const StyledProductItem = styled.div`
     width: calc(${(p) => p.theme.column.col_6} - ${content_gap});
     flex-direction: column;
     justify-content: start;
+    text-align: center;
+  }
+
+  .product__text {
+    font-size: 1.5rem;
+    margin: 0 auto 0;
   }
 
   .product__title {
-    line-height: 1;
-    font-weight: ${(p) => p.theme.fw.fw_semibold};
+    width: 200px;
+    margin: 0 auto ${(p) => p.theme.spacing.spacing_3};
   }
 
   .product__cta {
-    width: ${(p) => p.theme.column.col_6};
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: 0;
+    margin: auto auto 0;
   }
 `;
 

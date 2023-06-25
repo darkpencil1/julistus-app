@@ -3,7 +3,6 @@ import { Footer } from "./components/sharedComponents/Footer";
 import Header from "./components/sharedComponents/Header";
 import Router from "./Router";
 import { ProductProvider } from "./state/contexts/productContext";
-import "./resources/styles/css/main.css";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./resources/styles/GlobalStyle";
 import theme from "./resources/styles/theme";

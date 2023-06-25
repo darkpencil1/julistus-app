@@ -1,16 +1,12 @@
 import React from "react";
-import { Promotion } from "../FrontPageComponents/Promotion";
+import { NewReleases } from "../FrontPageComponents/NewReleases";
 import { Welcome } from "../FrontPageComponents/Welcome";
 
-interface Props {
-  // add any props here
-}
-
-const Home: React.FC<Props> = (props) => {
+const Home: React.FC = () => {
   return (
     <div>
       <Welcome />
-      <Promotion />
+      <NewReleases />
     </div>
   );
 };

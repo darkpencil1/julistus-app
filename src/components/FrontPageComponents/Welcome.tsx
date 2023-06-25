@@ -1,6 +1,4 @@
-import Col from "react-bootstrap/Col";
-
-export const Welcome = (props: {}) => {
+export const Welcome = () => {
   return (
     <div className="welcome__container">
       <div className="col-md-5 p-lg-2 ms-0 me-auto">

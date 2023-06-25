@@ -1,6 +1,6 @@
-import Col from "react-bootstrap/Col";
+import Col from "../baseComponents/Col.style";
 
-export const Promotion = (props: {}) => {
+export const NewReleases = () => {
   return (
     <Col className="col-md-5 p-lg-2 ms-0 me-auto ">
       <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">

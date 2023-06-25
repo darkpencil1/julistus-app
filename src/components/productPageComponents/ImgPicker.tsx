@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Col from "../baseComponents/Col.style";
 import Row from "../baseComponents/Row.style";
 import Image from "../baseComponents/Image.style";
@@ -7,7 +7,7 @@ import StyledImgPicker from "./ImgPicker.style";
 
 type ImgPickerProps = {
   selectedImg: string | undefined;
-  setSelectedImg: Function;
+  setSelectedImg: (img: string) => string | void;
 };
 
 const SELECTED_IMG_STYLE = {
@@ -17,7 +17,6 @@ const SELECTED_IMG_STYLE = {
 export const ImgPicker = (props: ImgPickerProps) => {
   const { setSelectedImg, selectedImg } = props;
   const { product } = useProduct();
-  useEffect(() => {}, [selectedImg]);
 
   return (
     <StyledImgPicker>

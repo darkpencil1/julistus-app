@@ -2,9 +2,9 @@ import React from "react";
 import StyledSizeDropdown from "./SizeDropdown.style";
 
 type SizeOption = {
-  id: Number;
-  name: String;
-  dimensions: String;
+  id: number;
+  name: string;
+  dimensions: string;
 };
 const sizeOptions: Array<SizeOption> = [
   {
@@ -24,7 +24,7 @@ const sizeOptions: Array<SizeOption> = [
   },
 ];
 
-export const SizeDropdown = (props: {}) => {
+export const SizeDropdown = () => {
   const [selected, setSelected] = React.useState<SizeOption>(sizeOptions[0]);
 
   return (

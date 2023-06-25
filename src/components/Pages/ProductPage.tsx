@@ -5,7 +5,7 @@ import StyledProductPage from "./Product.style";
 import Col from "../baseComponents/Col.style";
 import Row from "../baseComponents/Row.style";
 
-export const ProductPage = (props: {}) => {
+export const ProductPage = () => {
   return (
     <StyledProductPage>
       <Row>

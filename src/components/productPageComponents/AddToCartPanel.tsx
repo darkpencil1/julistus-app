@@ -4,7 +4,7 @@ import { AddToCartBtn } from "./AddToCartBtn";
 import { useProduct } from "../../state/contexts/productContext";
 import StyledAddToCartPanel from "./AddToCartPanel.style";
 
-export const AddToCartPanel = (props: {}) => {
+export const AddToCartPanel = () => {
   const { product } = useProduct();
   return (
     <StyledAddToCartPanel>

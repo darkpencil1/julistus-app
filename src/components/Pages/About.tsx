@@ -5,11 +5,8 @@ import portrait from "../../resources/images/tasha-1.webp";
 import StyledAboutPage from "./About.style";
 import Button from "../baseComponents/Button.style";
 import Image from "../baseComponents/Image.style";
-interface Props {
-  // add any props here
-}
 
-const About: React.FC<Props> = (props) => {
+const About: React.FC = () => {
   return (
     <StyledAboutPage>
       <Row>
