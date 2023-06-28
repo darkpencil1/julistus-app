@@ -49,7 +49,7 @@ const StyledProductItem = styled.div`
   }
 
   .product__text {
-    font-size: 1.5rem;
+    font-size: ${(p) => p.theme.fs.font_xl};
     margin: 0 auto 0;
   }
 

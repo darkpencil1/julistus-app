@@ -48,7 +48,7 @@ export const ProductItem = (props: ProductProps) => {
             <Image className="product__title" src={props.title_img} />
             <div className="product__text">{props.description}</div>
             {/*<div className="product__price">alkaen {props.price}€</div>*/}
-            <Button className="product__cta" secondary>
+            <Button className="product__cta" secondary size="md">
               Katso lisää
             </Button>
           </Row>
