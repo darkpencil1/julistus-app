@@ -2,12 +2,12 @@ import React from "react";
 import { MissionPromo } from "../FrontPageComponents/MissionPromo";
 import { NewReleases } from "../FrontPageComponents/NewReleases";
 import { RedirectToShop } from "../FrontPageComponents/RedirectToShop";
-import { Welcome } from "../FrontPageComponents/Welcome";
+import { Lander } from "../FrontPageComponents/Lander";
 
 const Home: React.FC = () => {
   return (
     <div>
-      <Welcome />
+      <Lander />
       <NewReleases />
       <MissionPromo />
       <RedirectToShop />

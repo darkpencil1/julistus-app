@@ -6,12 +6,7 @@ const Header: React.FC = () => {
   return (
     <StyledHeader>
       <div className="nav__logo">
-        <Image
-          src={logo}
-          width="150rem"
-          className="d-inline-block align-top"
-          alt="Julistus"
-        />
+        <Image src={logo} alt="Julistus" width="100%" />
       </div>
       <nav>
         <a href="/">Koti</a>

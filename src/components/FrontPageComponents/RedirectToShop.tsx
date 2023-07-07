@@ -11,7 +11,7 @@ export const RedirectToShop = () => {
         Kauppaan
       </Button>
       <Row className="redirect__content-container">
-        <Image src={oksa} className="mission__img" />
+        <Image src={oksa} className="mission__img" width="100%" />
         <h2 className="redirect__text">
           Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
           cillum sint consectetur cupidatat.
