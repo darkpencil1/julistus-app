@@ -5,10 +5,10 @@ import StyledMapSign from "./MapSign.style";
 
 type MapSignProps = {
   height?: number;
+  active: boolean;
 };
 
-const MapSign = ({ height }: MapSignProps) => {
-  const [active, setActive] = React.useState(true);
+const MapSign = ({ height, active }: MapSignProps) => {
   return (
     <StyledMapSign height={height ? height : 60} active={active}>
       <div className="sign__circle">
