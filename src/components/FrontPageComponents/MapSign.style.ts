@@ -2,11 +2,12 @@ import styled, { keyframes, css } from "styled-components";
 import colors from "../../resources/styles/baseColors";
 
 type MapSignProps = {
-  height?: number;
+  size?: number;
   active: boolean;
+  notRoundedSide: "left" | "right";
 };
 
-const mapSignSize = 60;
+const defaultSize = 60;
 
 const fadeIn = (color: string) => {
   return keyframes`
@@ -20,26 +21,28 @@ const fadeIn = (color: string) => {
 };
 
 const StyledMapSign = styled.div<MapSignProps>`
-  width: ${mapSignSize}px;
-  height: ${mapSignSize}px;
+  width: ${(p) => (p.size ? p.size : defaultSize)}px;
+  height: ${(p) => (p.size ? p.size : defaultSize)}px;
   position: relative;
-  border-radius: ${(p) => p.theme.br.br_medium} 0 0
-    ${(p) => p.theme.br.br_medium};
   background-color: "transparent";
+  border-radius: ${(p) =>
+    p.notRoundedSide === "right"
+      ? `${p.theme.br.br_medium} 0 0 ${p.theme.br.br_medium}`
+      : `0 ${p.theme.br.br_medium} ${p.theme.br.br_medium} 0`};
   ${({ active }) =>
     active &&
     css`
       animation: ${fadeIn("white")} 2s linear;
       background-color: ${(p) => p.theme.colors.bg};
-    `}
+    `};
 
   .sign__circle {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: ${mapSignSize - 5}px;
-    height: ${mapSignSize - 5}px;
+    width: ${(p) => (p.size ? p.size - 5 : defaultSize - 5)}px;
+    height: ${(p) => (p.size ? p.size - 5 : defaultSize - 5)}px;
     background-color: "transparent";
     border-radius: ${(p) => p.theme.br.br_full};
     display: flex;

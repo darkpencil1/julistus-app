@@ -7,28 +7,28 @@ import tall1 from "../../resources/images/tall1.png";
 import tall2 from "../../resources/images/tall2.png";
 
 type Location = {
-  top: string;
-  left: string;
+  top: number;
+  left: number;
   img: string;
   isWide: boolean;
 };
 
 const locations: Array<Location> = [
   {
-    top: "30%",
-    left: "50%",
+    top: 80,
+    left: 50,
     img: wide,
     isWide: true,
   },
   {
-    top: "20%",
-    left: "80%",
+    top: 20,
+    left: 80,
     img: tall1,
     isWide: false,
   },
   {
-    top: "50%",
-    left: "10%",
+    top: 50,
+    left: 10,
     img: tall2,
     isWide: false,
   },
@@ -40,7 +40,7 @@ export const Lander = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % locations.length);
-    }, 7000);
+    }, 3000);
 
     return () => {
       clearInterval(timer);
