@@ -40,7 +40,7 @@ export const Lander = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % locations.length);
-    }, 3000);
+    }, 5000);
 
     return () => {
       clearInterval(timer);
