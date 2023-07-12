@@ -10,7 +10,7 @@ type ButtonProps = {
 
 const Button = styled.button<ButtonProps>`
   display: inline-flex;
-  width: auto;
+  width: fit-content;
   justify-content: center;
   flex-wrap: nowrap;
   align-items: center;
@@ -38,13 +38,13 @@ const Button = styled.button<ButtonProps>`
     switch (size) {
       case "sm":
         return `
-          font-size: ${theme.fs.fs_sm};
-          padding: ${theme.spacing.spacing_3};
+          font-size: ${theme.fs.font_sm};
+          padding: ${theme.spacing.spacing_3} ${theme.spacing.spacing_5};
       `;
       case "md":
         return `
-          font-size: ${theme.fs.fs_md};
-          padding: ${theme.spacing.spacing_3};
+          font-size: ${theme.fs.font_md};
+          padding: ${theme.spacing.spacing_1} ${theme.spacing.spacing_4};
         `;
       case "lg":
         return `

@@ -1,6 +1,6 @@
 import { createContext, useContext, useReducer } from "react";
 import ProductContextType from "../../resources/interfaces/ProductContextType";
-import { Product } from "../../resources/interfaces/ProductInterface";
+import IProduct from "../../resources/interfaces/ProductInterface";
 import productReducer, { productActionType } from "../reducers/productReducer";
 
 const initialState = {
@@ -18,8 +18,8 @@ type ProviderProps = {
 const ProductProvider = ({ children }: ProviderProps) => {
   const [product, dispatch] = useReducer(productReducer, null);
 
-  const selectProduct = (product: Product) => {
-    console.log("Product SELECTED:", product);
+  const selectProduct = (product: IProduct) => {
+    console.log("IProduct SELECTED:", product);
     dispatch({
       type: productActionType.VIEW_PRODUCT,
       payload: product,

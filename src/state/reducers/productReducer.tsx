@@ -1,4 +1,4 @@
-import { Product } from "../../resources/interfaces/ProductInterface";
+import IProduct from "../../resources/interfaces/ProductInterface";
 
 export type ProductAction = {
   type: string;
@@ -13,9 +13,9 @@ export const productActionType = {
 
 //Return a product user views currently
 const productReducer = (
-  state: Product | null,
+  state: IProduct | null,
   action: ProductAction
-): Product | null => {
+): IProduct | null => {
   const { type, payload } = action;
   switch (type) {
     case productActionType.VIEW_PRODUCT:

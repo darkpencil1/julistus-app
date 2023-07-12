@@ -1,6 +1,6 @@
-import { Product } from "./ProductInterface";
+import IProduct from "./ProductInterface";
 
 export default interface ProductContextType {
-  product: Product | null;
+  product: IProduct | null;
   selectProduct: Function;
 }

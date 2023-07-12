@@ -14,12 +14,13 @@ const Shop: React.FC = () => {
         {products.map((product, i) => (
           <ProductItem
             id={product.id}
-            images={product.image}
+            images={product.images}
             title_img={product.title_img}
             name={product.name}
             price={product.price}
             categories={product.categories}
             description={product.description}
+            orientation={product.orientation}
             key={i}
           />
         ))}

@@ -21,7 +21,7 @@ export const ImgPicker = (props: ImgPickerProps) => {
   return (
     <StyledImgPicker>
       <Row className="thumbnail__container">
-        {product?.images.map((img, i) => {
+        {product?.images.map((img: string, i: number) => {
           return (
             <Col
               className="img__container"

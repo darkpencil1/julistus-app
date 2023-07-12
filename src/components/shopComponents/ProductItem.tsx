@@ -5,7 +5,9 @@ import Card from "../baseComponents/Card.style";
 import Image from "../baseComponents/Image.style";
 import Button from "../baseComponents/Button.style";
 import { useProduct } from "../../state/contexts/productContext";
-import { Product } from "../../resources/interfaces/ProductInterface";
+import IProduct, {
+  Orientation,
+} from "../../resources/interfaces/ProductInterface";
 import StyledProductItem from "./ProductItem.style";
 
 type ProductProps = {
@@ -16,15 +18,25 @@ type ProductProps = {
   price: number;
   description: string;
   categories: Array<string>;
+  orientation: Orientation;
 };
 
 export const ProductItem = (props: ProductProps) => {
-  const { id, images, name, price, description, categories, title_img } = props;
+  const {
+    id,
+    images,
+    name,
+    price,
+    description,
+    categories,
+    title_img,
+    orientation,
+  } = props;
   const { selectProduct } = useProduct();
   const navigate = useNavigate();
 
   const handleClick = () => {
-    const product: Product = {
+    const product: IProduct = {
       id: id,
       name: name,
       images: images,
@@ -32,6 +44,7 @@ export const ProductItem = (props: ProductProps) => {
       price: price,
       description: description,
       categories: categories,
+      orientation: orientation,
     };
     selectProduct({ ...product });
     navigate(`/tuote?id=${name}`);
