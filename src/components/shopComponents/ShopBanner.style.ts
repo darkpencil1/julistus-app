@@ -22,12 +22,13 @@ const StyledProductBanner = styled(Row)`
   .banner__title {
     font-size: 4rem;
     text-transform: uppercase;
-    margin: ${(p) => p.theme.spacing.spacing_6} auto;
+    margin: ${(p) => p.theme.spacing.spacing_1} auto;
   }
 
   .banner__desc {
     font-size: 1.5rem;
     max-width: 600px;
+    margin-top: 0;
   }
   .banner__img {
     width: ${(p) => p.theme.column.column_6};

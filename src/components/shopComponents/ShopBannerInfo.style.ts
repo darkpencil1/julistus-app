@@ -3,13 +3,13 @@ import Row from "../baseComponents/Row.style";
 
 const StyledShopBannerInfo = styled(Row)`
   position: absolute;
-  bottom: ${(p) => p.theme.spacing.spacing_5};
+  bottom: ${(p) => p.theme.spacing.spacing_2};
   left: ${(p) => p.theme.spacing.spacing_5};
   background-color: ${(p) => p.theme.colors.bg};
   flex-wrap: nowrap;
   border-radius: ${(p) => p.theme.br.br_medium};
   border: 2px solid ${(props) => props.theme.primary};
-  padding: ${(p) => p.theme.spacing.spacing_3};
+  padding: ${(p) => p.theme.spacing.spacing_1};
   gap: 0 ${(p) => p.theme.spacing.spacing_5};
 
   .banner__info {

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Row from "../baseComponents/Row.style";
+import Row from "../../baseComponents/Row.style";
 
 const StyledLander = styled(Row)`
   width: 100%;

@@ -12,7 +12,7 @@ const products: Array<IProduct> = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium congue venenatis.",
     price: 10.0,
-    images: [wide1, tall2, tall1, wide1],
+    images: [wide1, tall2, tall1, wide1, wide1, tall2, tall1, wide1],
     title_img: title_img,
     orientation: Orientation.LANDSCAPE,
   },

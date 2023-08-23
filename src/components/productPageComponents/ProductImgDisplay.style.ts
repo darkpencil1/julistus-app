@@ -2,7 +2,7 @@ import Col from "../baseComponents/Col.style";
 import styled from "styled-components";
 
 const StyledProductImgDisplay = styled(Col)`
-  width: ${(p) => p.theme.column.col_12};
+  flex: 1 0 100%;
   border-radius: ${(p) => p.theme.br.br_round};
   padding: ${(p) => p.theme.spacing.spacing_2}
     ${(p) => p.theme.column.spacing_4};
@@ -15,7 +15,7 @@ const StyledProductImgDisplay = styled(Col)`
   }
   .product__img-main-container {
     display: flex;
-    width: ${(p) => p.theme.column.col_10};
+    flex: 5;
     height: 100%;
     justify-content: center;
     align-items: center;

@@ -20,24 +20,22 @@ export const ImgPicker = (props: ImgPickerProps) => {
 
   return (
     <StyledImgPicker>
-      <Row className="thumbnail__container">
-        {product?.images.map((img: string, i: number) => {
-          return (
-            <Col
-              className="img__container"
-              style={
-                selectedImg === img
-                  ? (SELECTED_IMG_STYLE as React.CSSProperties)
-                  : {}
-              }
-              onClick={() => setSelectedImg(img)}
-              key={i}
-            >
-              <Image src={img} className="thumbnail__img" />
-            </Col>
-          );
-        })}
-      </Row>
+      {product?.images.map((img: string, i: number) => {
+        return (
+          <Col
+            className="picker__img-container"
+            style={
+              selectedImg === img
+                ? (SELECTED_IMG_STYLE as React.CSSProperties)
+                : {}
+            }
+            onClick={() => setSelectedImg(img)}
+            key={i}
+          >
+            <Image src={img} className="picker__thumbnail-img" />
+          </Col>
+        );
+      })}
     </StyledImgPicker>
   );
 };

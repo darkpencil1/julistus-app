@@ -13,6 +13,7 @@ const StyledProductPage = styled(Container)`
   .product__container {
     margin: 2rem 0 0 2rem;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 `;
 

@@ -14,7 +14,7 @@ export const ProductImgDisplay = () => {
       <Row className="product__img-row">
         <ImgPicker setSelectedImg={setSelectedImg} selectedImg={selectedImg} />
         <Col className="product__img-main-container">
-          <Image src={selectedImg} className="w-75 product__img-main" />
+          <Image src={selectedImg} className="product__img-main" />
         </Col>
       </Row>
     </StyledProductImgDisplay>

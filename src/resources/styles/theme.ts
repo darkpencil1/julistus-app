@@ -12,7 +12,7 @@ const theme = {
   spacing: spacing,
   fw: fontWeight,
   fs: fontSize,
-  fontSize: "17px",
+  fontSize: "25px",
   fontFamily: "Red Hat Display, sans-serif",
   fontColor: colors.primary,
 };

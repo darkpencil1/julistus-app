@@ -2,7 +2,7 @@ import React from "react";
 import { MissionPromo } from "../FrontPageComponents/MissionPromo";
 import { NewReleases } from "../FrontPageComponents/NewReleases";
 import { RedirectToShop } from "../FrontPageComponents/RedirectToShop";
-import { Lander } from "../FrontPageComponents/Lander";
+import Lander from "../FrontPageComponents/Lander/Lander";
 
 const Home: React.FC = () => {
   return (

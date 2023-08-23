@@ -58,7 +58,7 @@ export const ProductItem = (props: ProductProps) => {
             <Image className="product__img" src={props.images[0]} />
           </Col>
           <Row className="product__text-container">
-            <Image className="product__title" src={props.title_img} />
+            <h2 className="product__title">{props.name}</h2>
             <div className="product__text">{props.description}</div>
             {/*<div className="product__price">alkaen {props.price}€</div>*/}
             <Button className="product__cta" secondary size="md">

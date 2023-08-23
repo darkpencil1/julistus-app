@@ -4,7 +4,8 @@ const content_gap = "10px";
 
 const StyledProductItem = styled.div`
   width: calc(${(p) => p.theme.column.col_6} - 15px);
-  height: 300px;
+  height: auto;
+  min-height: 300px;
   border: 2px solid ${(props) => props.theme.primary};
   border-radius: 5px;
 
@@ -30,8 +31,8 @@ const StyledProductItem = styled.div`
 
   .product__img {
     object-fit: contain;
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 350px;
+    max-height: 350px;
     border-radius: ${(p) => p.theme.br.br_medium};
   }
 
@@ -44,22 +45,21 @@ const StyledProductItem = styled.div`
   .product__text-container {
     width: calc(${(p) => p.theme.column.col_6} - ${content_gap});
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-between;
     text-align: center;
   }
 
   .product__text {
-    font-size: ${(p) => p.theme.fs.font_xl};
     margin: 0 auto 0;
   }
 
   .product__title {
-    width: 200px;
+    width: auto;
     margin: 0 auto ${(p) => p.theme.spacing.spacing_3};
   }
 
   .product__cta {
-    margin: auto auto 0;
+    margin: 0 auto;
   }
 `;
 
