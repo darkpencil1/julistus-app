@@ -8,6 +8,7 @@ const StyledLander = styled(Row)`
   flex-direction: row;
   flex-wrap: no-wrap;
   text-align: center;
+  overflow-x: hidden;
 
   .lander__text-container {
     height: 90vh;

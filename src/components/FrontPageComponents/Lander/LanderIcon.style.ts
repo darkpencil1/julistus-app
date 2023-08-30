@@ -11,7 +11,7 @@ type LanderIconProps = {
 const smSize = 60;
 const mdSize = 80;
 const lgSize = 100;
-const iconModifier = 30;
+const iconModifier = 20;
 
 const StyledLanderIcon = styled(StyledIcon)<LanderIconProps>`
   position: absolute;
