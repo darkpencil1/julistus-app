@@ -1,14 +1,14 @@
 import React from "react";
 import { MissionPromo } from "../FrontPageComponents/MissionPromo";
-import { NewReleases } from "../FrontPageComponents/NewReleases";
 import { RedirectToShop } from "../FrontPageComponents/RedirectToShop";
 import Lander from "../FrontPageComponents/Lander/Lander";
+import Intro from "../FrontPageComponents/WorldIntro/Intro";
 
 const Home: React.FC = () => {
   return (
     <div>
       <Lander />
-      <NewReleases />
+      <Intro />
       <MissionPromo />
       <RedirectToShop />
     </div>

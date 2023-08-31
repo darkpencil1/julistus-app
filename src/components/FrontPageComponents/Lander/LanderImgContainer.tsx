@@ -7,13 +7,13 @@ import StyledLanderImgContainer from "./LanderImgContainer.style";
 import { Orientation } from "../../../resources/interfaces/ProductInterface";
 
 const iconPositions: Array<LanderIconProps> = [
-  { icon: magnifier, top: 80, left: 50, size: "sm" },
+  { icon: magnifier, top: 60, left: 10, size: "sm" },
   { icon: magnifier, top: 20, left: 80, size: "md" },
-  { icon: magnifier, top: 50, left: 10, size: "lg" },
+  { icon: magnifier, top: 90, left: 20, size: "lg" },
 ];
 
 const imgPositions: Array<LanderProductImgProps> = [
-  { img: wide, top: 10, left: 5, orientation: Orientation.LANDSCAPE },
+  { img: wide, top: 10, left: -30, orientation: Orientation.LANDSCAPE },
   { img: wide, top: 60, left: 50, orientation: Orientation.LANDSCAPE },
 ];
 

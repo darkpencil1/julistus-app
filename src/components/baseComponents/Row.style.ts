@@ -7,6 +7,7 @@ type RowProps = {
 const Row = styled.div<RowProps>`
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   gap: ${(p) => p.gap || "10px"};
 `;
 
