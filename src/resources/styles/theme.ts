@@ -4,6 +4,7 @@ import column from "./column";
 import br from "./br";
 import fontWeight from "./fontWeight";
 import fontSize from "./fontSize";
+import fontFamily from "./fontFamily";
 
 const theme = {
   colors: colors,
@@ -12,8 +13,9 @@ const theme = {
   spacing: spacing,
   fw: fontWeight,
   fs: fontSize,
+  ff: fontFamily,
   fontSize: "25px",
-  fontFamily: "Red Hat Display, sans-serif",
+  fontFamily: fontFamily.primary,
   fontColor: colors.primary,
 };
 

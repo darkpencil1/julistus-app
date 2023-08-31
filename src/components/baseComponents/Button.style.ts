@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-type Size = "sm" | "md" | "lg" | "xl";
+type ButtonSize = "sm" | "md" | "lg" | "xl";
 
 type ButtonProps = {
   primary?: boolean;
   secondary?: boolean;
-  size?: Size;
+  size?: ButtonSize;
 };
 
 const Button = styled.button<ButtonProps>`
@@ -16,9 +16,9 @@ const Button = styled.button<ButtonProps>`
   align-items: center;
   border: 2px solid ${(props) => props.theme.colors.primary};
   border-radius: ${(p) =>
-    p.primary ? p.theme.br.br_large : p.theme.br.br_medium};
-  background-color: ${(props) => props.theme.colors.bg};
-  color: ${(props) => props.theme.colors.primary};
+    p.primary ? p.theme.br.br_medium : p.theme.br.br_large};
+  background-color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.secondary};
   font-weight: ${(props) => props.theme.fw.fw_bold};
   font-size: ${(p) => p.theme.fs.fs_xl};
   font-size: 1.5rem;
@@ -49,7 +49,7 @@ const Button = styled.button<ButtonProps>`
       case "lg":
         return `
           font-size: ${theme.fs.fs_lg};
-          padding: ${theme.spacing.spacing_5};
+          padding: ${theme.spacing.spacing_3} ${theme.spacing.spacing_4};
 
       `;
       case "xl":

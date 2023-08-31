@@ -8,25 +8,25 @@ const StyledLander = styled(Row)`
   flex-direction: row;
   flex-wrap: no-wrap;
   text-align: center;
-  overflow-x: hidden;
+  overflow: hidden;
 
   .lander__text-container {
     height: 90vh;
     flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: end;
+    text-align: center;
+  }
+  .lander__text-container > p {
+    width: 70%;
   }
   .lander__title {
-    margin-top: ${(p) => p.theme.spacing.spacing_7};
+    margin: 0;
   }
-  .lander__map-container {
-    flex: 2;
-  }
-
-  .lander__map-mock {
-    width: 100%;
-    height: 90vh;
-    background-color: ${(p) => p.theme.colors.primary};
-    position: relative;
-    overflow: hidden;
+  .lander__subtitle {
+    margin: 0;
   }
 `;
 export default StyledLander;

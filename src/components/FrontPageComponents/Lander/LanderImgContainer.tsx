@@ -14,7 +14,7 @@ const iconPositions: Array<LanderIconProps> = [
 
 const imgPositions: Array<LanderProductImgProps> = [
   { img: wide, top: 10, left: 5, orientation: Orientation.LANDSCAPE },
-  { img: wide, top: 90, left: 100, orientation: Orientation.LANDSCAPE },
+  { img: wide, top: 60, left: 50, orientation: Orientation.LANDSCAPE },
 ];
 
 const LanderImgContainer = () => {
