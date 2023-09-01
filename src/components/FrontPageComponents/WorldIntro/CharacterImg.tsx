@@ -5,7 +5,7 @@ type CharacterImgProps = {
 export const CharacterImg = ({ img }: CharacterImgProps) => {
   return (
     <StyledCharacterImg>
-      <img src={img} />
+      <img className="char__img" src={img} />
     </StyledCharacterImg>
   );
 };

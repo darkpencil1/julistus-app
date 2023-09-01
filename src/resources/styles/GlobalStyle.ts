@@ -19,12 +19,17 @@ html {
 }
 
 body {
+  background-color: ${(p) => p.theme.colors.bg};
   font-family: ${(props) => props.theme.fontFamily};
   color: ${(props) => props.theme.fontColor};
 }
 h1 {
   font-family: ${(props) => props.theme.ff.title};
   font-size: ${(p) => p.theme.fs.font_xxl}; 
+}
+h2 {
+  font-family: ${(props) => props.theme.ff.title};
+  font-size: ${(p) => p.theme.fs.font_xl}; 
 }
 h3 {
   font-family: ${(props) => props.theme.ff.primary};

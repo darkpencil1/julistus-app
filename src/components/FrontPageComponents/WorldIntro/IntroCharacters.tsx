@@ -11,13 +11,15 @@ const IntroCharacters = () => {
   return (
     <StyledIntroCharacters>
       <img className="char__heart" src={heart} />
-      <div className="char__container--right">
-        <CharacterImg img={character} />;
-      </div>
-      <div className="char__container--left">
-        {worldElements.map((img: string, i: number) => {
-          return <CharacterImg img={img} key={i} />;
-        })}
+      <div className="char__container">
+        <div className="char__container--left">
+          <CharacterImg img={character} />;
+        </div>
+        <div className="char__container--right">
+          {worldElements.map((img: string, i: number) => {
+            return <CharacterImg img={img} key={i} />;
+          })}
+        </div>
       </div>
     </StyledIntroCharacters>
   );
