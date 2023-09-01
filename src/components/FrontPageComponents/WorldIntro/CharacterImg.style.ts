@@ -5,11 +5,12 @@ const StyledCharacterImg = styled.div`
   padding: 50px;
 
   .char__img {
-    max-height: 400px;
-    max-width: 400px;
     position: absolute;
-    top: 50;
-    left: 50;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
   }
 `;
 
