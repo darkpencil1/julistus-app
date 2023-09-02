@@ -1,8 +1,8 @@
 import React from "react";
-import { MissionPromo } from "../FrontPageComponents/MissionPromo";
 import { RedirectToShop } from "../FrontPageComponents/RedirectToShop";
 import Lander from "../FrontPageComponents/Lander/Lander";
 import Intro from "../FrontPageComponents/WorldIntro/Intro";
+import AboutUs from "../FrontPageComponents/About/AboutUs";
 import StyledHome from "./Home.style";
 
 const Home: React.FC = () => {
@@ -10,7 +10,7 @@ const Home: React.FC = () => {
     <StyledHome>
       <Lander />
       <Intro />
-      <MissionPromo />
+      <AboutUs />
       <RedirectToShop />
     </StyledHome>
   );

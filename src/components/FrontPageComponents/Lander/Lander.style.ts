@@ -2,13 +2,13 @@ import styled from "styled-components";
 import Row from "../../baseComponents/Row.style";
 
 const StyledLander = styled(Row)`
-  width: 100%;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   flex-wrap: no-wrap;
   text-align: center;
   overflow: hidden;
+  margin-bottom: 200px;
 
   .lander__text-container {
     height: 90vh;

@@ -1,33 +1,19 @@
 import styled from "styled-components";
-import Row from "../baseComponents/Row.style";
+import bg from "../../resources/images/redirect-to-shop-bg.png";
 
-const StyledRedirectToShop = styled(Row)`
-  height: 70vh;
-  margin: 0 10rem;
+const StyledRedirectToShop = styled.div`
+  height: 35vh;
+  display: flex;
   justify-content: center;
   align-items: center;
-  gap: 6rem;
-
-  .redirect__content-container {
-    flex: 0 auto;
-    flex-direction: column;
-    width: ${(p) => p.theme.column.col_5};
-    text-align: center;
-  }
-
-  .redirect__img-container {
-    flex: 0 auto;
-    width: ${(p) => p.theme.column.col_4};
-    max-height: 70vh;
-  }
-
-  .redirect__img {
-    width: auto;
-    height: 70vh;
-  }
-
-  .redirect__text {
-  }
+  background-image: url(${bg});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-right: 10px solid ${(p) => p.theme.colors.primary_shadow};
+  border-bottom: 10px solid ${(p) => p.theme.colors.primary_shadow};
+  border-radius: ${(p) => p.theme.br.br_large};
+  margin-bottom: 30px;
 `;
 
 export default StyledRedirectToShop;

@@ -1,6 +1,6 @@
 import heart from "../../../resources/images/sydän1.png";
 import magnifier from "../../../resources/images/suurennuslasi-kuvake.png";
-import wide from "../../../resources/images/wide1.png";
+import poster from "../../../resources/images/julisteproto1.png";
 import LanderIcon, { LanderIconProps } from "./LanderIcon";
 import LanderProductImg, { LanderProductImgProps } from "./LanderProductImg";
 import StyledLanderImgContainer from "./LanderImgContainer.style";
@@ -13,8 +13,8 @@ const iconPositions: Array<LanderIconProps> = [
 ];
 
 const imgPositions: Array<LanderProductImgProps> = [
-  { img: wide, top: 10, left: -30, orientation: Orientation.LANDSCAPE },
-  { img: wide, top: 60, left: 50, orientation: Orientation.LANDSCAPE },
+  { img: poster, top: 10, left: -30, orientation: Orientation.LANDSCAPE },
+  { img: poster, top: 60, left: 50, orientation: Orientation.LANDSCAPE },
 ];
 
 const LanderImgContainer = () => {

@@ -1,5 +1,5 @@
 import StyledLanderIcon from "./LanderIcon.style";
-import { Size } from "./LanderIcon.style";
+import { Size } from "../../baseComponents/Icon.style";
 
 export type LanderIconProps = {
   icon: string;
