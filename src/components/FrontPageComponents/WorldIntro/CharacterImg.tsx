@@ -1,11 +1,17 @@
 import StyledCharacterImg from "./CharacterImg.style";
-type CharacterImgProps = {
+import CharacterTag from "./CharacterTag";
+
+export type CharacterImgProps = {
   img: string;
+  icon: string;
+  name: string;
 };
-export const CharacterImg = ({ img }: CharacterImgProps) => {
+const CharacterImg = ({ img, icon, name }: CharacterImgProps) => {
   return (
     <StyledCharacterImg>
+      <CharacterTag icon={icon} name={name} />
       <img className="char__img" src={img} />
     </StyledCharacterImg>
   );
 };
+export default CharacterImg;
