@@ -5,6 +5,7 @@ import LanderIcon, { LanderIconProps } from "./LanderIcon";
 import LanderProductImg, { LanderProductImgProps } from "./LanderProductImg";
 import StyledLanderImgContainer from "./LanderImgContainer.style";
 import { Orientation } from "../../../resources/interfaces/ProductInterface";
+import { motion, Variants } from "framer-motion";
 
 const iconPositions: Array<LanderIconProps> = [
   { icon: magnifier, top: 60, left: 10, size: "sm" },
@@ -17,19 +18,54 @@ const imgPositions: Array<LanderProductImgProps> = [
   { img: poster, top: 60, left: 50, orientation: Orientation.LANDSCAPE },
 ];
 
+const heartVariant: Variants = {
+  animate: {
+    opacity: [0, 1],
+    scale: [0, 1],
+    transition: {
+      duration: 0.2,
+      type: "spring",
+      stiffness: 100,
+      bounce: 0.35,
+      damping: 12,
+      staggerChildren: 1,
+    },
+  },
+};
+
+const imgVariant: Variants = {
+  animate: {
+    opacity: [0, 1],
+    scale: [0, 1],
+    transition: {
+      duration: 0.2,
+      type: "spring",
+      stiffness: 100,
+      bounce: 0.35,
+      damping: 12,
+    },
+  },
+};
+
 const LanderImgContainer = () => {
   return (
     <StyledLanderImgContainer>
-      <img className="lander__img-main" src={heart} />
+      <motion.img
+        animate="animate"
+        variants={heartVariant}
+        className="lander__img-main"
+        src={heart}
+      />
       {iconPositions.map((icon: LanderIconProps, i: number) => {
         return (
-          <LanderIcon
-            icon={icon.icon}
-            top={icon.top}
-            left={icon.left}
-            size={icon.size}
-            key={i}
-          />
+          <motion.div animate="animate" variants={imgVariant} key={i}>
+            <LanderIcon
+              icon={icon.icon}
+              top={icon.top}
+              left={icon.left}
+              size={icon.size}
+            />
+          </motion.div>
         );
       })}
       {imgPositions.map((img: LanderProductImgProps, i: number) => {

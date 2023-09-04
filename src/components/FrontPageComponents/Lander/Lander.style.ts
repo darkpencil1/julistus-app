@@ -1,7 +1,11 @@
 import styled from "styled-components";
-import Row from "../../baseComponents/Row.style";
+import { motion } from "framer-motion";
 
-const StyledLander = styled(Row)`
+const StyledLander = styled(motion.div)`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 10px;
   justify-content: center;
   align-items: center;
   flex-direction: row;

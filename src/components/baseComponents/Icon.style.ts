@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import bg from "../../resources/images/nappitausta.png";
 
@@ -10,10 +11,10 @@ type StyledIconProps = {
 const smSize = 60;
 const mdSize = 80;
 const lgSize = 100;
-const xlSize = 200;
+const xlSize = 130;
 const iconModifier = 20;
 
-const StyledIcon = styled.div<StyledIconProps>`
+const StyledIcon = styled(motion.div)<StyledIconProps>`
   background-image: url(${bg});
   background-color: #cccccc; /* Used if the image is unavailable */
   background-position: center; /* Center the image */
