@@ -1,7 +1,10 @@
 import Button from "../../baseComponents/Button.style";
 import StyledAboutUs from "./AboutUs.style";
 import Icon from "../../baseComponents/Icon";
+import Value from "./Value";
 import mock from "../../../resources/images/suurennuslasi-kuvake.png";
+import { motion, useInView, Variants } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 type Value = {
   name: string;
@@ -15,7 +18,20 @@ const values: Array<Value> = [
   { name: "Fantasia", icon: mock },
 ];
 
+const nameVariant: Variants = {
+  animate: {
+    opacity: [0, 1],
+    translateX: [-50, 0],
+  },
+};
 const AboutUs = () => {
+  const valueRef = useRef(null);
+  const valuesInView = useInView(valueRef, { once: true });
+
+  useEffect(() => {
+    console.log("valuesInView", valuesInView);
+  }, [valuesInView]);
+
   return (
     <StyledAboutUs>
       <div className="about-us__text-container">
@@ -32,10 +48,12 @@ const AboutUs = () => {
       <div className="about-us__value-container">
         {values.map((value: Value, i: number) => {
           return (
-            <div className="about-us__value" key={i}>
-              <Icon icon={value.icon} size="xl" />
-              <h3>{value.name}</h3>
-            </div>
+            <Value
+              icon={value.icon}
+              name={value.name}
+              delay={i * 0.3}
+              key={i}
+            />
           );
         })}
       </div>
