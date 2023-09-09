@@ -18,20 +18,7 @@ const values: Array<Value> = [
   { name: "Fantasia", icon: mock },
 ];
 
-const nameVariant: Variants = {
-  animate: {
-    opacity: [0, 1],
-    translateX: [-50, 0],
-  },
-};
 const AboutUs = () => {
-  const valueRef = useRef(null);
-  const valuesInView = useInView(valueRef, { once: true });
-
-  useEffect(() => {
-    console.log("valuesInView", valuesInView);
-  }, [valuesInView]);
-
   return (
     <StyledAboutUs>
       <div className="about-us__text-container">

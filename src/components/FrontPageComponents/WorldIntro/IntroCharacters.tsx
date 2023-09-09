@@ -20,7 +20,7 @@ const heartVariant: Variants = {
     opacity: [0, 100],
     scale: [0, 1],
     transition: {
-      delay: 1,
+      delay: 0.2,
       duration: 0.2,
       type: "spring",
       stiffness: 100,

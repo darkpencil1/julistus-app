@@ -22,6 +22,8 @@ const StyledAboutUs = styled(Row)`
   }
 
   .about-us__text-container > h1 {
+    /*Adjust top margin to account for space in top that line-height causes*/
+    margin-top: -15px;
     margin-bottom: 0;
   }
 
@@ -29,7 +31,6 @@ const StyledAboutUs = styled(Row)`
     flex-basis: 40%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     text-align: center;

@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
-import heart from "../../../resources/images/sydän1.png";
+import heart from "../../../resources/images/sydän-ilman-viiva.png";
+import lines from "../../../resources/images/karttaviiva-keltainen1.png";
 import magnifier from "../../../resources/images/suurennuslasi-kuvake.png";
 import poster from "../../../resources/images/julisteproto1.png";
 import LanderIcon, { LanderIconProps } from "./LanderIcon";
 import LanderProductImg, { LanderProductImgProps } from "./LanderProductImg";
 import StyledLanderImgContainer from "./LanderImgContainer.style";
 import { Orientation } from "../../../resources/interfaces/ProductInterface";
-import { motion, useAnimate, Variants } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 const iconPositions: Array<LanderIconProps> = [
   { icon: magnifier, top: 60, left: 10, size: "sm" },
@@ -43,20 +43,17 @@ const imgVariant: Variants = {
 };
 
 const LanderImgContainer = () => {
-  const [scope, animate] = useAnimate();
-  const [animComplete, setAnimComplete] = useState<boolean>(false);
-
-  useEffect(() => {
-    if (animComplete) animate("span", { opacity: 1, scale: [0, 1] });
-  }, [animComplete]);
   return (
-    <StyledLanderImgContainer ref={scope}>
-      <motion.img
-        animate="animate"
-        variants={heartVariant}
-        className="lander__img-main"
-        src={heart}
-      />
+    <StyledLanderImgContainer>
+      <div className="lander__heart-container">
+        <motion.img
+          animate="animate"
+          variants={heartVariant}
+          className="lander__heart"
+          src={heart}
+        />
+        <motion.img className="lander__heart-line" src={lines} />
+      </div>
       {iconPositions.map((icon: LanderIconProps, i: number) => {
         return (
           <motion.div
@@ -71,11 +68,6 @@ const LanderImgContainer = () => {
               damping: 16,
             }}
             key={i}
-            onAnimationComplete={() =>
-              i === iconPositions.length - 1
-                ? setAnimComplete(true)
-                : setAnimComplete(false)
-            }
           >
             <LanderIcon
               icon={icon.icon}
@@ -89,10 +81,11 @@ const LanderImgContainer = () => {
 
       {imgPositions.map((img: LanderProductImgProps, i: number) => {
         return (
-          <motion.span
-            initial={{ opacity: 0 }}
+          <motion.div
+            animate="animate"
+            variants={imgVariant}
             transition={{
-              delay: i * 2,
+              delay: i === 0 ? 1.2 : i * 1.6,
               duration: 0.3,
               type: "tween",
             }}
@@ -104,7 +97,7 @@ const LanderImgContainer = () => {
               left={img.left}
               orientation={img.orientation}
             />
-          </motion.span>
+          </motion.div>
         );
       })}
     </StyledLanderImgContainer>
