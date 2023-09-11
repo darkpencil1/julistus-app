@@ -1,5 +1,6 @@
 import heart from "../../../resources/images/sydän-ilman-viiva.png";
-import lines from "../../../resources/images/karttaviiva-keltainen1.png";
+import lines from "../../../resources/images/karttaviiva.svg";
+import MapLines from "./MapLines";
 import magnifier from "../../../resources/images/suurennuslasi-kuvake.png";
 import poster from "../../../resources/images/julisteproto1.png";
 import LanderIcon, { LanderIconProps } from "./LanderIcon";
@@ -52,7 +53,7 @@ const LanderImgContainer = () => {
           className="lander__heart"
           src={heart}
         />
-        <motion.img className="lander__heart-line" src={lines} />
+        <MapLines size={700} />
       </div>
       {iconPositions.map((icon: LanderIconProps, i: number) => {
         return (

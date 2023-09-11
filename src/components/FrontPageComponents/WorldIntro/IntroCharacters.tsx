@@ -6,7 +6,7 @@ import mock_icon from "../../../resources/images/nuoli-kuvake.png";
 import heart_icon from "../../../resources/images/sydän-keltainen.png";
 import StyledIntroCharacters from "./IntroCharacters.style";
 import CharacterImg, { CharacterImgProps } from "./CharacterImg";
-import { motion, useAnimate, useInView, Variants } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 import { useRef } from "react";
 
 const worldElements: Array<CharacterImgProps> = [
