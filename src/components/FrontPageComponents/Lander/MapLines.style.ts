@@ -15,7 +15,6 @@ const StyledLines = styled(motion.svg)<StyledLinesProps>`
   margin-left: auto;
   margin-right: auto;
   mask-image: url(${heart});
-  -webkit-mask-image: url(${heart});
   mask-repeat: no-repeat;
   mask-size: ${(p) => `${p.size}px`};
 `;

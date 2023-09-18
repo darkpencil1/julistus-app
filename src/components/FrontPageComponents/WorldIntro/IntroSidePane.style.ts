@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import bg from "../../../resources/images/sidepane.png";
+import bg from "../../../resources/images/map-sidebanner.png";
 
 const StyledIntroSidePane = styled.div`
   background-image: url(${bg});
@@ -25,7 +25,7 @@ const StyledIntroSidePane = styled.div`
     margin-bottom: 0;
   }
 
-  .sidepane__text-container > h2 {
+  .sidepane__text-container > h3 {
     color: ${(p) => p.theme.colors.secondary}!important;
     text-shadow: 0 0 20px ${(p) => p.theme.colors.red};
     margin-top: 0;

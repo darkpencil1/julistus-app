@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import bg from "../../resources/images/redirect-to-shop-bg.png";
+import bg from "../../resources/images/map-banner.png";
 
 const StyledRedirectToShop = styled.div`
   height: 35vh;
@@ -13,7 +13,7 @@ const StyledRedirectToShop = styled.div`
   border-right: 10px solid ${(p) => p.theme.colors.primary_shadow};
   border-bottom: 10px solid ${(p) => p.theme.colors.primary_shadow};
   border-radius: ${(p) => p.theme.br.br_large};
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 `;
 
 export default StyledRedirectToShop;

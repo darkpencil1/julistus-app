@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import heart from "../../../../resources/images/sydän-ilman-viiva.png";
+//import heart from "../../../resources/images/sydän-ilman-viiva.png";
+import heart from "../../../../resources/images/sydän2.png";
 import { motion } from "framer-motion";
 
 export type StyledLinesProps = {
@@ -13,7 +14,7 @@ const StyledLines = styled(motion.svg)<StyledLinesProps>`
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  maskimage: url(${heart});
+  mask-image: url(${heart});
   mask-repeat: no-repeat;
   mask-size: ${(p) => `${p.size}px`};
 `;

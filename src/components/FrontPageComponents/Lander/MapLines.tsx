@@ -21,6 +21,15 @@ const MapLines = ({ size }: StyledLinesProps) => {
     setTimeout(() => setShow(!show), 5000);
   }, [show]);
 
+  //Ratio for svg based on the original heart bg img it was drawn on
+  const svgWidth = 462;
+  const svgHeight = 433;
+  const heartWidth = 465;
+  const svgRatio = svgHeight / svgWidth;
+  const svgImgRatio = svgWidth / heartWidth;
+
+  const svgScaledWidth = svgImgRatio * size;
+  const svgScaledHeight = svgRatio * svgScaledWidth;
   return (
     <StyledLines
       size={size}
