@@ -1,5 +1,4 @@
 import styled from "styled-components";
-//import heart from "../../../resources/images/sydän-ilman-viiva.png";
 import heart from "../../../resources/images/sydän1.png";
 import { motion } from "framer-motion";
 

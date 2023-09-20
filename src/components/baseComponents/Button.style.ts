@@ -24,6 +24,7 @@ const Button = styled.button<ButtonProps>`
   font-size: ${(p) => p.theme.fs.fs_xl};
   font-size: 1.5rem;
   line-height: 1rem;
+  z-index: 2;
 
   /*Effects*/
   &:hover {

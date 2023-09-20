@@ -1,11 +1,12 @@
 import styled from "styled-components";
-import bg from "../../resources/images/map-banner.png";
+import bg from "../../../resources/images/map-banner.png";
 
 const StyledRedirectToShop = styled.div`
   height: 35vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   background-image: url(${bg});
   background-position: center;
   background-repeat: no-repeat;

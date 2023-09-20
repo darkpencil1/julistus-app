@@ -1,5 +1,5 @@
 import React from "react";
-import { RedirectToShop } from "../FrontPageComponents/RedirectToShop";
+import RedirectToShop from "../FrontPageComponents/Redirect/RedirectToShop";
 import Lander from "../FrontPageComponents/Lander/Lander";
 import Intro from "../FrontPageComponents/WorldIntro/Intro";
 import AboutUs from "../FrontPageComponents/About/AboutUs";
