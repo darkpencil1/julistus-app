@@ -2,6 +2,7 @@ import styled from "styled-components";
 import bg from "../../../resources/images/map-sidebanner.png";
 
 const StyledIntroSidePane = styled.div`
+  position: relative;
   background-image: url(${bg});
   background-position: center;
   background-repeat: no-repeat;

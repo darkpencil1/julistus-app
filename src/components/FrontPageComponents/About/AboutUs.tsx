@@ -1,4 +1,4 @@
-import Button from "../../baseComponents/Button.style";
+import Button from "../../baseComponents/Button";
 import StyledAboutUs from "./AboutUs.style";
 import Icon from "../../baseComponents/Icon";
 import Value from "./Value";
@@ -28,9 +28,7 @@ const AboutUs = () => {
           asioista, jotka pysyivät samoina ja ohjasivat alusta alkaen taidetta.
           Lue lisää arvoista, visiosta ja tiimistä, jotka rakensivat tuotteemme.
         </p>
-        <Button primary size="lg">
-          Lue lisää
-        </Button>
+        <Button type="primary" size="lg" text="Lue lisää" />
       </div>
       <div className="about-us__value-container">
         {values.map((value: Value, i: number) => {

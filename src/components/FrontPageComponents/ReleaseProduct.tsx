@@ -1,4 +1,3 @@
-import Button from "../baseComponents/Button.style";
 import Col from "../baseComponents/Col.style";
 import Image from "../baseComponents/Image.style";
 import Row from "../baseComponents/Row.style";
@@ -25,9 +24,6 @@ const ReleaseProduct = ({
         <Col className="release__text">
           <h1>{name}</h1>
           <p>{description}</p>
-          <Button className="release__btn" size="md" primary>
-            Katso
-          </Button>
         </Col>
       </Row>
     </StyledReleaseProduct>

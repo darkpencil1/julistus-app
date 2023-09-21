@@ -1,5 +1,5 @@
 import StyledRedirectToShop from "./RedirectToShop.style";
-import Button from "../../baseComponents/Button.style";
+import Button from "../../baseComponents/Button";
 import Line from "./Line";
 import { useRef } from "react";
 
@@ -8,9 +8,12 @@ const RedirectToShop = () => {
 
   return (
     <StyledRedirectToShop ref={containerRef}>
-      <Button className="redirect__btn" size="lg" secondary>
-        Siirry kauppaan
-      </Button>
+      <Button
+        className="redirect__btn"
+        size="lg"
+        type="secondary"
+        text="Siirry kauppaan"
+      />
       <Line container={containerRef} />
     </StyledRedirectToShop>
   );

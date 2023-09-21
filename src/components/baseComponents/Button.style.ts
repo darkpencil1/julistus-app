@@ -1,23 +1,25 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-type ButtonSize = "sm" | "md" | "lg" | "xl";
+export type ButtonSize = "sm" | "md" | "lg" | "xl";
+export type ButtonType = "primary" | "secondary";
 
-type ButtonProps = {
-  primary?: boolean;
-  secondary?: boolean;
+type StyledButtonProps = {
   size?: ButtonSize;
+  btnType?: ButtonType;
 };
 
-const Button = styled.button<ButtonProps>`
+const StyledButton = styled(motion.button)<StyledButtonProps>`
   display: inline-flex;
   width: fit-content;
   justify-content: center;
   flex-wrap: nowrap;
   align-items: center;
   border: 5px solid
-    ${(p) => (p.secondary ? p.theme.colors.secondary : "transparent")};
+    ${(p) =>
+      p.btnType === "secondary" ? p.theme.colors.secondary : "transparent"};
   border-radius: ${(p) =>
-    p.primary ? p.theme.br.br_medium : p.theme.br.br_full};
+    p.btnType === "primary" ? p.theme.br.br_medium : p.theme.br.br_full};
   background-color: ${(p) => p.theme.colors.primary};
   color: ${(p) => p.theme.colors.secondary};
   font-weight: ${(p) => p.theme.fw.fw_bold};
@@ -27,11 +29,6 @@ const Button = styled.button<ButtonProps>`
   z-index: 2;
 
   /*Effects*/
-  &:hover {
-    box-shadow: 0 0 20px
-      ${(p) => (p.primary ? p.theme.colors.primary : p.theme.colors.red)};
-  }
-
   &:active {
     background-color: ${(p) => p.theme.colors.primary};
     text-shadow: 0 0 20px ${(p) => p.theme.colors.red};
@@ -69,4 +66,4 @@ const Button = styled.button<ButtonProps>`
   }}
 `;
 
-export default Button;
+export default StyledButton;

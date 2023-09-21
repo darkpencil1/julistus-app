@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-const StyledHeader = styled.header`
+const StyledHeader = styled(motion.header)`
   width: 45%;
   margin: 20px auto 0 10px;
   display: flex;

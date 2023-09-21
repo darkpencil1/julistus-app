@@ -15,6 +15,7 @@ const StyledRedirectToShop = styled.div`
   border-bottom: 10px solid ${(p) => p.theme.colors.primary_shadow};
   border-radius: ${(p) => p.theme.br.br_large};
   margin-bottom: 20px;
+  overflow: hidden;
 `;
 
 export default StyledRedirectToShop;

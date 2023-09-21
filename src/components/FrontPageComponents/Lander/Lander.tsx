@@ -1,7 +1,7 @@
 import StyledLander from "./Lander.style";
 import Col from "../../baseComponents/Col.style";
 import LanderImgContainer from "./LanderImgContainer";
-import Button from "../../baseComponents/Button.style";
+import Button from "../../baseComponents/Button";
 
 const Lander = () => {
   return (
@@ -13,9 +13,7 @@ const Lander = () => {
           Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
           cillum sint consectetur cupidatat.
         </p>
-        <Button primary size="lg">
-          Kauppaan
-        </Button>
+        <Button type="primary" size="lg" text="Kauppaan" />
       </Col>
       <LanderImgContainer />
     </StyledLander>

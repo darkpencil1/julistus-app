@@ -2,6 +2,8 @@ import StyledIntroSidePane from "./IntroSidePane.style";
 import heart_sm from "../../../resources/images/sydän-keltainen.png";
 import base from "../../../resources/images/sankaripallomerkki.png";
 import SidePaneIcon, { SidePaneIconType } from "./SidePaneIcon";
+import SidePaneLine from "./SidePaneLine";
+import { useRef } from "react";
 
 const sidePaneIcons: Array<SidePaneIconType> = [
   { icon: heart_sm, top: 10, left: 50 },
@@ -11,8 +13,10 @@ const sidePaneIcons: Array<SidePaneIconType> = [
 ];
 
 const IntroSidePane = () => {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
   return (
-    <StyledIntroSidePane>
+    <StyledIntroSidePane ref={containerRef}>
       <div className="sidepane__text-container">
         <h1>Tutustu maailmaamme</h1>
         <h3>kutsumuksen seuraamisesta</h3>
@@ -33,6 +37,7 @@ const IntroSidePane = () => {
           );
         })}
       </div>
+      <SidePaneLine container={containerRef} />
     </StyledIntroSidePane>
   );
 };
