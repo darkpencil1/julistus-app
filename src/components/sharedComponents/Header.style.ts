@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 const StyledHeader = styled(motion.header)`
   width: 45%;
+  height: 90px;
   margin: 20px auto 0 10px;
   display: flex;
   flex-direction: row;
@@ -15,8 +16,10 @@ const StyledHeader = styled(motion.header)`
   z-index: 1000;
 
   .nav__logo {
+    width: 70px;
     max-width: 70px;
     margin-left: ${(p) => p.theme.spacing.spacing_3};
+    cursor: pointer;
   }
 
   .nav__name {
@@ -27,6 +30,7 @@ const StyledHeader = styled(motion.header)`
     color: ${(p) => p.theme.colors.primary};
     margin: ${(p) => p.theme.spacing.spacing_2}
       ${(p) => p.theme.spacing.spacing_3};
+    cursor: pointer;
   }
 
   nav {

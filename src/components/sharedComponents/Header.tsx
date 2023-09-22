@@ -1,29 +1,53 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "../baseComponents/Image.style";
 import StyledHeader from "./Header.style";
 import logo from "../../resources/images/sydänlogo-viiva.png";
 import { AnimatePresence, motion, useAnimation, Variants } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const navVariant: Variants = {
   animate: {
-    translateX: [-100, 0],
-    opacity: 1,
+    translateX: [-50, 0],
+    opacity: [0, 1],
   },
   exit: {
     translateX: [0, -50],
-    opacity: 0,
+    opacity: [1, 0],
   },
 };
+
+type NavItem = {
+  href: string;
+  name: string;
+};
+const navItems: Array<NavItem> = [
+  {
+    href: "kauppa",
+    name: "Kauppa",
+  },
+  {
+    href: "missio",
+    name: "Missio",
+  },
+  {
+    href: "meistä",
+    name: "Meistä",
+  },
+];
 const Header: React.FC = () => {
-  const [scrollingUp, setScrollingUp] = useState(false);
+  const [scrollingUp, setScrollingUp] = useState(true);
   const controls = useAnimation();
+  const yScroll = useRef(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > yScroll.current) {
         setScrollingUp(false);
+        yScroll.current = window.scrollY;
       } else {
         setScrollingUp(true);
+        yScroll.current = window.scrollY;
       }
     };
 
@@ -38,22 +62,48 @@ const Header: React.FC = () => {
     if (scrollingUp) {
       controls.start({ width: "45%" });
     } else {
-      controls.start({ opacity: "auto" });
+      controls.start({ width: "140px" });
     }
   }, [scrollingUp, controls]);
 
   return (
-    <StyledHeader animate={controls} transition={{ duration: 0.3 }}>
-      <div className="nav__logo">
-        <Image src={logo} alt="Julistus" width="100%" />
-      </div>
-      <span className="nav__name">KUTSUMUS KAUPPA</span>
+    <StyledHeader animate={controls} transition={{ duration: 0.4 }}>
+      <motion.div className="nav__logo" onClick={() => navigate("/")}>
+        <Image src={logo} alt="Julistus" width="70px" />
+      </motion.div>
       <AnimatePresence>
         {scrollingUp && (
-          <motion.nav variants={navVariant}>
-            <a href="kauppa">Kauppa</a>
-            <a href="missio">Missio</a>
-            <a href="meistä">Meistä</a>
+          <motion.span
+            animate="animate"
+            exit="exit"
+            variants={navVariant}
+            className="nav__name"
+            key="header-title"
+          >
+            KUTSUMUS KAUPPA
+          </motion.span>
+        )}
+        {scrollingUp && (
+          <motion.nav
+            animate="animate"
+            exit="exit"
+            variants={navVariant}
+            key="header-nav"
+          >
+            {navItems.map((item: NavItem, i: number) => {
+              return (
+                <motion.a
+                  animate="animate"
+                  exit="exit"
+                  variants={navVariant}
+                  transition={{ delay: i * 0.1, duration: 0.2 }}
+                  href={item.href}
+                  key={i}
+                >
+                  {item.name}
+                </motion.a>
+              );
+            })}
           </motion.nav>
         )}
       </AnimatePresence>
