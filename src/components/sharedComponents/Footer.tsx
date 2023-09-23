@@ -1,50 +1,68 @@
 import Col from "../baseComponents/Col.style";
 import StyledFooter from "./Footer.style";
-import ig_Logo from "../../resources/images/Instagram_logo_2016.svg";
+
+type FooterLink = {
+  text: string;
+  link: string;
+};
+const links: Array<FooterLink> = [
+  { text: "UKK", link: "#" },
+  { text: "Ota yhteyttä", link: "#" },
+  { text: "Tietosuojaseloste", link: "#" },
+];
+const pageLinks: Array<FooterLink> = [
+  { text: "Koti", link: "/" },
+  { text: "Kauppa", link: "/kauppa" },
+  { text: "Maailma", link: "/maailma" },
+  { text: "Meistä", link: "/meista" },
+];
+
+const socialLinks: Array<FooterLink> = [{ text: "Instagram", link: "#" }];
 
 export const Footer = () => {
   return (
     <StyledFooter>
-      <ul className="">
-        <li className="footer__link">
-          <a href="#" className="nav-link px-2 text-body-secondary">
-            Home
-          </a>
-        </li>
-        <li className="footer__link">
-          <a href="#" className="nav-link px-2 text-body-secondary">
-            Features
-          </a>
-        </li>
-        <li className="footer__link">
-          <a href="#" className="nav-link px-2 text-body-secondary">
-            Pricing
-          </a>
-        </li>
-        <li className="footer__link">
-          <a href="#" className="nav-link px-2 text-body-secondary">
-            FAQs
-          </a>
-        </li>
-        <li className="footer__link">
-          <a href="#" className="nav-link px-2 text-body-secondary">
-            About
-          </a>
-        </li>
-      </ul>
-      <div className="social-media-container">
-        <Col className="copyright">
-          <span>&copy; 2023 Julistus</span>
-        </Col>
-
-        <ul className="social-media-list">
-          <li>
-            <a href="#">
-              <img src={ig_Logo} className="bi" width="24" height="24" />
-            </a>
-          </li>
-        </ul>
+      <div className="footer__links">
+        <div className="footer__link-container">
+          <h3>Yleistä</h3>
+          <ul>
+            {links.map((link: FooterLink, i: number) => {
+              return (
+                <li className="footer__link" key={`footer-general-${i}`}>
+                  <a href={link.link}>{link.text}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className="footer__link-container">
+          <h3>Sivut</h3>
+          <ul className="footer__page-links">
+            {pageLinks.map((link: FooterLink, i: number) => {
+              return (
+                <li className="footer__link" key={`footer-page-${i}`}>
+                  <a href={link.link}>{link.text}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className="footer__link-container">
+          <h3>Some</h3>
+          <ul className="footer__page-links">
+            {socialLinks.map((link: FooterLink, i: number) => {
+              return (
+                <li className="footer__link" key={`footer-social-${i}`}>
+                  <a href={link.link}>{link.text}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
+      <Col className="copyright">
+        <span>&copy; 2023 Kutsumuskauppa</span>
+      </Col>
     </StyledFooter>
   );
 };

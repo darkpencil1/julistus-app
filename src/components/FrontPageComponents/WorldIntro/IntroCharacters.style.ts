@@ -5,8 +5,12 @@ const StyledIntroCharacters = styled.div`
   flex-direction: column;
   justify-content: center;
 
+  > button {
+    margin: auto;
+    margin-top: ${(p) => p.theme.spacing.spacing_3};
+  }
   .char__heart {
-    width: 600px;
+    width: 500px;
     margin: 0 auto;
   }
 

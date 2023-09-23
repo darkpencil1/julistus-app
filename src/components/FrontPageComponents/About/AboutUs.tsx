@@ -1,10 +1,7 @@
 import Button from "../../baseComponents/Button";
 import StyledAboutUs from "./AboutUs.style";
-import Icon from "../../baseComponents/Icon";
 import Value from "./Value";
 import mock from "../../../resources/images/suurennuslasi-kuvake.png";
-import { motion, useInView, Variants } from "framer-motion";
-import { useEffect, useRef } from "react";
 
 type Value = {
   name: string;
@@ -24,9 +21,9 @@ const AboutUs = () => {
       <div className="about-us__text-container">
         <h1>Taidettamme ohjaa selkeät arvot</h1>
         <p>
-          Moni asia muuttuu luovassa prosessissa. Arvomme on yksi ainoista
-          asioista, jotka pysyivät samoina ja ohjasivat alusta alkaen taidetta.
-          Lue lisää arvoista, visiosta ja tiimistä, jotka rakensivat tuotteemme.
+          Moni asia muuttuu luovassa prosessissa. Arvomme on yksi asioista,
+          jotka pysyivät samoina ja ohjasivat alusta loppuun taidettamme. Lue
+          lisää arvoista, visiosta ja tiimistä, jotka rakensivat tuotteemme.
         </p>
         <Button type="primary" size="lg" text="Lue lisää" />
       </div>

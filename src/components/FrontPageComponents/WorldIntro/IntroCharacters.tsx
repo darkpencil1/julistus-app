@@ -8,6 +8,7 @@ import StyledIntroCharacters from "./IntroCharacters.style";
 import CharacterImg, { CharacterImgProps } from "./CharacterImg";
 import { motion, useInView, Variants } from "framer-motion";
 import { useRef } from "react";
+import Button from "../../baseComponents/Button";
 
 const worldElements: Array<CharacterImgProps> = [
   { img: building, icon: mock_icon, name: "Tärkeä paikka" },
@@ -69,6 +70,7 @@ const IntroCharacters = () => {
           );
         })}
       </div>
+      <Button type="primary" size="lg" text="Katso lisää" />
     </StyledIntroCharacters>
   );
 };

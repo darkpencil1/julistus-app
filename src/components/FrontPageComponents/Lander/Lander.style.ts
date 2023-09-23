@@ -11,7 +11,6 @@ const StyledLander = styled(motion.div)`
   flex-direction: row;
   flex-wrap: no-wrap;
   text-align: center;
-  overflow: hidden;
   margin-bottom: 200px;
 
   .lander__text-container {

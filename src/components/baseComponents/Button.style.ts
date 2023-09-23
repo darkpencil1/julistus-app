@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export type ButtonSize = "sm" | "md" | "lg" | "xl";
-export type ButtonType = "primary" | "secondary";
+export type ButtonType = "primary" | "secondary" | "wip";
 
 type StyledButtonProps = {
   size?: ButtonSize;

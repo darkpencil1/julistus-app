@@ -23,18 +23,26 @@ body {
   font-family: ${(props) => props.theme.fontFamily};
   color: ${(props) => props.theme.fontColor};
 }
+
 h1 {
   font-family: ${(props) => props.theme.ff.title};
   font-size: ${(p) => p.theme.fs.font_xxl}; 
 }
+
 h2 {
   font-family: ${(props) => props.theme.ff.title};
   font-size: ${(p) => p.theme.fs.font_xl}; 
 }
+
 h3 {
   font-family: ${(props) => props.theme.ff.primary};
   font-weight: ${(p) => p.theme.fw.fw_bold}; 
   font-size: ${(p) => p.theme.fs.font_lg}; 
+}
+
+a {
+  font-weight: ${(p) => p.theme.fw.fw_semibold};
+  color: ${(p) => p.theme.colors.primary};
 }
 `;
 

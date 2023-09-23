@@ -1,8 +1,13 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-const StyledHeader = styled(motion.header)`
-  width: 45%;
+type StyledHeaderProps = {
+  shrink: boolean;
+};
+const StyledHeader = styled(motion.header)<StyledHeaderProps>`
+  width: 900px;
+  min-width: ${(p) => (p.shrink ? "850px" : "140px")};
+  max-width: 900px;
   height: 90px;
   margin: 20px auto 0 10px;
   display: flex;

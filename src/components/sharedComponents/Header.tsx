@@ -42,7 +42,7 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > yScroll.current) {
+      if (window.scrollY > yScroll.current && window.scrollY > 200) {
         setScrollingUp(false);
         yScroll.current = window.scrollY;
       } else {
@@ -67,7 +67,11 @@ const Header: React.FC = () => {
   }, [scrollingUp, controls]);
 
   return (
-    <StyledHeader animate={controls} transition={{ duration: 0.4 }}>
+    <StyledHeader
+      animate={controls}
+      transition={{ duration: 0.4 }}
+      shrink={scrollingUp}
+    >
       <motion.div className="nav__logo" onClick={() => navigate("/")}>
         <Image src={logo} alt="Julistus" width="70px" />
       </motion.div>

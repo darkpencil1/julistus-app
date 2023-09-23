@@ -15,8 +15,8 @@ const portraitWidth = `${size / ratio}px`;
 
 const StyledLanderProductImg = styled.div<LanderImgProps>`
   position: absolute;
-  top: ${(p) => p.top}%;
-  left: ${(p) => p.left}%;
+  top: ${(p) => p.top}px;
+  left: ${(p) => p.left}px;
   border-radius: ${(p) => p.theme.br.br_medium};
 
   .lander__product-img {

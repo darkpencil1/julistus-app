@@ -1,6 +1,7 @@
 import heart from "../../../resources/images/sydän2.png";
 import MapLines from "./MapLines";
 import magnifier from "../../../resources/images/suurennuslasi-kuvake.png";
+import heartIcon from "../../../resources/images/goldenheart.png";
 import poster from "../../../resources/images/julisteproto1.png";
 import LanderIcon, { LanderIconProps } from "./LanderIcon";
 import LanderProductImg, { LanderProductImgProps } from "./LanderProductImg";
@@ -11,13 +12,14 @@ import MapLine2 from "./MapLines/MapLine2";
 
 const iconPositions: Array<LanderIconProps> = [
   { icon: magnifier, top: 60, left: 10, size: "sm" },
-  { icon: magnifier, top: 20, left: 80, size: "md" },
+  { icon: heartIcon, top: 20, left: 90, size: "md" },
   { icon: magnifier, top: 90, left: 20, size: "lg" },
+  { icon: heartIcon, top: -10, left: 40, size: "md" },
 ];
 
 const imgPositions: Array<LanderProductImgProps> = [
   { img: poster, top: 10, left: -30, orientation: Orientation.LANDSCAPE },
-  { img: poster, top: 60, left: 50, orientation: Orientation.LANDSCAPE },
+  { img: poster, top: 500, left: 700, orientation: Orientation.LANDSCAPE },
 ];
 
 const heartVariant: Variants = {
