@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/julistus-app/static/css/main.e6c13ad2.css",
+    "main.js": "/julistus-app/static/js/main.7674085c.js",
+    "static/js/787.b6158b6b.chunk.js": "/julistus-app/static/js/787.b6158b6b.chunk.js",
+    "static/media/wide1.png": "/julistus-app/static/media/wide1.e74db32eb2fc81a6f2af.png",
+    "static/media/tall1.png": "/julistus-app/static/media/tall1.40b47508fad98164d1d9.png",
+    "static/media/tall2.png": "/julistus-app/static/media/tall2.e392c96d232d90356364.png",
+    "static/media/julisteproto1.png": "/julistus-app/static/media/julisteproto1.3d78d08ec725664e040c.png",
+    "static/media/building1.png": "/julistus-app/static/media/building1.0ba66aa4aefb620908c9.png",
+    "static/media/badguys.png": "/julistus-app/static/media/badguys.66b8b49d2f3d6b212538.png",
+    "static/media/sydän1.png": "/julistus-app/static/media/sydän1.bd7a3d8a1517333e61bc.png",
+    "static/media/character.png": "/julistus-app/static/media/character.c20ad3a044c63c3ac76b.png",
+    "static/media/map-banner.png": "/julistus-app/static/media/map-banner.a61515e3d773d55f05d9.png",
+    "static/media/map-sidebanner.png": "/julistus-app/static/media/map-sidebanner.c7df6e0af8e7d7e4608b.png",
+    "static/media/tasha-1.webp": "/julistus-app/static/media/tasha-1.5501120de60198b1cf97.webp",
+    "static/media/banner.png": "/julistus-app/static/media/banner.a8c063bcd453937d8285.png",
+    "static/media/sydän-ilman-viiva.png": "/julistus-app/static/media/sydän-ilman-viiva.f705b5e8c6d37979a739.png",
+    "static/media/sydän2.png": "/julistus-app/static/media/sydän2.bdde9aa17e1d92c573d2.png",
+    "static/media/sydänlogo-viiva.png": "/julistus-app/static/media/sydänlogo-viiva.ac1fae42258d35da929b.png",
+    "static/media/goldenheart.png": "/julistus-app/static/media/goldenheart.4e5e9de76f9a42757d8e.png",
+    "static/media/kierrätys.webp": "/julistus-app/static/media/kierrätys.13dc94c576d5e76ce736.webp",
+    "static/media/smileface.webp": "/julistus-app/static/media/smileface.44821bf04fc7ce107148.webp",
+    "static/media/laatikko.webp": "/julistus-app/static/media/laatikko.00dc5fd9c52a1fbd05a9.webp",
+    "static/media/checkmark.webp": "/julistus-app/static/media/checkmark.a769dc2b1f8f4626780d.webp",
+    "static/media/Finland.webp": "/julistus-app/static/media/Finland.068fe6ff6d6a7ef068a7.webp",
+    "index.html": "/julistus-app/index.html",
+    "main.e6c13ad2.css.map": "/julistus-app/static/css/main.e6c13ad2.css.map",
+    "main.7674085c.js.map": "/julistus-app/static/js/main.7674085c.js.map",
+    "787.b6158b6b.chunk.js.map": "/julistus-app/static/js/787.b6158b6b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.7674085c.js"
+  ]
+}
