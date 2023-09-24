@@ -10,6 +10,7 @@ const Router: React.FC = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/julistus-app" element={<Home />} />
       <Route path="/kauppa" element={<Shop />} />
       <Route path="/tuote" element={<ProductPage />} />
       <Route path="/meistä" element={<About />} />
