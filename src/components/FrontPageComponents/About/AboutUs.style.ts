@@ -37,7 +37,9 @@ const StyledAboutUs = styled(Row)`
   }
   .about-us__value > h3 {
     margin-top: 10px;
+    font-weight: ${(p) => p.theme.fw.fw_semibold};
   }
+
   @media (max-width: 1400px) {
     margin: 50px;
     .about-us__value-container {

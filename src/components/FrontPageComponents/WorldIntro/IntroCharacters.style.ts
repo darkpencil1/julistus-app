@@ -24,6 +24,9 @@ const StyledIntroCharacters = styled.div`
   }
 
   @media (max-width: 1600px) {
+    > button {
+      margin-bottom: 0;
+    }
     .char__heart {
       width: 400px;
     }

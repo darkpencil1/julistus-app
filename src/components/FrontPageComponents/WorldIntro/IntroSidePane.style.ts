@@ -37,7 +37,7 @@ const StyledIntroSidePane = styled.div`
     color: ${(p) => p.theme.colors.secondary}!important;
     width: 80%;
     margin: auto;
-    font-weight: ${(p) => p.theme.fw.fw_bold};
+    font-weight: ${(p) => p.theme.fw.fw_semibold};
   }
   .sidepane__icon-container {
     position: relative;
@@ -47,12 +47,12 @@ const StyledIntroSidePane = styled.div`
   @media (max-width: 1600px) {
     width: 500px;
 
-    .sidepane__text-container > h1 {
+    .sidepane__title-container > h1 {
       font-size: ${(p) => p.theme.fs.font_xl};
     }
   }
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1450px) {
     width: 100%;
     flex-direction: row;
     margin: 0 auto;

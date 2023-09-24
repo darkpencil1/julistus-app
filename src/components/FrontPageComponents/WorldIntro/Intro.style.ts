@@ -7,7 +7,7 @@ const StyledIntro = styled(Row)`
   margin: 100px 0;
   height: 90vh;
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1450px) {
     flex-wrap: wrap-reverse;
     justify-content: center;
     margin-top: 300px;

@@ -34,10 +34,5 @@ const StyledLander = styled(motion.div)`
   .lander__subtitle {
     margin: 0;
   }
-
-  @media (max-width: 1400px) {
-    .lander__text-container {
-    }
-  }
 `;
 export default StyledLander;
