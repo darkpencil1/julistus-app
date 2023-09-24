@@ -14,7 +14,7 @@ const StyledHeader = styled(motion.header)<StyledHeaderProps>`
   flex-direction: row;
   align-items: center;
   background-color: ${(p) => p.theme.colors.bg};
-  border: 5px solid ${(p) => p.theme.primary};
+  border: 3px solid ${(p) => p.theme.primary};
   border-radius: ${(p) => p.theme.br.br_full};
   position: sticky;
   top: 20px;

@@ -10,8 +10,8 @@ const Lander = () => {
         <h1 className="lander__title">Fantasiataidetta</h1>
         <h3 className="lander__subtitle">kutsumuksen seuraamisesta</h3>
         <p>
-          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-          cillum sint consectetur cupidatat.
+          Julisteita, pinnejä ja merkkejä. Esineitä, jotka kuvaavat kutsumustasi
+          asiaan kuuluvalla eeppisyydellä.
         </p>
         <Button type="primary" size="lg" text="Kauppaan" />
       </Col>

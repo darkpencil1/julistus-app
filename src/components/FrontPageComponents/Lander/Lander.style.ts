@@ -22,14 +22,22 @@ const StyledLander = styled(motion.div)`
     justify-content: end;
     text-align: center;
   }
+
   .lander__text-container > p {
-    width: 70%;
+    width: 80%;
   }
+
   .lander__title {
     margin: 0;
   }
+
   .lander__subtitle {
     margin: 0;
+  }
+
+  @media (max-width: 1400px) {
+    .lander__text-container {
+    }
   }
 `;
 export default StyledLander;

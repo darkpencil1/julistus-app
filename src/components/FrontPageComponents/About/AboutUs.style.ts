@@ -38,6 +38,12 @@ const StyledAboutUs = styled(Row)`
   .about-us__value > h3 {
     margin-top: 10px;
   }
+  @media (max-width: 1400px) {
+    margin: 50px;
+    .about-us__value-container {
+      justify-content: space-between;
+    }
+  }
 `;
 
 export default StyledAboutUs;

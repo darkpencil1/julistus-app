@@ -6,6 +6,7 @@ export type LanderProductImgProps = {
   top: number;
   left: number;
   orientation: Orientation;
+  className?: string;
 };
 
 const LanderProductImg = ({
@@ -13,9 +14,15 @@ const LanderProductImg = ({
   top,
   left,
   orientation,
+  className,
 }: LanderProductImgProps) => {
   return (
-    <StyledLanderProductImg top={top} left={left} orientation={orientation}>
+    <StyledLanderProductImg
+      top={top}
+      left={left}
+      orientation={orientation}
+      className={className}
+    >
       <img className="lander__product-img" src={img} />
     </StyledLanderProductImg>
   );

@@ -22,6 +22,12 @@ const StyledIntroCharacters = styled.div`
     gap: 10px;
     margin-top: -200px;
   }
+
+  @media (max-width: 1600px) {
+    .char__heart {
+      width: 400px;
+    }
+  }
 `;
 
 export default StyledIntroCharacters;

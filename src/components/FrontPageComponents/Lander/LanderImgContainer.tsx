@@ -1,5 +1,4 @@
 import heart from "../../../resources/images/sydän2.png";
-import MapLines from "./MapLines";
 import magnifier from "../../../resources/images/suurennuslasi-kuvake.png";
 import heartIcon from "../../../resources/images/goldenheart.png";
 import poster from "../../../resources/images/julisteproto1.png";
@@ -18,8 +17,8 @@ const iconPositions: Array<LanderIconProps> = [
 ];
 
 const imgPositions: Array<LanderProductImgProps> = [
-  { img: poster, top: 10, left: -30, orientation: Orientation.LANDSCAPE },
-  { img: poster, top: 500, left: 700, orientation: Orientation.LANDSCAPE },
+  { img: poster, top: 10, left: -200, orientation: Orientation.LANDSCAPE },
+  { img: poster, top: 400, left: 500, orientation: Orientation.LANDSCAPE },
 ];
 
 const heartVariant: Variants = {
@@ -92,13 +91,14 @@ const LanderImgContainer = () => {
               duration: 0.3,
               type: "tween",
             }}
-            key={i}
+            key={`lander__product-img--${i}`}
           >
             <LanderProductImg
               img={img.img}
               top={img.top}
               left={img.left}
               orientation={img.orientation}
+              className={`lander__product-img--${i}`}
             />
           </motion.div>
         );

@@ -6,7 +6,7 @@ const size = "700px";
 
 const StyledLanderImgContainer = styled(motion.div)`
   position: relative;
-  flex: 1 0;
+  flex: 1;
   width: 100%;
   max-width: 100%;
 
@@ -29,6 +29,15 @@ const StyledLanderImgContainer = styled(motion.div)`
     mask-image: url(${heart});
     mask-repeat: no-repeat;
     mask-size: ${size};
+  }
+
+  @media (max-width: 1400px) {
+    scale: 0.8;
+
+    /*Change the positioning of product img*/
+    .lander__product-img--1 {
+      left: 400px;
+    }
   }
 `;
 

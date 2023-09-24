@@ -1,5 +1,5 @@
 import StyledLines, { StyledLinesProps } from "./MapLine.style";
-import { AnimatePresence, motion, useAnimate } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Filter from "./Filter";
 
@@ -11,11 +11,9 @@ const lines: Array<string> = [
 const MapLine2 = ({ size }: StyledLinesProps) => {
   const [show, setShow] = useState<boolean>(true);
   const activeLine = useRef(0);
-  const [scope, animate] = useAnimate();
 
   //Animate the svg periodically
   useEffect(() => {
-    console.log("useEffect fired, show", show);
     if (!show) {
       setTimeout(() => {
         activeLine.current =

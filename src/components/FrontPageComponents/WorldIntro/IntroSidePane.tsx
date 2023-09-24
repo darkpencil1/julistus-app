@@ -18,8 +18,10 @@ const IntroSidePane = () => {
   return (
     <StyledIntroSidePane ref={containerRef}>
       <div className="sidepane__text-container">
-        <h1>Tutustu maailmaamme</h1>
-        <h3>kutsumuksen seuraamisesta</h3>
+        <div className="sidepane__title-container">
+          <h1>Tutustu maailmaamme</h1>
+          <h3>kutsumuksen seuraamisesta</h3>
+        </div>
         <p>
           Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
           cillum sint consectetur cupidatat.

@@ -101,7 +101,7 @@ const Header: React.FC = () => {
                   exit="exit"
                   variants={navVariant}
                   transition={{ delay: i * 0.1, duration: 0.2 }}
-                  href={item.href}
+                  href="#"
                   key={i}
                 >
                   {item.name}

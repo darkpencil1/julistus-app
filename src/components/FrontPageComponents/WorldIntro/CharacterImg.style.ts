@@ -10,6 +10,12 @@ const StyledCharacterImg = styled.div`
   .char__img {
     height: 400px;
   }
+
+  @media (max-width: 1800px) {
+    .char__img {
+      height: 300px;
+    }
+  }
 `;
 
 export default StyledCharacterImg;
