@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export type ButtonSize = "sm" | "md" | "lg" | "xl";
-export type ButtonType = "primary" | "secondary" | "wip";
+export type ButtonType = "primary" | "secondary" | "white" | "wip";
 
 type StyledButtonProps = {
   size?: ButtonSize;
@@ -15,11 +15,6 @@ const StyledButton = styled(motion.button)<StyledButtonProps>`
   justify-content: center;
   flex-wrap: nowrap;
   align-items: center;
-  border: 5px solid
-    ${(p) =>
-      p.btnType === "secondary" ? p.theme.colors.secondary : "transparent"};
-  border-radius: ${(p) =>
-    p.btnType === "primary" ? p.theme.br.br_medium : p.theme.br.br_full};
   background-color: ${(p) => p.theme.colors.primary};
   color: ${(p) => p.theme.colors.secondary};
   font-weight: ${(p) => p.theme.fw.fw_bold};
@@ -33,6 +28,44 @@ const StyledButton = styled(motion.button)<StyledButtonProps>`
     background-color: ${(p) => p.theme.colors.primary};
     text-shadow: 0 0 20px ${(p) => p.theme.colors.red};
   }
+  &:hover {
+    cursor: pointer;
+  }
+
+  /* Type spesific styles*/
+  ${({ btnType, theme }) => {
+    switch (btnType) {
+      case "primary":
+        return `
+          border: 5px solid "transparent";
+          border-radius: ${theme.br.br_medium};
+      `;
+      case "secondary":
+        return `
+          border: 5px solid ${theme.colors.secondary};
+          border-radius: ${theme.br.br_full};
+        `;
+      case "white":
+        return `
+          border: 3px solid ${theme.colors.primary};
+          border-radius: ${theme.br.br_full};
+          background-color: ${theme.colors.white_muted};
+          color: ${theme.colors.primary};
+
+      `;
+      case "wip":
+        return `
+          border: 5px solid "transparent";
+          border-radius: ${theme.br.br_medium};
+      `;
+      default:
+        return `
+          border: 5px solid "transparent";
+          border-radius: ${theme.br.br_medium};
+      `;
+    }
+  }}
+
   /* Size-specific font sizes*/
   ${({ size, theme }) => {
     switch (size) {

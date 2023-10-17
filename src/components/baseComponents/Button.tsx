@@ -5,9 +5,10 @@ type ButtonProps = {
   type?: ButtonType;
   size?: ButtonSize;
   text: string;
+  onClick?: () => void;
 };
 
-const Button = ({ type, size, text, className }: ButtonProps) => {
+const Button = ({ type, size, text, className, onClick }: ButtonProps) => {
   return (
     <StyledButton
       whileHover={{ scale: 1.05 }}
@@ -15,6 +16,7 @@ const Button = ({ type, size, text, className }: ButtonProps) => {
       size={size}
       btnType={type}
       className={className}
+      onClick={onClick}
     >
       {text}
     </StyledButton>

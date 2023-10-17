@@ -52,7 +52,7 @@ export const ProductItem = (props: ProductProps) => {
 
   return (
     <StyledProductItem>
-      <Card className="product__container" onClick={() => handleClick()}>
+      <Card className="product__container">
         <Row className="product__content-container">
           <Col className="product__img-container">
             <Image className="product__img" src={props.images[0]} />
@@ -63,9 +63,10 @@ export const ProductItem = (props: ProductProps) => {
             {/*<div className="product__price">alkaen {props.price}€</div>*/}
             <Button
               className="product__cta"
-              type="secondary"
+              type="white"
               size="md"
-              text="Katso lisää"
+              text="Katso"
+              onClick={handleClick}
             />
           </Row>
         </Row>

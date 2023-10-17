@@ -6,6 +6,7 @@ const colors = {
   bg_secondary: "#F5F5F5",
   red: "#E94B29",
   white_muted: "#f2f2f2",
+  gray: "#9E9E9E",
 };
 
 export default colors;
