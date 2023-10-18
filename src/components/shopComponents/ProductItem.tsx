@@ -52,25 +52,23 @@ export const ProductItem = (props: ProductProps) => {
 
   return (
     <StyledProductItem>
-      <Card className="product__container">
-        <Row className="product__content-container">
-          <Col className="product__img-container">
-            <Image className="product__img" src={props.images[0]} />
-          </Col>
-          <Row className="product__text-container">
-            <h2 className="product__title">{props.name}</h2>
-            <div className="product__text">{props.description}</div>
-            {/*<div className="product__price">alkaen {props.price}€</div>*/}
-            <Button
-              className="product__cta"
-              type="white"
-              size="md"
-              text="Katso"
-              onClick={handleClick}
-            />
-          </Row>
+      <Row className="product__content-container">
+        <Col className="product__img-container">
+          <Image className="product__img" src={props.images[0]} />
+        </Col>
+        <Row className="product__text-container">
+          <h2 className="product__title">{props.name}</h2>
+          <div className="product__text">{props.description}</div>
+          {/*<div className="product__price">alkaen {props.price}€</div>*/}
+          <Button
+            className="product__cta"
+            type="white"
+            size="md"
+            text="Katso"
+            onClick={handleClick}
+          />
         </Row>
-      </Card>
+      </Row>
     </StyledProductItem>
   );
 };

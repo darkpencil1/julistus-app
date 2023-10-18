@@ -5,22 +5,15 @@ const content_gap = "10px";
 
 const StyledProductItem = styled(Card)`
   flex: 1;
-  flex-basis: 45%;
   height: auto;
   min-height: 400px;
+  min-width: 750px;
+  width: 750px;
   border-bottom: 5px solid ${(props) => props.theme.colors.gray};
   border-right: 5px solid ${(props) => props.theme.colors.gray};
   box-shadow: 0 0 10px ${(props) => props.theme.colors.gray};
   border-radius: 15px;
   padding: 0;
-
-  .product__container {
-    display: flex;
-    flex-direction: column;
-    align-content: start;
-    height: 100%;
-    border-radius: 15px;
-  }
 
   .product__img-container {
     width: ${(p) => p.theme.column.col_6};
@@ -31,6 +24,7 @@ const StyledProductItem = styled(Card)`
     align-content: center;
     align-items: center;
     border-radius: 15px 0 0 15px;
+    background-color: ${(p) => p.theme.colors.white};
   }
 
   .product__img {
@@ -51,7 +45,7 @@ const StyledProductItem = styled(Card)`
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    padding: 30px 0;
+    padding: 30px;
     border-radius: 0 15px 15px 0;
   }
 

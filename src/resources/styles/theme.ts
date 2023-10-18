@@ -5,6 +5,7 @@ import br from "./br";
 import fontWeight from "./fontWeight";
 import fontSize from "./fontSize";
 import fontFamily from "./fontFamily";
+import textShadow from "./textShadow";
 
 const theme = {
   colors: colors,
@@ -14,6 +15,7 @@ const theme = {
   fw: fontWeight,
   fs: fontSize,
   ff: fontFamily,
+  ts: textShadow,
   fontSize: "25px",
   fontFamily: fontFamily.primary,
   fontColor: colors.primary,
