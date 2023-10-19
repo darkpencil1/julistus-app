@@ -63,8 +63,6 @@ const Line = ({ container }: LineProps) => {
         </clipPath>
         <filter
           id="banner-filter"
-          x="-87.9678"
-          y="0.834717"
           width="2470.73"
           height="443.075"
           filterUnits="userSpaceOnUse"
