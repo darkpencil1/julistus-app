@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Row from "../baseComponents/Row.style";
-import banner from "../../resources/images/banner.png";
+import banner from "../../resources/images/shop-banner.png";
 
 const StyledProductBanner = styled(Row)`
   height: 400px;

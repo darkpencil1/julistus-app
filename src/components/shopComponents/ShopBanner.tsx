@@ -1,4 +1,3 @@
-import { ShopBannerInfo } from "./ShopBannerInfo";
 import StyledProductBanner from "./ShopBanner.style";
 
 export const ShopBanner = () => {
