@@ -3,7 +3,7 @@ import Row from "../baseComponents/Row.style";
 import banner from "../../resources/images/shop-banner.png";
 
 const StyledProductBanner = styled(Row)`
-  height: 400px;
+  height: 370px;
   position: relative;
   overflow: hidden;
   margin: 0 ${(p) => p.theme.spacing.spacing_7};

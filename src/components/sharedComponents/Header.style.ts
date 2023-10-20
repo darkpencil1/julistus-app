@@ -9,7 +9,7 @@ const StyledHeader = styled(motion.header)<StyledHeaderProps>`
   min-width: ${(p) => (p.shrink ? "850px" : "140px")};
   max-width: 900px;
   height: 90px;
-  margin: 20px auto 30px 10px;
+  margin: 20px auto 20px 10px;
   display: flex;
   flex-direction: row;
   align-items: center;

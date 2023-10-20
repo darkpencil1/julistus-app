@@ -6,7 +6,7 @@ const content_gap = "10px";
 const StyledProductItem = styled(Card)`
   flex: 1;
   height: auto;
-  min-height: 400px;
+  min-height: 320px;
   min-width: 750px;
   width: 750px;
   border-bottom: 5px solid ${(props) => props.theme.colors.gray};
@@ -29,15 +29,9 @@ const StyledProductItem = styled(Card)`
 
   .product__img {
     object-fit: contain;
-    max-width: 350px;
-    max-height: 350px;
+    max-width: 300px;
+    max-height: 300px;
     border-radius: ${(p) => p.theme.br.br_medium};
-  }
-
-  .product__content-container {
-    height: 100%;
-    flex-direction: row;
-    gap: ${content_gap};
   }
 
   .product__text-container {
@@ -50,12 +44,12 @@ const StyledProductItem = styled(Card)`
   }
 
   .product__text {
-    margin: 0 auto 0;
+    margin: 0 auto ${(p) => p.theme.spacing.spacing_1};
   }
 
   .product__title {
     width: auto;
-    margin: 0 auto ${(p) => p.theme.spacing.spacing_3};
+    margin: 0 auto ${(p) => p.theme.spacing.spacing_2};
   }
 
   .product__cta {
