@@ -1,37 +1,13 @@
 import React from "react";
-import Row from "../baseComponents/Row.style";
-import Col from "../baseComponents/Col.style";
-import portrait from "../../resources/images/tasha-1.webp";
+import MissionBanner from "../AboutPageComponents/MissionBanner";
+import OurStory from "../AboutPageComponents/OurStory";
 import StyledAboutPage from "./About.style";
-import Button from "../baseComponents/Button.style";
-import Image from "../baseComponents/Image.style";
 
 const About: React.FC = () => {
   return (
     <StyledAboutPage>
-      <Row>
-        <Col className="text__container">
-          <h1>Meistä</h1>
-          <p className="lead">
-            Esittele tässä kuvat uusista julkaisuista ja vähän fiksua tekstiä.
-          </p>
-          <p className="paragraph">
-            Varsinainen teksti Julistuksen missiosta kuvittaa elämäntarkoituksen
-            seuraamista Suomessa. Varsinainen teksti Julistuksen missiosta
-            kuvittaa elämäntarkoituksen seuraamista Suomessa. Varsinainen teksti
-            Julistuksen missiosta kuvittaa elämäntarkoituksen seuraamista
-            Suomessa. Varsinainen teksti Julistuksen missiosta kuvittaa
-            elämäntarkoituksen seuraamista Suomessa. Varsinainen teksti
-            Julistuksen missiosta kuvittaa elämäntarkoituksen seuraamista
-            Suomessa. Varsinainen teksti Julistuksen missiosta kuvittaa
-            elämäntarkoituksen seuraamista Suomessa.
-          </p>
-          <Button>Kauppaan</Button>
-        </Col>
-        <Col className="image__container">
-          <Image src={portrait} />
-        </Col>
-      </Row>
+      <MissionBanner />
+      <OurStory />
     </StyledAboutPage>
   );
 };
