@@ -5,20 +5,20 @@ export type Value = {
 
 const values: Array<Value> = [
   {
-    name: "Kohti mestaruutta",
+    name: "Mestaruus",
     desc: "Lorem ipsum dolor sit amet, qui minim labore",
   },
   {
-    name: "Kohti mestaruutta",
+    name: "Kutsumus",
     desc: "Lorem ipsum dolor sit amet, qui minim labore",
   },
   {
-    name: "Kohti mestaruutta",
+    name: "Fantasia",
     desc: "Lorem ipsum dolor sit amet, qui minim labore",
   },
   {
-    name: "Kohti mestaruutta",
-    desc: "Lorem ipsum dolor sit amet, qui minim labore",
+    name: "Rakkaus",
+    desc: "Lorem ipsum dolor sit amet, qui minim labore. Sit amet, qui.",
   },
 ];
 
