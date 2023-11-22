@@ -5,7 +5,9 @@ const StyledValueContainer = styled.div`
   flex-direction: row;
   align-items: start;
   gap: 70px;
-  margin: 0 ${(p) => p.theme.spacing.spacing_6};
+  margin: ${(p) => p.theme.spacing.spacing_4}
+    ${(p) => p.theme.spacing.spacing_6};
+  height: 300px;
 `;
 
 export default StyledValueContainer;

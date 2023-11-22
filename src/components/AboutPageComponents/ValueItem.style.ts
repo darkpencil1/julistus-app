@@ -4,21 +4,20 @@ import { motion } from "framer-motion";
 
 const StyledValueItem = styled(motion.div)`
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  height: 100px;
-
   flex: 1 1 200px;
+  overflow-y: hidden;
+
+  height: 100px;
+  padding: ${(p) => p.theme.spacing.spacing_2};
 
   border-radius: ${(p) => p.theme.br.br_large};
   border-bottom: 5px solid ${(props) => props.theme.colors.gray};
   border-right: 5px solid ${(props) => props.theme.colors.gray};
   box-shadow: 0 0 10px ${(props) => props.theme.colors.gray};
 
-  padding: ${(p) => p.theme.spacing.spacing_2};
+  /*Small animation for height change*/
+  transition: height 0.3s;
 
   &:hover {
     background-color: ${(p) => p.theme.colors.primary};
@@ -30,13 +29,24 @@ const StyledValueItem = styled(motion.div)`
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    p {
+      display: block;
+    }
   }
 
   h2 {
     font-family: ${(p) => p.theme.ff.primary};
+    margin: 0;
   }
 
   p {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
     font-size: 1.5rem;
     margin-top: 0;
     font-weight: ${(p) => p.theme.fw.fw_semibold};

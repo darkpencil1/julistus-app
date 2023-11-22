@@ -1,7 +1,8 @@
 import { useRef, useState } from "react";
 import StyledValueItem from "./ValueItem.style";
 import { Value } from "./values";
-import { useInView, Variants } from "framer-motion";
+import { AnimatePresence, motion, useInView, Variants } from "framer-motion";
+import colors from "../../resources/styles/baseColors";
 
 type ValueItemProps = {
   value: Value;
@@ -14,6 +15,14 @@ const valueVariant: Variants = {
     scale: [0, 1],
   },
   hidden: { opacity: 0 },
+};
+
+const descVariant: Variants = {
+  animate: {
+    opacity: [0, 1],
+  },
+  hidden: { opacity: 0 },
+  exit: { opacity: [0, 1] },
 };
 
 const ValueItem = ({ value, delay }: ValueItemProps) => {
@@ -37,7 +46,22 @@ const ValueItem = ({ value, delay }: ValueItemProps) => {
       ref={containerRef}
     >
       <h2>{value.name}</h2>
-      {hovered && <p>{value.desc}</p>}
+      <AnimatePresence>
+        {hovered && (
+          <motion.p
+            initial="hidden"
+            animate="animate"
+            exit="exit"
+            variants={descVariant}
+            transition={{
+              delay: 0.1,
+              duration: 0.3,
+            }}
+          >
+            {value.desc}
+          </motion.p>
+        )}
+      </AnimatePresence>
     </StyledValueItem>
   );
 };
