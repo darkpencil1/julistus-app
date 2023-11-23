@@ -1,20 +1,21 @@
 import Row from "../baseComponents/Row.style";
 import Image from "../baseComponents/Image.style";
-import StyledTeamMember from "./TeamMember.style";
-import { Member } from "./teamMembers";
+import StyledTeamMemberCard from "./TeamMemberCard.style";
+import { TeamMember } from "./teamMembers";
 
-const TeamMember = ({ img, name, description }: Member) => {
+const TeamMemberCard = ({ img, name, description, imgDesc }: TeamMember) => {
   return (
-    <StyledTeamMember>
+    <StyledTeamMemberCard>
       <div className="member__img-container">
         <Image className="member__img" src={img} />
+        <p className="member__img-desc">{imgDesc}</p>
       </div>
       <Row className="member__text-container">
         <h2 className="member__title">{name}</h2>
         <div className="member__text">{description}</div>
       </Row>
-    </StyledTeamMember>
+    </StyledTeamMemberCard>
   );
 };
 
-export default TeamMember;
+export default TeamMemberCard;

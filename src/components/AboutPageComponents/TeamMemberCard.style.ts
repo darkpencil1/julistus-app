@@ -3,8 +3,8 @@ import Card from "../baseComponents/Card.style";
 
 const content_gap = "10px";
 
-const StyledTeamMember = styled(Card)`
-  flex: 1;
+const StyledTeamMemberCard = styled(Card)`
+  flex-direction: row-reverse;
   height: auto;
   min-height: 320px;
   min-width: 750px;
@@ -17,24 +17,29 @@ const StyledTeamMember = styled(Card)`
 
   .member__img-container {
     flex: 1 0;
-    width: 100%;
     max-width: 100%;
     width: ${(p) => p.theme.column.col_6};
     max-height: 100%;
     max-width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
     align-items: center;
-    border-radius: 15px 0 0 15px;
+    border-radius: 0 15px 15px 0;
     background-color: ${(p) => p.theme.colors.white};
-  }
 
-  .member__img {
-    object-fit: contain;
-    max-width: 300px;
-    max-height: 300px;
-    border-radius: ${(p) => p.theme.br.br_medium};
+    .member__img {
+      object-fit: contain;
+      max-width: 300px;
+      max-height: 300px;
+      border-radius: ${(p) => p.theme.br.br_medium};
+    }
+    .member__img-desc {
+      font-size: ${(p) => p.theme.fs.font_xs};
+      max-width: 300px;
+      margin-top: 10px;
+    }
   }
 
   .member__text-container {
@@ -56,4 +61,4 @@ const StyledTeamMember = styled(Card)`
   }
 `;
 
-export default StyledTeamMember;
+export default StyledTeamMemberCard;
