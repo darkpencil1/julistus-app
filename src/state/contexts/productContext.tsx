@@ -18,11 +18,10 @@ type ProviderProps = {
 const ProductProvider = ({ children }: ProviderProps) => {
   const [product, dispatch] = useReducer(productReducer, null);
 
-  const selectProduct = (product: IProduct) => {
-    console.log("IProduct SELECTED:", product);
+  const selectProduct = (productId: IProduct["id"]) => {
     dispatch({
       type: productActionType.VIEW_PRODUCT,
-      payload: product,
+      payload: productId,
     });
   };
 

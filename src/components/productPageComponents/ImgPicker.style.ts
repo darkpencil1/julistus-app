@@ -1,23 +1,24 @@
 import styled from "styled-components";
-import Col from "../baseComponents/Col.style";
 
-const StyledImgPicker = styled(Col)`
-
-    width: ${(p) => p.theme.column.col_1};
-    max-height: 100%;
-    overflow-y: scroll;
-    flex-direction: column;
-    gap: 1rem 0;
-    height: 100%;
+const StyledImgPicker = styled.div`
     display: flex;
+    flex-direction: row;
+    justify-content:center;
+    margin: auto;
+    height: 170px;
+    max-height: 170px;
+    width: 90%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 1rem 0;
 
   .picker__img-container {
-    background-color: white;
     min-width: 150px;
     min-height: 150px;
     position: relative;
     border-radius: ${(p) => p.theme.br.br_small};
   }
+
   }
   .picker__thumbnail-img {
     object-fit: contain;

@@ -1,6 +1,6 @@
 import React from "react";
 import Row from "../baseComponents/Row.style";
-import { ProductItem } from "../shopComponents/ProductItem";
+import ProductItem from "../shopComponents/ProductItem";
 import { ShopBanner } from "../shopComponents/ShopBanner";
 import StyledShop from "./Shop.style";
 import products from "../../resources/misc/products";
@@ -15,12 +15,8 @@ const Shop: React.FC = () => {
           <ProductItem
             id={product.id}
             images={product.images}
-            title_img={product.title_img}
             name={product.name}
-            price={product.price}
-            categories={product.categories}
-            description={product.description}
-            orientation={product.orientation}
+            snapshot={product.snapshot}
             key={i}
           />
         ))}

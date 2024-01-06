@@ -1,6 +1,5 @@
 import React from "react";
 import Col from "../baseComponents/Col.style";
-import Row from "../baseComponents/Row.style";
 import Image from "../baseComponents/Image.style";
 import { useProduct } from "../../state/contexts/productContext";
 import StyledImgPicker from "./ImgPicker.style";
@@ -22,7 +21,7 @@ export const ImgPicker = (props: ImgPickerProps) => {
     <StyledImgPicker>
       {product?.images.map((img: string, i: number) => {
         return (
-          <Col
+          <div
             className="picker__img-container"
             style={
               selectedImg === img
@@ -33,7 +32,7 @@ export const ImgPicker = (props: ImgPickerProps) => {
             key={i}
           >
             <Image src={img} className="picker__thumbnail-img" />
-          </Col>
+          </div>
         );
       })}
     </StyledImgPicker>

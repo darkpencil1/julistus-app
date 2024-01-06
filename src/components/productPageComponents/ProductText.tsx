@@ -1,15 +1,14 @@
 import { useProduct } from "../../state/contexts/productContext";
-import Col from "../baseComponents/Col.style";
-//const lorem =
-//"Lorem ipsum dolor sit amet, consectetur adipiscing elit. phasellus pretium congue venenatis. donec a ante interdum, mattis felis sed, sagittis nisi. nam congue vulputate ex, quis tincidunt urna pharetra eget. nam lobortis diam dapibus dapibus lacinia. vivamus at viverra justo. nunc auctor felis fringilla, placerat ante ac, fermentum erat. praesent bibendum lectus ut nunc fringilla rhoncus. sed porttitor, lectus ac lacinia mattis, tellus nunc accumsan velit, vel sollicitudin elit est nec elit. aenean quis dui tincidunt, porttitor sem semper, aliquam nulla. morbi tincidunt, velit id lacinia euismod, diam est auctor sapien, vel pellentesque neque dolor eget tellus. aenean varius magna eget neque lacinia venenatis. ";
+import StyledProductText from "./ProductText.style";
 
-export const ProductText = () => {
+const ProductText = () => {
   const { product } = useProduct();
   return (
-    <Col>
+    <StyledProductText>
+      <p className="product__text-class">{product?.class}</p>
       <h2>{product?.name}</h2>
       <p>{product?.description}</p>
-      <p>{product?.description}</p>
-    </Col>
+    </StyledProductText>
   );
 };
+export default ProductText;

@@ -5,7 +5,6 @@ const content_gap = "10px";
 
 const StyledProductItem = styled(Card)`
   flex: 1;
-  height: auto;
   min-height: 320px;
   min-width: 750px;
   width: 750px;
@@ -14,6 +13,7 @@ const StyledProductItem = styled(Card)`
   box-shadow: 0 0 10px ${(props) => props.theme.colors.gray};
   border-radius: 15px;
   padding: 0;
+  background-color: ${(p) => p.theme.colors.bg};
 
   .product__img-container {
     width: ${(p) => p.theme.column.col_6};

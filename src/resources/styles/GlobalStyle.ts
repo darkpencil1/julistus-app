@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import theme from "./theme";
+import bg from "../images/taustagrafiikka1.png";
 
 type GlobalProps = {
   theme: typeof theme;
@@ -15,13 +16,16 @@ const GlobalStyle = createGlobalStyle<GlobalProps>`
 }
 
 html {
-  font-size: ${(p) => p.theme.fontSize}
+  font-size: ${(p) => p.theme.fontSize};
 }
 
 body {
   background-color: ${(p) => p.theme.colors.bg};
   font-family: ${(props) => props.theme.fontFamily};
   color: ${(props) => props.theme.fontColor};
+  background-image: url(${bg});
+  background-repeat: repeat-y;
+  background-size: 100% auto;
 }
 
 h1 {
@@ -43,6 +47,35 @@ h3 {
 a {
   font-weight: ${(p) => p.theme.fw.fw_semibold};
   color: ${(p) => p.theme.colors.primary};
+}
+
+/*Scrollbar styles*/
+
+/* Track */
+::-webkit-scrollbar {
+  width: 7px; /* Set the width of the scrollbar */
+  height: 7px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #a0a0a0; /* Set the color of the scrollbar handle */
+  border-radius: 3px; /* Add rounded corners to the handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #808080; /* Set the color of the handle on hover */
+}
+
+/* Track on hover */
+::-webkit-scrollbar-track:hover {
+  background-color: #f0f0f0; /* Set the color of the track on hover */
+}
+
+/* Handle when dragging */
+::-webkit-scrollbar-thumb:active {
+ background-color: #606060; /* Set the color of the handle when dragging */
 }
 `;
 

@@ -4,59 +4,29 @@ import Row from "../baseComponents/Row.style";
 import Image from "../baseComponents/Image.style";
 import Button from "../baseComponents/Button";
 import { useProduct } from "../../state/contexts/productContext";
-import IProduct, {
-  Orientation,
-} from "../../resources/interfaces/ProductInterface";
+import IProduct from "../../resources/interfaces/ProductInterface";
 import StyledProductItem from "./ProductItem.style";
 
-type ProductProps = {
-  id: number;
-  images: Array<string>;
-  title_img: string;
-  name: string;
-  price: number;
-  description: string;
-  categories: Array<string>;
-  orientation: Orientation;
-};
-
-export const ProductItem = (props: ProductProps) => {
-  const {
-    id,
-    images,
-    name,
-    price,
-    description,
-    categories,
-    title_img,
-    orientation,
-  } = props;
+const ProductItem = (
+  props: Pick<IProduct, "id" | "images" | "name" | "snapshot">
+) => {
+  const { id, images, name, snapshot } = props;
   const { selectProduct } = useProduct();
   const navigate = useNavigate();
 
   const handleClick = () => {
-    const product: IProduct = {
-      id: id,
-      name: name,
-      images: images,
-      title_img: title_img,
-      price: price,
-      description: description,
-      categories: categories,
-      orientation: orientation,
-    };
-    selectProduct({ ...product });
-    navigate(`/tuote?id=${name}`);
+    selectProduct(id);
+    navigate(`/tuote?id=${id}`);
   };
 
   return (
     <StyledProductItem>
       <Col className="product__img-container">
-        <Image className="product__img" src={props.images[0]} />
+        <Image className="product__img" src={images[0]} />
       </Col>
       <Row className="product__text-container">
-        <h2 className="product__title">{props.name}</h2>
-        <div className="product__text">{props.description}</div>
+        <h2 className="product__title">{name}</h2>
+        <div className="product__text">{snapshot}</div>
         {/*<div className="product__price">alkaen {props.price}€</div>*/}
         <Button
           className="product__cta"
@@ -69,3 +39,4 @@ export const ProductItem = (props: ProductProps) => {
     </StyledProductItem>
   );
 };
+export default ProductItem;

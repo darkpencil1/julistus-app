@@ -12,7 +12,7 @@ const StyledProductBanner = styled(Row)`
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: start;
-  border-radius: 70px;
+  border-radius: 50px;
   border-right: 10px solid ${(p) => p.theme.colors.primary_shadow};
   border-bottom: 10px solid ${(p) => p.theme.colors.primary_shadow};
   box-shadow: 5px 5px 20px 10px ${(p) => p.theme.colors.gray};

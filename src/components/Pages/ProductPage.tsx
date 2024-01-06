@@ -1,21 +1,30 @@
-import { ProductImgDisplay } from "../productPageComponents/ProductImgDisplay";
-import { ProductText } from "../productPageComponents/ProductText";
-import { AddToCartPanel } from "../productPageComponents/AddToCartPanel";
+import { useSearchParams } from "react-router-dom";
+import ProductImgContainer from "../productPageComponents/ProductImgContainer";
+import ProductText from "../productPageComponents/ProductText";
 import StyledProductPage from "./Product.style";
-import Col from "../baseComponents/Col.style";
 import Row from "../baseComponents/Row.style";
+import { useEffect } from "react";
+import { useProduct } from "../../state/contexts/productContext";
 
-export const ProductPage = () => {
+const ProductPage = () => {
+  const [searchParams] = useSearchParams();
+  const id = searchParams.get("id");
+  const { product, selectProduct } = useProduct();
+
+  //Set product if none is set
+  //eg. when user navigates via url instead of shop
+  useEffect(() => {
+    if (!product) {
+      //Conversion to number can throw an error.
+      selectProduct(Number(id));
+    }
+  }, []);
+
   return (
     <StyledProductPage>
-      <Row>
-        <Col className="product__col">
-          <Row className="product__container">
-            <ProductImgDisplay />
-            <ProductText />
-          </Row>
-        </Col>
-        <AddToCartPanel />
+      <Row className="product__container">
+        <ProductImgContainer />
+        <ProductText />
       </Row>
     </StyledProductPage>
   );
