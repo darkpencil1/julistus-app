@@ -7,7 +7,7 @@ const products: Array<IProduct> = [
   {
     id: 1,
     name: "Tuotteen nimi",
-    class: "juliste",
+    class: "poster",
     snapshot:
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
     description: `Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. 
@@ -19,7 +19,7 @@ const products: Array<IProduct> = [
   {
     id: 2,
     name: "Pidempi tuotteen nimi",
-    class: "juliste",
+    class: "poster",
     snapshot:
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
     description:
@@ -31,7 +31,7 @@ const products: Array<IProduct> = [
   {
     id: 3,
     name: "Todella pitkä tuotteen nimi",
-    class: "juliste",
+    class: "poster",
     snapshot:
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
     description:
@@ -43,7 +43,7 @@ const products: Array<IProduct> = [
   {
     id: 4,
     name: "Pidempi tuotteen nimi",
-    class: "juliste",
+    class: "poster",
     snapshot:
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
     description:
@@ -55,7 +55,7 @@ const products: Array<IProduct> = [
   {
     id: 5,
     name: "Pidempi tuotteen nimi",
-    class: "juliste",
+    class: "poster",
     snapshot:
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
     description:
@@ -67,7 +67,7 @@ const products: Array<IProduct> = [
   {
     id: 6,
     name: "Todella pitkä tuotteen nimi",
-    class: "juliste",
+    class: "poster",
     snapshot:
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
     description:
@@ -79,7 +79,7 @@ const products: Array<IProduct> = [
   {
     id: 7,
     name: "Pidempi tuotteen nimi",
-    class: "juliste",
+    class: "poster",
     snapshot:
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
     description:
@@ -91,7 +91,7 @@ const products: Array<IProduct> = [
   {
     id: 8,
     name: "Tuotteen nimi",
-    class: "juliste",
+    class: "poster",
     snapshot:
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
     description:
@@ -100,7 +100,6 @@ const products: Array<IProduct> = [
     images: [wide1, wide1, tall1, tall2],
     orientation: Orientation.LANDSCAPE,
   },
-  // Add more products here if needed
 ];
 
 export default products;

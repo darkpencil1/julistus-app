@@ -5,6 +5,7 @@ import StyledProductPage from "./Product.style";
 import Row from "../baseComponents/Row.style";
 import { useEffect } from "react";
 import { useProduct } from "../../state/contexts/productContext";
+import { AddToCartPanel } from "../productPageComponents/AddToCartPanel";
 
 const ProductPage = () => {
   const [searchParams] = useSearchParams();
@@ -26,6 +27,7 @@ const ProductPage = () => {
         <ProductImgContainer />
         <ProductText />
       </Row>
+      <AddToCartPanel />
     </StyledProductPage>
   );
 };

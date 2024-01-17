@@ -3,7 +3,7 @@ export enum Orientation {
   LANDSCAPE = "landscape",
 }
 
-type ProductClass = "juliste" | "merkki";
+type ProductClass = "poster" | "tag";
 
 interface IProduct {
   id: number;
