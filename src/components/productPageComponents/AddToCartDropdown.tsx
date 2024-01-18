@@ -1,4 +1,4 @@
-import { AnimatePresence, motion, Variants } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import StyledAddToCartDropdown from "./AddToCartDropdown.style";
 
@@ -13,17 +13,6 @@ type AddToCartDropdownProps = {
   options: Array<DropdownOption>;
   setSelected: (param1: DropdownOption, param2: number) => void;
   dropdownId: number;
-};
-
-const dropDownVariant: Variants = {
-  animate: {
-    translateX: [-20, 0],
-    opacity: [0, 1],
-  },
-  exit: {
-    translateX: [0, -20],
-    opacity: [1, 0],
-  },
 };
 
 const AddToCartDropdown = ({
@@ -42,34 +31,39 @@ const AddToCartDropdown = ({
     setSelectedOption(option);
   };
 
-  const calcDelay = (i: number) => {
-    //Play exit animations
-    if (!show) {
-      return options.length - i * 0.2;
-
-      //Entrance animations
-    } else return i * 0.2;
-  };
-
   return (
     <StyledAddToCartDropdown onClick={() => setShow(!show)}>
       <div className="addToCart__selected">
         {selectedOption && selectedOption.name}
       </div>
-      <AnimatePresence>
+      <AnimatePresence onExitComplete={() => setShow(false)}>
         {show && (
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: [1, 0], translateX: -10 }}
+            animate={{ opacity: 1, transition: { delay: 0 } }}
+            exit={{
+              opacity: [1, 0],
+              translateX: -10,
+              transition: { delay: (options.length + 1) * 0.2 },
+            }}
             className="addToCart__dropdown"
           >
             {options.map((option: DropdownOption, i: number) => (
               <motion.span
-                animate="animate"
-                exit="exit"
-                variants={dropDownVariant}
-                transition={{ delay: calcDelay(i) }}
+                animate={{
+                  translateX: [-20, 0],
+                  opacity: [0, 1],
+                  transition: {
+                    delay: i * 0.2,
+                  },
+                }}
+                exit={{
+                  translateX: [0, -20],
+                  opacity: [1, 0],
+                  transition: {
+                    delay: (options.length - i) * 0.2,
+                  },
+                }}
                 key={option.id}
                 className={`addToCart__dropdown-option ${
                   selectedOption?.id === option.id ? "selected" : ""
