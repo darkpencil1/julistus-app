@@ -54,23 +54,26 @@ export const AddToCartPanel = () => {
 
   return (
     <StyledAddToCartPanel>
-      {options?.map((option: AddToCartOption, i: number) => {
-        return (
-          <div className="addToCart__dropdown-container" key={i}>
-            <label>{option.name}</label>
-            <AddToCartDropdown
-              options={option.data}
-              setSelected={addCartEntry}
-              dropdownId={i}
-            />
-          </div>
-        );
-      })}
-      <div className="addToCart__price">
-        <label>Hinta</label>
-        <p>{product?.price}€</p>
+      <div className="addToCart__panel">
+        {options?.map((option: AddToCartOption, i: number) => {
+          return (
+            <div className="addToCart__dropdown-container" key={i}>
+              <label>{option.name}</label>
+              <AddToCartDropdown
+                options={option.data}
+                setSelected={addCartEntry}
+                dropdownId={i}
+              />
+            </div>
+          );
+        })}
+
+        <div className="addToCart__price">
+          <label>Hinta</label>
+          <p>{product?.price}€</p>
+        </div>
+        <Button text="Lisää koriin" size="md" type="primary" />
       </div>
-      <Button text="Lisää koriin" size="md" type="primary" />
     </StyledAddToCartPanel>
   );
 };

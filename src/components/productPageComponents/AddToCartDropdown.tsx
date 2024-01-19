@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import StyledAddToCartDropdown from "./AddToCartDropdown.style";
 
 export type DropdownOption = {
@@ -24,6 +24,36 @@ const AddToCartDropdown = ({
     DropdownOption | undefined
   >(undefined);
   const [show, setShow] = useState<boolean>(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !(dropdownRef.current as HTMLDivElement).contains(event.target as Node)
+      ) {
+        // Clicked outside the component
+        setShow(false);
+      }
+    };
+
+    const handleEscapeKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        // Pressed the escape key
+        setShow(false);
+      }
+    };
+
+    // Add event listeners when the component mounts
+    document.addEventListener("click", handleClickOutside);
+    document.addEventListener("keydown", handleEscapeKey);
+
+    // Remove event listeners when the component unmounts
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("keydown", handleEscapeKey);
+    };
+  }, []);
 
   const handleDropdownChange = (option: DropdownOption) => {
     setSelected(option, dropdownId);
@@ -32,7 +62,7 @@ const AddToCartDropdown = ({
   };
 
   return (
-    <StyledAddToCartDropdown onClick={() => setShow(!show)}>
+    <StyledAddToCartDropdown onClick={() => setShow(!show)} ref={dropdownRef}>
       <div className="addToCart__selected">
         {selectedOption && selectedOption.name}
       </div>
@@ -44,7 +74,7 @@ const AddToCartDropdown = ({
             exit={{
               opacity: [1, 0],
               translateX: -10,
-              transition: { delay: (options.length + 1) * 0.2 },
+              transition: { delay: (options.length + 1) * 0.1 },
             }}
             className="addToCart__dropdown"
           >
@@ -61,13 +91,10 @@ const AddToCartDropdown = ({
                   translateX: [0, -20],
                   opacity: [1, 0],
                   transition: {
-                    delay: (options.length - i) * 0.2,
+                    delay: (options.length - i) * 0.05,
                   },
                 }}
                 key={option.id}
-                className={`addToCart__dropdown-option ${
-                  selectedOption?.id === option.id ? "selected" : ""
-                }`}
                 onClick={() => handleDropdownChange(option)}
               >
                 {option.name}
