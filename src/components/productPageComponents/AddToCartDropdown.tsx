@@ -1,11 +1,13 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import StyledAddToCartDropdown from "./AddToCartDropdown.style";
+import StyledAddToCartDropdown, {
+  DropdownSize,
+} from "./AddToCartDropdown.style";
 
 export type DropdownOption = {
   id: number;
-  name: string;
-  price: number;
+  name: string | number;
+  price?: number;
   specs?: string;
 };
 
@@ -13,18 +15,22 @@ type AddToCartDropdownProps = {
   options: Array<DropdownOption>;
   setSelected: (param1: DropdownOption, param2: number) => void;
   dropdownId: number;
+  size?: DropdownSize;
 };
 
 const AddToCartDropdown = ({
   options,
   setSelected,
   dropdownId,
+  size,
 }: AddToCartDropdownProps) => {
   const [selectedOption, setSelectedOption] = useState<
     DropdownOption | undefined
   >(undefined);
   const [show, setShow] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const itemDelayMultiplier = options.length > 4 ? 0.05 : 0.2;
+  const containerDelayMultiplier = options.length > 4 ? 0.05 : 0.1;
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -62,9 +68,18 @@ const AddToCartDropdown = ({
   };
 
   return (
-    <StyledAddToCartDropdown onClick={() => setShow(!show)} ref={dropdownRef}>
+    <StyledAddToCartDropdown
+      onClick={() => setShow(!show)}
+      ref={dropdownRef}
+      size={size ? size : "normal"}
+    >
       <div className="addToCart__selected">
-        {selectedOption && selectedOption.name}
+        {selectedOption && `${selectedOption.name}`}
+        {selectedOption && selectedOption.specs && (
+          <span className="addToCart__selected--secondary">
+            &nbsp;({selectedOption.specs})
+          </span>
+        )}
       </div>
       <AnimatePresence onExitComplete={() => setShow(false)}>
         {show && (
@@ -74,37 +89,46 @@ const AddToCartDropdown = ({
             exit={{
               opacity: [1, 0],
               translateX: -10,
-              transition: { delay: (options.length + 1) * 0.1 },
+              transition: {
+                delay: (options.length + 1) * containerDelayMultiplier,
+              },
             }}
             className="addToCart__dropdown"
           >
-            {options.map((option: DropdownOption, i: number) => (
-              <motion.span
-                animate={{
-                  translateX: [-20, 0],
-                  opacity: [0, 1],
-                  transition: {
-                    delay: i * 0.2,
-                  },
-                }}
-                exit={{
-                  translateX: [0, -20],
-                  opacity: [1, 0],
-                  transition: {
-                    delay: (options.length - i) * 0.05,
-                  },
-                }}
-                key={option.id}
-                onClick={() => handleDropdownChange(option)}
-              >
-                {option.name}
-                {option.specs && (
-                  <span className="addToCart__dropdown-option--secondary">
-                    &nbsp;({option.specs})
-                  </span>
-                )}
-              </motion.span>
-            ))}
+            {options.map((option: DropdownOption, i: number) => {
+              return (
+                <motion.span
+                  animate={{
+                    translateX: [-20, 0],
+                    opacity: [0, 1],
+                    transition: {
+                      delay: i * itemDelayMultiplier,
+                    },
+                  }}
+                  exit={{
+                    translateX: [0, -20],
+                    opacity: [1, 0],
+                    transition: {
+                      delay: (options.length - i) * 0.05,
+                    },
+                  }}
+                  key={option.id}
+                  onClick={() => handleDropdownChange(option)}
+                >
+                  {option.name}
+                  {option.specs && (
+                    <span className="addToCart__dropdown-option--secondary">
+                      &nbsp;({option.specs})
+                    </span>
+                  )}
+                  {option.price && (
+                    <span className="addToCart__dropdown-option--price">
+                      &nbsp;{option.price}€
+                    </span>
+                  )}
+                </motion.span>
+              );
+            })}
           </motion.div>
         )}
       </AnimatePresence>

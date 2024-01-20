@@ -4,6 +4,7 @@ import { useProduct } from "../../state/contexts/productContext";
 import Button from "../baseComponents/Button";
 import StyledAddToCartPanel from "./AddToCartPanel.style";
 import posterOptions from "../../resources/productOptions/posterOptions";
+import quantities from "../../resources/productOptions/quantity";
 
 export type AddToCartOption = {
   name: string;
@@ -63,6 +64,7 @@ export const AddToCartPanel = () => {
                 options={option.data}
                 setSelected={addCartEntry}
                 dropdownId={i}
+                size={option.name === quantities.name ? "sm" : "normal"}
               />
             </div>
           );

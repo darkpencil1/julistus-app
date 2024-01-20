@@ -1,8 +1,13 @@
 import styled from "styled-components";
 
-const StyledAddToCartDropdown = styled.div`
+export type DropdownSize = "normal" | "sm";
+type StyledDropdownProps = {
+  size: DropdownSize;
+};
+
+const StyledAddToCartDropdown = styled.div<StyledDropdownProps>`
   height: 50px;
-  width: 200px;
+  width: ${(p) => (p.size === "normal" ? "250" : "70")}px;
   font-weight: ${(p) => p.theme.fw.fw_semibold};
   position: relative;
 
@@ -12,6 +17,18 @@ const StyledAddToCartDropdown = styled.div`
     border: 1px solid blue;
     border-radius: ${(p) => p.theme.br.br_medium};
     font-weight: ${(p) => p.theme.fw.fw_semibold};
+    position: relative;
+    ${(p) =>
+      p.size === "sm" &&
+      `
+          text-align: center;
+        `}
+
+    .addToCart__selected--secondary {
+      position: absolute;
+      right: 10px;
+      font-size: ${(p) => p.theme.fs.font_sm};
+    }
   }
 
   .addToCart__dropdown {
@@ -23,20 +40,32 @@ const StyledAddToCartDropdown = styled.div`
 
     > span {
       height: 20px;
-      max-width: 200px;
+      max-width: ${(p) => (p.size === "normal" ? "250" : "70")}px;
       padding: 10px 5px;
       margin-bottom: 20px;
       font-weight: ${(p) => p.theme.fw.fw_semibold};
       cursor: pointer;
+      position: relative;
+      ${(p) =>
+        p.size === "sm" &&
+        `
+          text-align: center;
+        `}
 
       :hover {
         background-color: ${(p) => p.theme.colors.bg};
       }
     }
     .addToCart__dropdown-option--secondary {
-      font-size: ${(p) => p.theme.fs.font_sm};
+      font-size: ${(p) => p.theme.fs.font_xs};
       font-weight: ${(p) => p.theme.fw.fw_regular};
       margin-left: 10px;
+    }
+    .addToCart__dropdown-option--price {
+      position: absolute;
+      right: 10px;
+      font-size: ${(p) => p.theme.fs.font_sm};
+      font-weight: ${(p) => p.theme.fw.fw_regular};
     }
   }
 `;
