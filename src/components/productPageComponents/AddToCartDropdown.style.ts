@@ -29,6 +29,11 @@ const StyledAddToCartDropdown = styled.div<StyledDropdownProps>`
       right: 10px;
       font-size: ${(p) => p.theme.fs.font_sm};
     }
+
+    .addToCart__placeholder {
+      font-size: ${(p) => p.theme.fs.font_sm};
+      color: ${(p) => p.theme.colors.gray};
+    }
   }
 
   .addToCart__dropdown {
@@ -39,13 +44,13 @@ const StyledAddToCartDropdown = styled.div<StyledDropdownProps>`
     padding-bottom: 10px;
 
     > span {
-      height: 20px;
+      height: 40px;
       max-width: ${(p) => (p.size === "normal" ? "250" : "70")}px;
       padding: 10px 5px;
-      margin-bottom: 20px;
       font-weight: ${(p) => p.theme.fw.fw_semibold};
       cursor: pointer;
       position: relative;
+      line-height: 1;
       ${(p) =>
         p.size === "sm" &&
         `

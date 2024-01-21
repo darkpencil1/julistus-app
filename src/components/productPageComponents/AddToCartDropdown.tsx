@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { AddToCartOption } from "./AddToCartPanel";
 import StyledAddToCartDropdown, {
   DropdownSize,
 } from "./AddToCartDropdown.style";
@@ -12,7 +13,7 @@ export type DropdownOption = {
 };
 
 type AddToCartDropdownProps = {
-  options: Array<DropdownOption>;
+  options: AddToCartOption;
   setSelected: (param1: DropdownOption, param2: number) => void;
   dropdownId: number;
   size?: DropdownSize;
@@ -27,12 +28,21 @@ const AddToCartDropdown = ({
   const [selectedOption, setSelectedOption] = useState<
     DropdownOption | undefined
   >(undefined);
+  const [placeholder, setPlaceholder] = useState<string | null>(null);
+  //Too rapid clicks can leave dropdown empty due to animation delays
+  //State is true when no animation is in play
+  const [clickable, setClickable] = useState<boolean>(true);
   const [show, setShow] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const itemDelayMultiplier = options.length > 4 ? 0.05 : 0.2;
-  const containerDelayMultiplier = options.length > 4 ? 0.05 : 0.1;
+  const itemDelayMultiplier = options.data.length > 4 ? 0.05 : 0.2;
+  const containerDelayMultiplier = options.data.length > 4 ? 0.05 : 0.1;
 
+  //Initialize the dropdown
   useEffect(() => {
+    if (options.default) {
+      setSelectedOption(options.default);
+    } else setPlaceholder(`Valitse ${options.name.toLowerCase()}...`);
+
     const handleClickOutside = (event: MouseEvent) => {
       if (
         dropdownRef.current &&
@@ -62,6 +72,7 @@ const AddToCartDropdown = ({
   }, []);
 
   const handleDropdownChange = (option: DropdownOption) => {
+    setPlaceholder(null);
     setSelected(option, dropdownId);
     // Update the local state with the selected option
     setSelectedOption(option);
@@ -69,11 +80,15 @@ const AddToCartDropdown = ({
 
   return (
     <StyledAddToCartDropdown
-      onClick={() => setShow(!show)}
+      onClick={() => clickable && setShow(!show)}
       ref={dropdownRef}
       size={size ? size : "normal"}
     >
       <div className="addToCart__selected">
+        {placeholder && (
+          <span className="addToCart__placeholder">{placeholder}</span>
+        )}
+
         {selectedOption && `${selectedOption.name}`}
         {selectedOption && selectedOption.specs && (
           <span className="addToCart__selected--secondary">
@@ -90,12 +105,14 @@ const AddToCartDropdown = ({
               opacity: [1, 0],
               translateX: -10,
               transition: {
-                delay: (options.length + 1) * containerDelayMultiplier,
+                delay: (options.data.length + 1) * containerDelayMultiplier,
               },
             }}
             className="addToCart__dropdown"
+            onAnimationStart={() => setClickable(false)}
+            onAnimationComplete={() => setClickable(true)}
           >
-            {options.map((option: DropdownOption, i: number) => {
+            {options.data.map((option: DropdownOption, i: number) => {
               return (
                 <motion.span
                   animate={{
@@ -109,7 +126,7 @@ const AddToCartDropdown = ({
                     translateX: [0, -20],
                     opacity: [1, 0],
                     transition: {
-                      delay: (options.length - i) * 0.05,
+                      delay: (options.data.length - i) * 0.05,
                     },
                   }}
                   key={option.id}
@@ -123,7 +140,7 @@ const AddToCartDropdown = ({
                   )}
                   {option.price && (
                     <span className="addToCart__dropdown-option--price">
-                      &nbsp;{option.price}€
+                      {option.price}€
                     </span>
                   )}
                 </motion.span>

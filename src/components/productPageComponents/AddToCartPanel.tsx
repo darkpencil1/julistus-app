@@ -9,6 +9,7 @@ import quantities from "../../resources/productOptions/quantity";
 export type AddToCartOption = {
   name: string;
   data: DropdownOption[];
+  default?: DropdownOption;
 };
 
 type SelectedOption = {
@@ -61,7 +62,7 @@ export const AddToCartPanel = () => {
             <div className="addToCart__dropdown-container" key={i}>
               <label>{option.name}</label>
               <AddToCartDropdown
-                options={option.data}
+                options={option}
                 setSelected={addCartEntry}
                 dropdownId={i}
                 size={option.name === quantities.name ? "sm" : "normal"}
