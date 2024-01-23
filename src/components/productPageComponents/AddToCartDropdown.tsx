@@ -1,28 +1,27 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { AddToCartOption } from "./AddToCartPanel";
+import { AddToCartOption, SelectedOption } from "./AddToCartPanel";
 import StyledAddToCartDropdown, {
   DropdownSize,
 } from "./AddToCartDropdown.style";
+import quantities from "../../resources/productOptions/quantity";
 
 export type DropdownOption = {
   id: number;
   name: string | number;
-  price?: number;
+  price: number;
   specs?: string;
 };
 
 type AddToCartDropdownProps = {
   options: AddToCartOption;
-  setSelected: (param1: DropdownOption, param2: number) => void;
-  dropdownId: number;
+  setSelected: (param1: SelectedOption) => void;
   size?: DropdownSize;
 };
 
 const AddToCartDropdown = ({
   options,
   setSelected,
-  dropdownId,
   size,
 }: AddToCartDropdownProps) => {
   const [selectedOption, setSelectedOption] = useState<
@@ -41,6 +40,7 @@ const AddToCartDropdown = ({
   useEffect(() => {
     if (options.default) {
       setSelectedOption(options.default);
+      setSelected({ ...options.default, dropdownId: options.id });
     } else setPlaceholder(`Valitse ${options.name.toLowerCase()}...`);
 
     const handleClickOutside = (event: MouseEvent) => {
@@ -71,11 +71,24 @@ const AddToCartDropdown = ({
     };
   }, []);
 
-  const handleDropdownChange = (option: DropdownOption) => {
+  const handleDropdownChange = (
+    option: DropdownOption,
+    dropdownId: AddToCartOption["id"]
+  ) => {
     setPlaceholder(null);
-    setSelected(option, dropdownId);
+    setSelected({ ...option, dropdownId: dropdownId });
     // Update the local state with the selected option
     setSelectedOption(option);
+  };
+
+  const formatPrice = (option: DropdownOption) => {
+    //Don't add currency information to quantity dropdown
+    if (options.id === quantities.id) {
+      return "";
+    } else if (options.primary) {
+      return option.price + "€";
+      //Add plus to secondary items that affect the base price set by primary product
+    } else return "+" + option.price + "€";
   };
 
   return (
@@ -130,7 +143,7 @@ const AddToCartDropdown = ({
                     },
                   }}
                   key={option.id}
-                  onClick={() => handleDropdownChange(option)}
+                  onClick={() => handleDropdownChange(option, options.id)}
                 >
                   {option.name}
                   {option.specs && (
@@ -138,11 +151,9 @@ const AddToCartDropdown = ({
                       &nbsp;({option.specs})
                     </span>
                   )}
-                  {option.price && (
-                    <span className="addToCart__dropdown-option--price">
-                      {option.price}€
-                    </span>
-                  )}
+                  <span className="addToCart__dropdown-option--price">
+                    {formatPrice(option)}
+                  </span>
                 </motion.span>
               );
             })}

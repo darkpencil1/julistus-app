@@ -31,8 +31,6 @@ const StyledAddToCartPanel = styled.div`
       margin: 0;
       font-size: ${(p) => p.theme.fs.font_lg};
       font-weight: ${(p) => p.theme.fw.fw_bold};
-      text-decoration: underline;
-      text-decoration-thickness: 2px;
     }
   }
 `;

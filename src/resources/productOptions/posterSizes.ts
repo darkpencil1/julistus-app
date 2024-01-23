@@ -23,6 +23,8 @@ const data = [
 
 const posterSizes: AddToCartOption = {
   name: "Koko",
+  id: "SIZE",
   data: data,
+  primary: true,
 };
 export default posterSizes;
