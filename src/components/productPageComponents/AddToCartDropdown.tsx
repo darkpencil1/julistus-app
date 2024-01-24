@@ -15,13 +15,13 @@ export type DropdownOption = {
 
 type AddToCartDropdownProps = {
   options: AddToCartOption;
-  setSelected: (param1: SelectedOption) => void;
+  addCartEntry: (param1: SelectedOption) => void;
   size?: DropdownSize;
 };
 
 const AddToCartDropdown = ({
   options,
-  setSelected,
+  addCartEntry,
   size,
 }: AddToCartDropdownProps) => {
   const [selectedOption, setSelectedOption] = useState<
@@ -40,7 +40,6 @@ const AddToCartDropdown = ({
   useEffect(() => {
     if (options.default) {
       setSelectedOption(options.default);
-      setSelected({ ...options.default, dropdownId: options.id });
     } else setPlaceholder(`Valitse ${options.name.toLowerCase()}...`);
 
     const handleClickOutside = (event: MouseEvent) => {
@@ -76,7 +75,7 @@ const AddToCartDropdown = ({
     dropdownId: AddToCartOption["id"]
   ) => {
     setPlaceholder(null);
-    setSelected({ ...option, dropdownId: dropdownId });
+    addCartEntry({ ...option, dropdownId: dropdownId });
     // Update the local state with the selected option
     setSelectedOption(option);
   };

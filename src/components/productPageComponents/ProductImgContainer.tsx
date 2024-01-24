@@ -7,9 +7,10 @@ import ProductImg from "./ProductImg";
 const ProductImgContainer = () => {
   const { product } = useProduct();
   const [selectedImg, setSelectedImg] = React.useState(product?.images[0]);
+
   return (
     <StyledProductImgContainer>
-      <ProductImg />
+      <ProductImg selectedImg={selectedImg} />
       <ImgPicker setSelectedImg={setSelectedImg} selectedImg={selectedImg} />
     </StyledProductImgContainer>
   );

@@ -24,7 +24,6 @@ export const AddToCartPanel = () => {
   const [selectedOptions, setSelectedOptions] = useState<SelectedOption[]>([]);
   const [options, setOptions] = useState<AddToCartOption[]>([]);
   const [price, setPrice] = useState<string>("-");
-  //Product type, say poster, should have available options stored in an interface
   const { product } = useProduct();
   const controls = useAnimation();
 
@@ -40,10 +39,28 @@ export const AddToCartPanel = () => {
         option,
         ...prevState.slice(index + 1),
       ]);
-    } else {
-      setSelectedOptions((prevState) => [...prevState, option]);
     }
   };
+
+  //Build default cart
+  useEffect(() => {
+    if (options.length > 0) {
+      const defaultCart: SelectedOption[] = options.map(
+        (option: AddToCartOption) => {
+          if (option.default)
+            return { dropdownId: option.id, ...option.default };
+          else
+            return {
+              dropdownId: option.id,
+              id: -1,
+              name: -1,
+              price: -1,
+            };
+        }
+      );
+      setSelectedOptions(defaultCart);
+    }
+  }, [options]);
 
   useEffect(() => {
     if (product?.class === "poster") {
@@ -66,9 +83,9 @@ export const AddToCartPanel = () => {
     jumpAnimation();
   }, [price]);
 
-  //Check if all dropdowns have a value
+  //Check if all dropdowns have a valid value
   const isSelectionDone = () => {
-    return selectedOptions.length === options.length;
+    return selectedOptions.every((option) => option.id !== -1);
   };
 
   const calcPrice = () => {
@@ -100,7 +117,7 @@ export const AddToCartPanel = () => {
               <label>{option.name}</label>
               <AddToCartDropdown
                 options={option}
-                setSelected={addCartEntry}
+                addCartEntry={addCartEntry}
                 size={option.name === quantities.name ? "sm" : "normal"}
               />
             </div>

@@ -31,6 +31,9 @@ const StyledAddToCartPanel = styled.div`
       margin: 0;
       font-size: ${(p) => p.theme.fs.font_lg};
       font-weight: ${(p) => p.theme.fw.fw_bold};
+      /*Prevent horizontal movement when price changes*/
+      width: 80px;
+      overflow-x: visible;
     }
   }
 `;
