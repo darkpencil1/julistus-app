@@ -24,6 +24,8 @@ const StyledImgPicker = styled.div`
     object-fit: contain;
     max-width: 90%;
     max-height: 90%;
+    height: auto;
+    width: auto;
     padding: 0 ${(p) => p.theme.spacing.spacing_2};
     position: absolute;
     top: 50%;
