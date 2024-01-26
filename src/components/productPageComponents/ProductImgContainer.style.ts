@@ -14,8 +14,7 @@ const StyledProductImgContainer = styled(Row)`
   box-shadow: 0 0 10px ${(props) => props.theme.colors.gray};
 
   margin: 0 ${(p) => p.theme.spacing.spacing_2};
-  padding: ${(p) => p.theme.spacing.spacing_2}
-    ${(p) => p.theme.column.spacing_4};
+  padding: 0 ${(p) => p.theme.column.spacing_4};
 `;
 
 export default StyledProductImgContainer;

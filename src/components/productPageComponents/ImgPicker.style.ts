@@ -5,14 +5,24 @@ const StyledImgPicker = styled.div`
     flex-direction: row;
     justify-content:center;
     margin: auto;
+    margin-bottom: 0;
+    margin-top: 0;
     height: 170px;
     max-height: 170px;
-    width: 90%;
-    overflow-x: scroll;
+    width: 100%;
     overflow-y: hidden;
     gap: 1rem 0;
+    background-color:${(p) => p.theme.colors.bg}; 
+    border-radius:${(p) => p.theme.br.br_large}; 
 
-  .picker__img-container {
+    .img-picker__container {
+      display: flex;
+      flex-direction: row;
+      justify-content:start;
+      overflow-x: scroll;
+    }
+
+  .img-picker__img-container {
     min-width: 150px;
     min-height: 150px;
     position: relative;

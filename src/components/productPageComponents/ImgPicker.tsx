@@ -23,24 +23,26 @@ export const ImgPicker = (props: ImgPickerProps) => {
 
   return (
     <StyledImgPicker>
-      {product?.images.map((img: string, i: number) => {
-        const id = `img-picker-${i}`;
-        return (
-          <div
-            id={`${id}-container`}
-            className="picker__img-container"
-            onClick={() => handleClick(img, id)}
-            key={i}
-          >
-            <motion.img
-              id={`${id}`}
-              src={img}
-              className="picker__thumbnail-img"
-              key={img}
-            />
-          </div>
-        );
-      })}
+      <div className="img-picker__container">
+        {product?.images.map((img: string, i: number) => {
+          const id = `img-picker-${i}`;
+          return (
+            <div
+              id={`${id}-container`}
+              className="img-picker__img-container"
+              onClick={() => handleClick(img, id)}
+              key={i}
+            >
+              <motion.img
+                id={`${id}`}
+                src={img}
+                className="picker__thumbnail-img"
+                key={img}
+              />
+            </div>
+          );
+        })}
+      </div>
     </StyledImgPicker>
   );
 };
