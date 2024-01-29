@@ -7,9 +7,15 @@ const StyledProductPage = styled.div`
   justify-content: center;
 
   .product__container {
-    margin: 2rem 0 2rem 2rem;
+    margin: 0 0 1rem 2rem;
     justify-content: space-between;
     flex-wrap: wrap;
+  }
+
+  .product__img-container {
+    width: ${(p) => p.theme.column.col_6};
+    max-width: ${(p) => p.theme.column.col_6};
+    max-height: 600px;
   }
 `;
 

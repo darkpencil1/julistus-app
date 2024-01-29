@@ -7,7 +7,7 @@ const ProductText = () => {
     <StyledProductText>
       <p className="product__text-class">{product?.class}</p>
       <h2>{product?.name}</h2>
-      <p>{product?.description}</p>
+      <p className="product__text-desc">{product?.description}</p>
     </StyledProductText>
   );
 };

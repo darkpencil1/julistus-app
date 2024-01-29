@@ -5,6 +5,7 @@ import StyledAddToCartDropdown, {
   DropdownSize,
 } from "./AddToCartDropdown.style";
 import quantities from "../../resources/productOptions/quantity";
+import dropdownArrow from "../../resources/images/dropdown_arrow.svg";
 
 export type DropdownOption = {
   id: number;
@@ -107,6 +108,11 @@ const AddToCartDropdown = ({
             &nbsp;({selectedOption.specs})
           </span>
         )}
+        <motion.img
+          animate={{ rotate: show ? 180 : 0 }}
+          className="addToCart__dropdown-arrow"
+          src={dropdownArrow}
+        />
       </div>
       <AnimatePresence onExitComplete={() => setShow(false)}>
         {show && (

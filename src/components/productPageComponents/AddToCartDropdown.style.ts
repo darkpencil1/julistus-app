@@ -18,21 +18,22 @@ const StyledAddToCartDropdown = styled.div<StyledDropdownProps>`
     border-radius: ${(p) => p.theme.br.br_medium};
     font-weight: ${(p) => p.theme.fw.fw_semibold};
     position: relative;
-    ${(p) =>
-      p.size === "sm" &&
-      `
-          text-align: center;
-        `}
 
     .addToCart__selected--secondary {
-      position: absolute;
-      right: 10px;
+      margin-left: 10px;
       font-size: ${(p) => p.theme.fs.font_sm};
     }
 
     .addToCart__placeholder {
       font-size: ${(p) => p.theme.fs.font_sm};
       color: ${(p) => p.theme.colors.gray};
+    }
+
+    .addToCart__dropdown-arrow {
+      position: absolute;
+      right: 10px;
+      /*Perhaps due to the svg, to get correct centering dont go all the way to 50%*/
+      top: 45%;
     }
   }
 

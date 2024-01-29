@@ -6,11 +6,12 @@ const StyledAddToCartPanel = styled.div`
   margin: 20px auto;
 
   .addToCart__panel {
-    padding: 20px;
-    border: 2px solid ${(p) => p.theme.primary};
-
+    padding: 0 20px;
+    border-bottom: 5px solid ${(props) => props.theme.colors.gray};
+    border-right: 5px solid ${(props) => props.theme.colors.gray};
+    box-shadow: 0 0 10px ${(props) => props.theme.colors.gray};
+    border-radius: 15px;
     background-color: ${(p) => p.theme.colors.white};
-    border-radius: ${(p) => p.theme.br.br_medium};
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -18,6 +19,10 @@ const StyledAddToCartPanel = styled.div`
     gap: 40px;
   }
 
+  .addToCart__dropdown-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
   .addToCart__dropdown-container {
     display: flex;
     flex-direction: column;
@@ -27,6 +32,7 @@ const StyledAddToCartPanel = styled.div`
   .addToCart__price {
     display: flex;
     flex-direction: column;
+    text-align: center;
     > p {
       margin: 0;
       font-size: ${(p) => p.theme.fs.font_lg};

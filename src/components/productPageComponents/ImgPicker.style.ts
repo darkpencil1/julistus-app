@@ -13,7 +13,8 @@ const StyledImgPicker = styled.div`
     overflow-y: hidden;
     gap: 1rem 0;
     background-color:${(p) => p.theme.colors.bg}; 
-    border-radius:${(p) => p.theme.br.br_large}; 
+    border-radius:0 0 ${(p) => p.theme.br.br_large} ${(p) =>
+  p.theme.br.br_large}; 
 
     .img-picker__container {
       display: flex;

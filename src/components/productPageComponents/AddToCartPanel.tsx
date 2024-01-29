@@ -6,6 +6,7 @@ import StyledAddToCartPanel from "./AddToCartPanel.style";
 import posterOptions from "../../resources/productOptions/posterOptions";
 import quantities from "../../resources/productOptions/quantity";
 import { motion, useAnimation } from "framer-motion";
+import separator from "../../resources/images/addToCart__separator.png";
 
 export type AddToCartOption = {
   name: string;
@@ -113,13 +114,16 @@ export const AddToCartPanel = () => {
       <div className="addToCart__panel">
         {options?.map((option: AddToCartOption, i: number) => {
           return (
-            <div className="addToCart__dropdown-container" key={i}>
-              <label>{option.name}</label>
-              <AddToCartDropdown
-                options={option}
-                addCartEntry={addCartEntry}
-                size={option.name === quantities.name ? "sm" : "normal"}
-              />
+            <div className="addToCart__dropdown-wrapper" key={i}>
+              <div className="addToCart__dropdown-container">
+                <label>{option.name}</label>
+                <AddToCartDropdown
+                  options={option}
+                  addCartEntry={addCartEntry}
+                  size={option.name === quantities.name ? "sm" : "normal"}
+                />
+              </div>
+              <img src={separator} />
             </div>
           );
         })}

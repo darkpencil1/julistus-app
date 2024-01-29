@@ -15,8 +15,8 @@ const StyledButton = styled(motion.button)<StyledButtonProps>`
   justify-content: center;
   flex-wrap: nowrap;
   align-items: center;
-  background-color: ${(p) => p.theme.colors.primary};
-  color: ${(p) => p.theme.colors.secondary};
+  background-color: ${(p) => p.theme.colors.bg};
+  color: ${(p) => p.theme.colors.primary};
   font-weight: ${(p) => p.theme.fw.fw_bold};
   font-size: ${(p) => p.theme.fs.fs_xl};
   font-size: 1.5rem;
@@ -26,7 +26,7 @@ const StyledButton = styled(motion.button)<StyledButtonProps>`
   /*Effects*/
   &:active {
     background-color: ${(p) => p.theme.colors.primary};
-    text-shadow: 0 0 20px ${(p) => p.theme.colors.red};
+    color: ${(p) => p.theme.colors.secondary};
   }
   &:hover {
     cursor: pointer;
@@ -37,7 +37,7 @@ const StyledButton = styled(motion.button)<StyledButtonProps>`
     switch (btnType) {
       case "primary":
         return `
-          border: 5px solid "transparent";
+          border: 3px solid ${theme.colors.primary};
           border-radius: ${theme.br.br_medium};
       `;
       case "secondary":
