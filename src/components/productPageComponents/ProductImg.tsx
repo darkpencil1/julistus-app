@@ -12,7 +12,6 @@ const ProductImg = ({ selectedImg }: ProductImgProps) => {
         transition={{ duration: 0.4 }}
         src={selectedImg}
         className="product__img"
-        //Key should not be img, since it can contain sensitive pathing information
         key={selectedImg}
       />
     </StyledProductImg>

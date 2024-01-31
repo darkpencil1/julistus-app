@@ -11,8 +11,10 @@ const StyledProductText = styled.div`
   }
 
   .product__text-desc {
-    max-height: 500px;
+    /*Calc height as full height of container - title height - product class height - desc own margin top*/
+    max-height: calc(600px - 61px - 33px - 25px);
     overflow-y: scroll;
+    margin-bottom: 0;
   }
 
   > h2 {

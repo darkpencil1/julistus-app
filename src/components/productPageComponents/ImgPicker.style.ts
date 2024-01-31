@@ -6,7 +6,6 @@ const StyledImgPicker = styled.div`
     justify-content:center;
     margin: auto;
     margin-bottom: 0;
-    margin-top: 0;
     height: 170px;
     max-height: 170px;
     width: 100%;

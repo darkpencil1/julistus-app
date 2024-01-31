@@ -5,7 +5,7 @@ const StyledProductImgContainer = styled(Row)`
   flex-direction: column;
   flex-wrap: no-wrap;
 
-  max-height: 600px;
+  height: 100%;
 
   background-color: ${(p) => p.theme.colors.white};
   border-radius: ${(p) => p.theme.br.br_large};

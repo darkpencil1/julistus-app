@@ -5,12 +5,12 @@ const StyledProductImg = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 15rem;
+  height: 70%;
   width: 100%;
   border-radius: ${(p) => p.theme.br.br_round};
 
   .product__img {
-    max-height: 12rem;
+    max-height: 15rem;
   }
 `;
 
