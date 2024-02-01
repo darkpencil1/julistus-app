@@ -8,6 +8,8 @@ const products: Array<IProduct> = [
     id: 1,
     name: "Tuotteen nimi",
     class: "poster",
+    primer:
+      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit. Phasellus pretium congue venenatis.",
     snapshot:
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
     description: `Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. 
@@ -20,6 +22,8 @@ const products: Array<IProduct> = [
     id: 2,
     name: "Pidempi tuotteen nimi",
     class: "poster",
+    primer:
+      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit. Phasellus pretium congue venenatis.",
     snapshot:
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
     description: `Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. 
@@ -32,6 +36,8 @@ const products: Array<IProduct> = [
     id: 3,
     name: "Todella pitkä tuotteen nimi",
     class: "poster",
+    primer:
+      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit. Phasellus pretium congue venenatis.",
     snapshot:
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
     description: `Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.\n 
@@ -44,6 +50,8 @@ const products: Array<IProduct> = [
     id: 4,
     name: "Pidempi tuotteen nimi",
     class: "poster",
+    primer:
+      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit. Phasellus pretium congue venenatis.",
     snapshot:
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
     description: `Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. 
@@ -56,6 +64,8 @@ const products: Array<IProduct> = [
     id: 5,
     name: "Pidempi tuotteen nimi",
     class: "poster",
+    primer:
+      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit. Phasellus pretium congue venenatis.",
     snapshot:
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
     description: `Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. 
@@ -68,6 +78,8 @@ const products: Array<IProduct> = [
     id: 6,
     name: "Todella pitkä tuotteen nimi",
     class: "poster",
+    primer:
+      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit. Phasellus pretium congue venenatis.",
     snapshot:
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
     description: `Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. 
@@ -80,6 +92,8 @@ const products: Array<IProduct> = [
     id: 7,
     name: "Pidempi tuotteen nimi",
     class: "poster",
+    primer:
+      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit. Phasellus pretium congue venenatis.",
     snapshot:
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
     description:
@@ -92,6 +106,8 @@ const products: Array<IProduct> = [
     id: 8,
     name: "Tuotteen nimi",
     class: "poster",
+    primer:
+      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit. Phasellus pretium congue venenatis.",
     snapshot:
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
     description:

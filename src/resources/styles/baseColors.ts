@@ -8,6 +8,7 @@ const colors = {
   white: "#FBFBFB",
   white_muted: "#f2f2f2",
   gray: "#9E9E9E",
+  light_gray: "#E0E0E0",
 };
 
 export default colors;

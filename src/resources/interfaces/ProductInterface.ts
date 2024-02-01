@@ -3,14 +3,15 @@ export enum Orientation {
   LANDSCAPE = "landscape",
 }
 
-type ProductClass = "poster" | "tag";
+export type ProductClass = "poster" | "tag";
 
 interface IProduct {
   id: number;
   name: string;
   class: ProductClass;
+  primer: string; //First part of the description
   description: string;
-  snapshot: string;
+  snapshot: string; //Description displayed in shop
   images: string[];
   price: number;
   orientation: Orientation;

@@ -18,15 +18,32 @@ const StyledImgPicker = styled.div`
     .img-picker__container {
       display: flex;
       flex-direction: row;
+      gap: 10px;
       justify-content:start;
       overflow-x: scroll;
+      margin: 10px 0;
+      height: 160px;
     }
 
   .img-picker__img-container {
     min-width: 150px;
-    min-height: 150px;
+    height: 150px;
+    max-height: 150px;
     position: relative;
-    border-radius: ${(p) => p.theme.br.br_small};
+    border-radius: ${(p) => p.theme.br.br_medium};
+
+    &:hover{
+      background-color:${(p) => p.theme.colors.white}; 
+      cursor: pointer;
+    }
+  }
+
+  .img-picker__img-container--selected{
+    background-color:${(p) => p.theme.colors.light_gray}; 
+
+    &:hover{
+      background-color:${(p) => p.theme.colors.light_gray}; 
+    }
   }
 
   }
@@ -42,6 +59,7 @@ const StyledImgPicker = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: ${(p) => p.theme.br.br_small};
+    cursor: pointer;
   }
 `;
 

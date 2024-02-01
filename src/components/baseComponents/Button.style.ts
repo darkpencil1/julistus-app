@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export type ButtonSize = "sm" | "md" | "lg" | "xl";
-export type ButtonType = "primary" | "secondary" | "white" | "wip";
+export type ButtonType = "primary" | "secondary" | "white" | "disabled" | "wip";
 
 type StyledButtonProps = {
   size?: ButtonSize;
@@ -52,6 +52,22 @@ const StyledButton = styled(motion.button)<StyledButtonProps>`
           background-color: ${theme.colors.white_muted};
           color: ${theme.colors.primary};
 
+      `;
+      case "disabled":
+        return `
+          background-color: ${theme.colors.white_muted};
+          color: ${theme.colors.gray};
+          border: 3px solid ${theme.colors.gray};
+          border-radius: ${theme.br.br_medium};
+
+          &:active {
+            background-color: ${theme.colors.white_muted};
+            color: ${theme.colors.gray};
+          }
+
+          &:hover {
+            cursor: auto;
+          }
       `;
       case "wip":
         return `

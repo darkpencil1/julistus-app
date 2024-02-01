@@ -10,11 +10,16 @@ const StyledProductText = styled.div`
     margin-top: 0;
   }
 
-  .product__text-desc {
-    /*Calc height as full height of container - title height - product class height - desc own margin top*/
+  .product__text-desc-container {
     max-height: calc(600px - 61px - 33px - 25px);
     overflow-y: scroll;
     margin-bottom: 0;
+  }
+
+  .product__text-primer {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-style: italic;
   }
 
   > h2 {

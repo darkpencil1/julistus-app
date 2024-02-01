@@ -11,7 +11,7 @@ type ButtonProps = {
 const Button = ({ type, size, text, className, onClick }: ButtonProps) => {
   return (
     <StyledButton
-      whileHover={{ scale: 1.05 }}
+      whileHover={type !== "disabled" ? { scale: 1.05 } : {}}
       transition={{ type: "spring", stiffness: 1000, damping: 10 }}
       size={size}
       btnType={type}

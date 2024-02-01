@@ -8,7 +8,7 @@ type ImgPickerProps = {
 };
 
 export const ImgPicker = (props: ImgPickerProps) => {
-  const { setSelectedImg } = props;
+  const { setSelectedImg, selectedImg } = props;
   const { product } = useProduct();
 
   const handleClick = (img: string, id: string) => {
@@ -26,10 +26,13 @@ export const ImgPicker = (props: ImgPickerProps) => {
       <div className="img-picker__container">
         {product?.images.map((img: string, i: number) => {
           const id = `img-picker-${i}`;
+          const isSelectedImg = selectedImg === img ? true : false;
           return (
             <div
               id={`${id}-container`}
-              className="img-picker__img-container"
+              className={`img-picker__img-container ${
+                isSelectedImg && "img-picker__img-container--selected"
+              }`}
               onClick={() => handleClick(img, id)}
               key={i}
             >

@@ -137,7 +137,11 @@ export const AddToCartPanel = () => {
             {price}
           </motion.p>
         </div>
-        <Button text="Lisää koriin" size="md" type="primary" />
+        <Button
+          text="Lisää koriin"
+          size="md"
+          type={isSelectionDone() ? "primary" : "disabled"}
+        />
       </div>
     </StyledAddToCartPanel>
   );
