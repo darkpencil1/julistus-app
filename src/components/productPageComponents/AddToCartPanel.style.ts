@@ -12,6 +12,7 @@ const StyledAddToCartPanel = styled.div`
     box-shadow: 0 0 10px ${(props) => props.theme.colors.gray};
     border-radius: 15px;
     background-color: ${(p) => p.theme.colors.white};
+
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -23,6 +24,7 @@ const StyledAddToCartPanel = styled.div`
     display: flex;
     flex-direction: row;
   }
+
   .addToCart__dropdown-container {
     display: flex;
     flex-direction: column;
@@ -40,6 +42,25 @@ const StyledAddToCartPanel = styled.div`
       /*Prevent horizontal movement when price changes*/
       width: 80px;
       overflow-x: visible;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    .addToCart__panel {
+      flex-direction: column;
+      padding: 0 0 10px 0;
+      gap: 5px;
+    }
+    .addToCart__dropdown-wrapper {
+      flex-direction: column;
+
+      .addToCart__dropdown-container {
+        padding-bottom: 0;
+      }
+
+      > img {
+        display: none;
+      }
     }
   }
 `;

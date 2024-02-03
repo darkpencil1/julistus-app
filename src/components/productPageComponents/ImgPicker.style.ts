@@ -4,8 +4,8 @@ const StyledImgPicker = styled.div`
     display: flex;
     flex-direction: row;
     justify-content:center;
-    margin: auto;
     margin-bottom: 0;
+    margin-top: auto;
     height: 170px;
     max-height: 170px;
     width: 100%;
