@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import theme from "./theme";
-import bg from "../images/taustagrafiikka1.png";
+import bg from "../images/taustagrafiikka8.png";
 
 type GlobalProps = {
   theme: typeof theme;
