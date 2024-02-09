@@ -35,7 +35,7 @@ const Icon = ({ icon, size, delay, play }: IconProps) => {
       variants={valueVariant}
       size={size}
     >
-      <img className="icon__main" src={icon} />
+      <img src={icon} />
     </StyledIcon>
   );
 };
