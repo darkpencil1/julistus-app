@@ -5,10 +5,10 @@ import Icon from "../../baseComponents/Icon";
 const LanderQuestIcon = () => {
   return (
     <StyledLanderQuestIcon>
-      <Icon play={true} icon={icon} size="xl" />
+      <Icon play={true} icon={icon} size="lg" />
       <div>
-        <h2>Tehtävä-</h2>
-        <h2>julisteita</h2>
+        <h3>Tehtävä-</h3>
+        <h3>julisteita</h3>
       </div>
     </StyledLanderQuestIcon>
   );

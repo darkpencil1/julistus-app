@@ -21,6 +21,8 @@ const StyledLander = styled(motion.div)`
     flex-direction: column;
     justify-content: end;
     text-align: center;
+    /*Allow images come closer*/
+    margin-right: -100px;
   }
 
   .lander__text-container > p {

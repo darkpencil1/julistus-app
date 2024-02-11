@@ -8,7 +8,9 @@ const StyledLanderQuestIcon = styled.div`
   div {
     display: flex;
     flex-direction: column;
-    > h2 {
+
+    > h3 {
+      font-size: ${(p) => p.theme.fs.font_xl};
       margin: 0;
     }
   }

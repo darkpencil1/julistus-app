@@ -10,6 +10,8 @@ const StyledLanderImgContainer = styled(motion.div)`
   flex: 1;
   width: 100%;
   max-width: 100%;
+  margin-bottom: -100px;
+  margin-left: -200px;
 
   .lander__product-img-parent--0 {
     order: 1;
@@ -21,6 +23,13 @@ const StyledLanderImgContainer = styled(motion.div)`
     margin-top: -150px;
     margin-left: -500px;
     order: 3;
+    z-index: 1;
+  }
+
+  .lander__product-img-parent--2 {
+    margin-top: 500px;
+    margin-left: -400px;
+    order: 4;
     z-index: 1;
   }
 
@@ -45,30 +54,6 @@ const StyledLanderImgContainer = styled(motion.div)`
     mask-image: url(${heart});
     mask-repeat: no-repeat;
     mask-size: ${size};
-  }
-
-  @media (max-width: 1850px) {
-    /*Change the positioning of product img*/
-    .lander__product-img--1 {
-      left: 400px;
-    }
-  }
-
-  @media (max-width: 1700px) {
-    /*Change the positioning of product img*/
-    .lander__product-img--1 {
-      left: 350px;
-      scale: 0.8;
-    }
-  }
-
-  @media (max-width: 1400px) {
-    scale: 0.8;
-
-    /*Change the positioning of product img*/
-    .lander__product-img--1 {
-      left: 400px;
-    }
   }
 `;
 

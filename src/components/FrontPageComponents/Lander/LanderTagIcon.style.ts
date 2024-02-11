@@ -5,9 +5,9 @@ const StyledLanderTagIcon = styled.div`
   flex-direction: column;
   gap: 10px;
 
-  h2 {
+  h3 {
     margin: 0;
-    font-size: ${(p) => p.theme.fs.font_lg};
+    font-size: ${(p) => p.theme.fs.font_md};
   }
 `;
 

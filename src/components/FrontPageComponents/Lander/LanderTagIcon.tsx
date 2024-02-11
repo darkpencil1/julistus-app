@@ -5,8 +5,8 @@ import Icon from "../../baseComponents/Icon";
 const LanderTagIcon = () => {
   return (
     <StyledLanderTagIcon>
-      <Icon play={true} icon={icon} size="md" />
-      <h2>Saavutusmerkit</h2>
+      <Icon play={true} icon={icon} size="sm" />
+      <h3>SAAVUTUSMERKIT</h3>
     </StyledLanderTagIcon>
   );
 };
