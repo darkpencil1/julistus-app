@@ -13,26 +13,6 @@ const StyledLanderImgContainer = styled(motion.div)`
   margin-bottom: -100px;
   margin-left: -200px;
 
-  .lander__product-img-parent--0 {
-    order: 1;
-    z-index: 1;
-    margin-right: -30px;
-  }
-
-  .lander__product-img-parent--1 {
-    margin-top: -150px;
-    margin-left: -500px;
-    order: 3;
-    z-index: 1;
-  }
-
-  .lander__product-img-parent--2 {
-    margin-top: 500px;
-    margin-left: -400px;
-    order: 4;
-    z-index: 1;
-  }
-
   .lander__heart-container {
     order: 2;
     position: relative;
@@ -54,6 +34,18 @@ const StyledLanderImgContainer = styled(motion.div)`
     mask-image: url(${heart});
     mask-repeat: no-repeat;
     mask-size: ${size};
+  }
+
+  @media (max-width: 1600px) {
+    margin: 150px 0 0 -100px;
+    justify-content: center;
+  }
+
+  /*Start making items smaller*/
+  @media (max-width: 1400px) {
+    .lander__heart {
+      width: 500px;
+    }
   }
 `;
 

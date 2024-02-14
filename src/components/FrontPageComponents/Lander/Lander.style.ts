@@ -8,8 +8,6 @@ const StyledLander = styled(motion.div)`
   gap: 10px;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  flex-wrap: no-wrap;
   text-align: center;
   margin-bottom: 200px;
 
@@ -35,6 +33,11 @@ const StyledLander = styled(motion.div)`
 
   .lander__subtitle {
     margin: 0;
+  }
+
+  @media (max-width: 1600px) {
+    flex-direction: column-reverse;
+    gap: 50px;
   }
 `;
 export default StyledLander;

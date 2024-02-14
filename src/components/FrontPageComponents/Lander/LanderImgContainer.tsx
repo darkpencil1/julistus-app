@@ -30,7 +30,7 @@ const LanderImgContainer = () => {
           className="lander__heart"
           src={heart}
         />
-        <MapLine2 size={700} />
+        <MapLine2 />
       </div>
       <LanderQuestImg index={1} />
       <LanderTagImg index={2} />

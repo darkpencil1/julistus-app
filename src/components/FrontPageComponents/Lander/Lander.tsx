@@ -1,7 +1,6 @@
 import StyledLander from "./Lander.style";
 import Col from "../../baseComponents/Col.style";
 import LanderImgContainer from "./LanderImgContainer";
-import Button from "../../baseComponents/Button";
 import Link from "../../baseComponents/Link";
 
 const Lander = () => {

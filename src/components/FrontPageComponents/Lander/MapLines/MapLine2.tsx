@@ -8,8 +8,9 @@ const lines: Array<string> = [
   "M439.457 35.8032C440.884 41.8719 441.465 48.512 441.731 54.7009C442.301 67.9475 442.606 81.2881 442.606 94.5521C442.606 111.259 444.612 129.579 439.675 145.689C435.669 158.763 430.363 172.168 423.796 184.185C418.558 193.769 410.748 202.254 403.805 210.606C388.726 228.745 374.445 247.637 354.636 260.956C335.205 274.022 313.873 283.393 293.656 294.946C275.421 305.366 256.719 317.7 244.137 334.666C230.736 352.737 230.242 374.465 232.064 396.127C232.454 400.773 232.121 405.741 236.482 408.332C242.383 411.837 247.629 412.297 254.417 412.575C260.36 412.818 266.372 412.691 272.309 413.056C279.954 413.527 287.787 414.791 295.45 414.543C301.796 414.339 308.629 411.416 314.653 409.644C326.05 406.292 335.243 397.092 344.137 389.565C355.254 380.159 368.476 372.489 377.077 360.475C389.691 342.855 390.999 323.728 389.85 302.645C389.179 290.32 386.092 278.098 382.764 266.249C381.418 261.46 379.511 256.468 376.814 252.251C365.233 234.136 352.395 215.563 334.47 203.082C311.839 187.326 284.976 172.647 256.517 176.661C240.52 178.917 224.445 181.091 208.573 184.097C193.308 186.988 178.686 192.503 163.516 195.908C159.399 196.833 154.782 197.133 150.568 197.133C147.931 197.133 144.369 193.701 142.256 192.409C131.475 185.815 122.359 180.56 113.385 171.586C100.954 159.156 92.2533 142.285 82.7636 127.754C74.5436 115.167 66.4615 102.837 59.579 89.434C56.9569 84.3278 20.7509 23.2521 18.5 18",
 ];
 
-const MapLine2 = ({ size }: StyledLinesProps) => {
+const MapLine2 = () => {
   const [show, setShow] = useState<boolean>(true);
+  const [size, setSize] = useState<700 | 500>(700);
   const activeLine = useRef(0);
 
   //Animate the svg periodically
@@ -21,22 +22,28 @@ const MapLine2 = ({ size }: StyledLinesProps) => {
         setShow(true);
       }, 1000);
     }
-    //const pathLength = show ? [0, 1] : [1, 0];
-    //animate(
-    //scope.current,
-    //{ pathLength: pathLength },
-    //{
-    //delay: 1.8,
-    //duration: 3,
-    //type: "tween",
-    //}
-    //);
-    //setTimeout(() => {
-    //setShow(!show);
-    //activeLine.current =
-    //activeLine.current < lines.length - 1 ? activeLine.current + 1 : 0;
-    //}, 5000);
   }, [show]);
+
+  //Calculate the svg size ratio based on window width
+  useEffect(() => {
+    function calcSize() {
+      if (window.innerWidth > 1400) {
+        setSize(700);
+      } else {
+        setSize(500);
+      }
+    }
+
+    calcSize();
+
+    // Event listener for window resize
+    window.addEventListener("resize", calcSize);
+
+    // Cleanup function to remove event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", calcSize);
+    };
+  }, []);
 
   //Ratio for svg based on the original heart bg img it was drawn on
   const svgWidth = 462;
@@ -73,7 +80,6 @@ const MapLine2 = ({ size }: StyledLinesProps) => {
             stroke="#EFCE1E"
             strokeWidth="8"
             strokeLinecap="round"
-            shapeRendering="crispEdges"
           />
         )}
       </g>

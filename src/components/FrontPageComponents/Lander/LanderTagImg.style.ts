@@ -5,7 +5,7 @@ const StyledLanderTagImg = styled(motion.div)`
   display: flex;
   flex-direction: row;
   gap: 30px;
-  margin-top: -200px;
+  margin-top: -170px;
   margin-left: -600px;
   z-index: 1;
   order: 3;

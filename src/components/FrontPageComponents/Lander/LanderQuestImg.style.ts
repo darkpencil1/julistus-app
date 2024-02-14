@@ -5,7 +5,7 @@ const StyledLanderQuestImg = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin-top: -120px;
+  margin-top: -150px;
   margin-right: -60px;
   border-radius: ${(p) => p.theme.br.br_medium};
   z-index: 1;
@@ -36,7 +36,7 @@ const StyledLanderQuestImg = styled(motion.div)`
 
   .swarm__icon-container--2 {
     order: 5;
-    margin-right: -20px;
+    margin-right: -200px;
     margin-top: 200px;
   }
 `;
