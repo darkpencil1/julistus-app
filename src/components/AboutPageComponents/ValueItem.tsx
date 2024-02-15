@@ -2,7 +2,6 @@ import { useRef, useState } from "react";
 import StyledValueItem from "./ValueItem.style";
 import { Value } from "./values";
 import { AnimatePresence, motion, useInView, Variants } from "framer-motion";
-import colors from "../../resources/styles/baseColors";
 
 type ValueItemProps = {
   value: Value;

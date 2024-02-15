@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Row from "../baseComponents/Row.style";
 import banner from "../../resources/images/shop-banner.png";
 
-const StyledProductBanner = styled(Row)`
+const StyledShopBanner = styled(Row)`
   height: 370px;
   position: relative;
   overflow: hidden;
@@ -26,6 +26,7 @@ const StyledProductBanner = styled(Row)`
     text-shadow: ${(p) => p.theme.ts.base};
     margin-left: ${(p) => p.theme.spacing.spacing_5};
     margin-right: auto;
+    z-index: 2;
   }
 
   .banner__title {
@@ -41,4 +42,4 @@ const StyledProductBanner = styled(Row)`
   }
 `;
 
-export default StyledProductBanner;
+export default StyledShopBanner;

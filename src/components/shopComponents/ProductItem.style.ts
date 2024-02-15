@@ -8,6 +8,7 @@ const StyledProductItem = styled(Card)`
   min-height: 320px;
   min-width: 750px;
   width: 750px;
+  max-width: 1000px;
   border-bottom: 5px solid ${(props) => props.theme.colors.gray};
   border-right: 5px solid ${(props) => props.theme.colors.gray};
   box-shadow: 0 0 10px ${(props) => props.theme.colors.gray};

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
-const StyledLink = styled(motion.span)`
+const StyledLink = styled(motion.div)`
   position: relative;
 
   > a {

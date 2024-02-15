@@ -15,6 +15,7 @@ const StyledLine = styled.svg<StyledLineProps>`
   left: ${(p) => (p.position ? p.position.left : 0)}%;
   clip-path: url(#${(p) => p.maskId});
   mask-repeat: no-repeat;
+  z-index: 1;
 `;
 
 export default StyledLine;

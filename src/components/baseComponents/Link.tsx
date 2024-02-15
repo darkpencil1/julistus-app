@@ -1,6 +1,5 @@
 import StyledLink from "./Link.style";
 import arrow from "../../resources/images/button_arrow1.png";
-import { useNavigate } from "react-router-dom";
 
 type LinkProps = {
   content: string;
@@ -8,7 +7,7 @@ type LinkProps = {
 };
 const linkVariants = {
   hover: {
-    scale: 1.1, // Increase the size on hover
+    scale: 1.1,
   },
   tap: {
     translateY: [20, -10],
@@ -16,14 +15,8 @@ const linkVariants = {
 };
 
 const Link = ({ content, href }: LinkProps) => {
-  const navigate = useNavigate();
-
-  const navigateToNewPage = () => {
-    navigate(href);
-  };
-
   return (
-    <StyledLink variants={linkVariants} whileHover="hover">
+    <StyledLink variants={linkVariants} whileHover="hover" className="link">
       <a href={href}>{content}</a>
       <img src={arrow} alt="" />
     </StyledLink>

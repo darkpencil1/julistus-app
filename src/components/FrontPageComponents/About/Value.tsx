@@ -1,12 +1,9 @@
 import { motion, useInView, Variants } from "framer-motion";
 import { useRef } from "react";
-import Icon from "../../baseComponents/Icon";
 
 type ValueProps = {
-  icon: string;
   name: string;
   delay: number;
-  play?: boolean;
 };
 
 const nameVariant: Variants = {
@@ -17,14 +14,13 @@ const nameVariant: Variants = {
   hidden: { opacity: 0 },
 };
 
-const Value = ({ name, icon, delay }: ValueProps) => {
+const Value = ({ name, delay }: ValueProps) => {
   const valueRef = useRef(null);
   const valuesInView = useInView(valueRef, { once: true });
 
   return (
     <div ref={valueRef} className="about-us__value">
-      <Icon icon={icon} size="xl" delay={delay} play={valuesInView} />
-      <motion.h3
+      <motion.h2
         animate={valuesInView ? "animate" : "hidden"}
         transition={{
           delay: delay,
@@ -33,7 +29,7 @@ const Value = ({ name, icon, delay }: ValueProps) => {
         variants={nameVariant}
       >
         {name}
-      </motion.h3>
+      </motion.h2>
     </div>
   );
 };

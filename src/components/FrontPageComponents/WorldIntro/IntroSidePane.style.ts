@@ -63,6 +63,10 @@ const StyledIntroSidePane = styled.div`
       flex-direction: row;
       gap: 50px;
       margin: 0 50px;
+
+      > p {
+        font-size: ${(p) => p.theme.fs.font_lg};
+      }
     }
     .sidepane__title-container {
       display: flex;

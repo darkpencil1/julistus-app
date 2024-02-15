@@ -44,6 +44,8 @@ const StyledButton = styled(motion.button)<StyledButtonProps>`
         return `
           border: 5px solid ${theme.colors.secondary};
           border-radius: ${theme.br.br_full};
+          background-color: ${theme.colors.primary};
+          color: ${theme.colors.secondary};
         `;
       case "white":
         return `
