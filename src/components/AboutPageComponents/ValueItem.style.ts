@@ -3,12 +3,19 @@ import bg from "../../resources/images/arvo-maaviiva1.png";
 import { motion } from "framer-motion";
 
 const StyledValueItem = styled(motion.div)`
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
   text-align: center;
   flex: 1 1 200px;
+  min-width: 400px;
+  max-width: 400px;
   overflow-y: hidden;
+  overflow-x: hidden;
 
-  height: 100px;
+  height: 300px;
   padding: ${(p) => p.theme.spacing.spacing_2};
 
   border-radius: ${(p) => p.theme.br.br_large};
@@ -23,8 +30,6 @@ const StyledValueItem = styled(motion.div)`
     background-color: ${(p) => p.theme.colors.primary};
     color: ${(p) => p.theme.colors.secondary}!important;
     text-shadow: ${(p) => p.theme.ts.base};
-    /*Adjust height to fit description in*/
-    height: 320px;
     background-image: url(${bg});
     background-position: center;
     background-repeat: no-repeat;
@@ -33,21 +38,19 @@ const StyledValueItem = styled(motion.div)`
     p {
       display: block;
     }
+    h2 {
+      font-size: ${(p) => p.theme.fs.font_xl};
+    }
   }
 
   h2 {
-    font-family: ${(p) => p.theme.ff.primary};
-    margin: 0;
+    font-size: ${(p) => p.theme.fs.font_xxl};
   }
 
   p {
     display: none;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
     width: 80%;
-    font-size: 1.5rem;
+    font-size: ${(p) => p.theme.fs.font_md};
     margin-top: 0;
     font-weight: ${(p) => p.theme.fw.fw_semibold};
   }

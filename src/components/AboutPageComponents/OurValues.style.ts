@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 const StyledValueDisplay = styled.div`
+  width: 100%;
+
   h1 {
     font-size: 3rem;
     margin: ${(p) => p.theme.spacing.spacing_1} auto;

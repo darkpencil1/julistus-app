@@ -1,7 +1,13 @@
 import { useRef, useState } from "react";
 import StyledValueItem from "./ValueItem.style";
 import { Value } from "./values";
-import { AnimatePresence, motion, useInView, Variants } from "framer-motion";
+import {
+  AnimatePresence,
+  LayoutGroup,
+  motion,
+  useInView,
+  Variants,
+} from "framer-motion";
 
 type ValueItemProps = {
   value: Value;
@@ -44,23 +50,27 @@ const ValueItem = ({ value, delay }: ValueItemProps) => {
       }}
       ref={containerRef}
     >
-      <h2>{value.name}</h2>
-      <AnimatePresence>
-        {hovered && (
-          <motion.p
-            initial="hidden"
-            animate="animate"
-            exit="exit"
-            variants={descVariant}
-            transition={{
-              delay: 0.1,
-              duration: 0.3,
-            }}
-          >
-            {value.desc}
-          </motion.p>
-        )}
-      </AnimatePresence>
+      <LayoutGroup>
+        <motion.h2 layout transition={{ duration: 0.4 }}>
+          {value.name}
+        </motion.h2>
+        <AnimatePresence>
+          {hovered && (
+            <motion.p
+              initial="hidden"
+              animate="animate"
+              exit="exit"
+              variants={descVariant}
+              transition={{
+                delay: 0.1,
+                duration: 0.3,
+              }}
+            >
+              {value.desc}
+            </motion.p>
+          )}
+        </AnimatePresence>
+      </LayoutGroup>
     </StyledValueItem>
   );
 };

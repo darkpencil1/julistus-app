@@ -26,6 +26,7 @@ body {
   background-image: url(${bg});
   background-repeat: repeat-y;
   background-size: 100% auto;
+  margin: 0;
 }
 
 h1 {

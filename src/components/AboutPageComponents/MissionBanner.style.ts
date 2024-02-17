@@ -3,11 +3,13 @@ import bg from "../../resources/images/map-banner.png";
 
 const StyledMissionBanner = styled.div`
   height: 40vh;
+  width: 100%;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
   background-image: url(${bg});
   background-position: center;

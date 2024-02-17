@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 const StyledFooter = styled.footer`
+  /*Position to bottom of page*/
+  flex-shrink: 0;
+
   margin: 0;
   padding: 0;
   background-color: ${(p) => p.theme.colors.primary};
