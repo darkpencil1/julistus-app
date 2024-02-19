@@ -8,6 +8,7 @@ import {
   useInView,
   Variants,
 } from "framer-motion";
+import Icon from "../baseComponents/Icon";
 
 type ValueItemProps = {
   value: Value;
@@ -51,6 +52,9 @@ const ValueItem = ({ value, delay }: ValueItemProps) => {
       ref={containerRef}
     >
       <LayoutGroup>
+        <AnimatePresence>
+          {!hovered && <Icon icon={value.icon} size="lg" play={true} />}
+        </AnimatePresence>
         <motion.h2 layout transition={{ duration: 0.4 }}>
           {value.name}
         </motion.h2>

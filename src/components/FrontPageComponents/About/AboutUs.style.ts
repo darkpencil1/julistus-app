@@ -34,15 +34,9 @@ const StyledAboutUs = styled(Row)`
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-
-    height: 100px;
-    border-radius: ${(p) => p.theme.br.br_large};
-    border-bottom: 5px solid ${(props) => props.theme.colors.gray};
-    border-right: 5px solid ${(props) => props.theme.colors.gray};
-    box-shadow: 0 0 10px ${(props) => props.theme.colors.gray};
-    background-color: ${(p) => p.theme.colors.bg};
+    text-align: center;
   }
-  .about-us__value > h2 {
+  .about-us__value > h3 {
     margin-top: 10px;
     font-weight: ${(p) => p.theme.fw.fw_semibold};
   }

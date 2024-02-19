@@ -5,11 +5,13 @@ const StyledMission = styled.div`
   margin: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  height: 100vh;
 
   .link {
     margin: auto;
+    margin-top: 10px;
   }
 `;
 

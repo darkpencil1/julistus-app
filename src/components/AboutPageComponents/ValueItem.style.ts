@@ -44,13 +44,14 @@ const StyledValueItem = styled(motion.div)`
   }
 
   h2 {
-    font-size: ${(p) => p.theme.fs.font_xxl};
+    font-size: ${(p) => p.theme.fs.font_xl};
+    line-height: 1;
   }
 
   p {
     display: none;
     width: 80%;
-    font-size: ${(p) => p.theme.fs.font_md};
+    font-size: ${(p) => p.theme.fs.font_md}!important;
     margin-top: 0;
     font-weight: ${(p) => p.theme.fw.fw_semibold};
   }
