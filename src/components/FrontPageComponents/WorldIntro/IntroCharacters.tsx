@@ -1,76 +1,74 @@
-import character from "../../../resources/images/character.png";
-import badguys from "../../../resources/images/badguys.png";
-import building from "../../../resources/images/building1.png";
+import character from "../../../resources/images/character-concept.png";
 import heart from "../../../resources/images/sydän1.png";
-import mock_icon from "../../../resources/images/nuoli-kuvake.png";
-import heart_icon from "../../../resources/images/sydän-keltainen.png";
+import plusIcon from "../../../resources/images/plus-icon-no-container.svg";
 import StyledIntroCharacters from "./IntroCharacters.style";
-import CharacterImg, { CharacterImgProps } from "./CharacterImg";
 import { motion, useInView, Variants } from "framer-motion";
 import { useRef } from "react";
-import Link from "../../baseComponents/Link";
+import LanderSwarmIcon from "../Lander/LanderSwarmIcon";
 
-const worldElements: Array<CharacterImgProps> = [
-  { img: building, icon: mock_icon, name: "Tärkeä paikka" },
-  { img: character, icon: heart_icon, name: "Sankarit" },
-  { img: badguys, icon: mock_icon, name: "Haasteiden joukko" },
-];
-
-const heartVariant: Variants = {
-  animate: {
-    opacity: [0, 100],
-    scale: [0, 1],
-    transition: {
-      delay: 0.2,
-      duration: 0.2,
-      type: "spring",
-      stiffness: 100,
-      bounce: 50,
-      damping: 7,
-    },
-  },
-  hidden: { opacity: 0 },
-};
 const charVariant: Variants = {
   animate: {
     translateX: [-100, 0],
     opacity: [0, 100],
   },
+  animate2: {
+    translateX: [100, 0],
+    opacity: [0, 100],
+  },
   hidden: { opacity: 0 },
 };
 const IntroCharacters = () => {
-  const heartRef = useRef(null);
-  const heartInView = useInView(heartRef, { once: true });
   const charRef = useRef(null);
   const charInView = useInView(charRef, { once: true });
 
   return (
-    <StyledIntroCharacters ref={heartRef}>
-      <motion.img
-        animate={heartInView ? "animate" : "hidden"}
-        variants={heartVariant}
-        className="char__heart"
-        src={heart}
-      />
+    <StyledIntroCharacters>
       <div className="char__container" ref={charRef}>
-        {worldElements.map((elem: CharacterImgProps, i: number) => {
-          return (
-            <motion.div
-              animate={charInView ? "animate" : "hidden"}
-              transition={{
-                delay: i * 0.3,
-                duration: 0.3,
-                type: "tween",
-              }}
-              variants={charVariant}
-              key={i}
-            >
-              <CharacterImg img={elem.img} icon={elem.icon} name={elem.name} />
-            </motion.div>
-          );
-        })}
+        <motion.div
+          animate={charInView ? "animate" : "hidden"}
+          transition={{
+            delay: 0.5,
+            duration: 0.3,
+            type: "tween",
+          }}
+          variants={charVariant}
+          className="intro__char-img-container"
+        >
+          <img className="intro__char-img" src={character} />
+          <h3>Kutsumuksen seuraajat</h3>
+        </motion.div>
+        <motion.div
+          animate={charInView ? "animate2" : "hidden"}
+          transition={{
+            delay: 1,
+            duration: 0.3,
+            type: "tween",
+          }}
+          variants={charVariant}
+          className="intro__heart-img-container"
+        >
+          <img className="intro__heart-img" src={heart} />
+          <h3>Sydänmaa</h3>
+        </motion.div>
       </div>
-      <Link href="/" content="Katso lisää" />
+      <motion.div
+        animate={charInView ? "animate" : "hidden"}
+        transition={{
+          delay: 1.5,
+          duration: 0.3,
+          type: "tween",
+        }}
+        variants={charVariant}
+        className="intro__char-text-container"
+      >
+        <LanderSwarmIcon icon={plusIcon} index={1} />
+        <div className="intro__char-text">
+          <h3>Ja paljon muuta</h3>
+          <p>...päivitetään tähän myöhemmin</p>
+        </div>
+        <LanderSwarmIcon icon={plusIcon} index={2} />
+        <LanderSwarmIcon icon={plusIcon} index={3} />
+      </motion.div>
     </StyledIntroCharacters>
   );
 };

@@ -5,8 +5,8 @@ import IntroCharacters from "./IntroCharacters";
 const Intro = () => {
   return (
     <StyledIntro>
-      <IntroCharacters />
       <IntroSidePane />
+      <IntroCharacters />
     </StyledIntro>
   );
 };

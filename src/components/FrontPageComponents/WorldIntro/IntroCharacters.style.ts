@@ -4,24 +4,61 @@ const StyledIntroCharacters = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  .link {
-    margin: auto;
-    margin-top: ${(p) => p.theme.spacing.spacing_3};
-  }
-
-  .char__heart {
-    width: 500px;
-    margin: 0 auto;
-  }
+  flex: 1;
 
   .char__container {
     display: flex;
     flex-direction: row;
     flex-wrap: none;
-    justify-content: space-between;
-    gap: 10px;
-    margin-top: -200px;
+    gap: -100px;
+
+    .intro__char-img-container {
+      display: flex;
+      flex-direction: row;
+
+      .intro__char-img {
+        height: 70vh;
+      }
+
+      h3 {
+        max-width: 50px;
+      }
+    }
+    .intro__heart-img-container {
+      align-self: center;
+      display: flex;
+      flex-direction: row-reverse;
+
+      .intro__heart-img {
+        height: 300px;
+      }
+    }
+  }
+  .intro__char-text-container {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    margin-left: -50px;
+    margin-top: -100px;
+
+    h3 {
+      margin-bottom: 0;
+    }
+    p {
+      margin-top: 0;
+    }
+
+    > .swarm__icon-container--1 {
+      margin-bottom: -20px;
+    }
+
+    > .swarm__icon-container--2 {
+      margin-bottom: 30px;
+    }
+
+    > .swarm__icon-container--3 {
+      margin-left: 40px;
+    }
   }
 
   @media (max-width: 1600px) {
