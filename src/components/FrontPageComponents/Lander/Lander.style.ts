@@ -9,7 +9,8 @@ const StyledLander = styled(motion.div)`
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-bottom: 100px;
+  margin: 0 auto 100px auto;
+  max-width: 2000px;
 
   .lander__text-container {
     height: 80vh;
@@ -25,6 +26,7 @@ const StyledLander = styled(motion.div)`
 
   .lander__text-container > p {
     width: 80%;
+    max-width: 900px;
   }
 
   .lander__title {

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledMission = styled.div`
+const StyledWorld = styled.div`
   flex: 1 0 auto;
   margin: 2rem;
   display: flex;
@@ -15,4 +15,4 @@ const StyledMission = styled.div`
   }
 `;
 
-export default StyledMission;
+export default StyledWorld;

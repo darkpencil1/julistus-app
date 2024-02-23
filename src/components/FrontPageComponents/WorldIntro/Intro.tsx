@@ -1,11 +1,11 @@
 import StyledIntro from "./Intro.style";
-import IntroSidePane from "./IntroSidePane";
+import IntroText from "./IntroText";
 import IntroCharacters from "./IntroCharacters";
 
 const Intro = () => {
   return (
     <StyledIntro>
-      <IntroSidePane />
+      <IntroText />
       <IntroCharacters />
     </StyledIntro>
   );

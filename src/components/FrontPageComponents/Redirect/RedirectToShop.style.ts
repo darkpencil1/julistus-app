@@ -3,6 +3,7 @@ import bg from "../../../resources/images/map-banner.png";
 
 const StyledRedirectToShop = styled.div`
   height: 35vh;
+  max-width: 2000px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,10 +12,10 @@ const StyledRedirectToShop = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-right: 10px solid ${(p) => p.theme.colors.primary_shadow};
-  border-bottom: 10px solid ${(p) => p.theme.colors.primary_shadow};
   border-radius: ${(p) => p.theme.br.br_large};
-  margin-bottom: 20px;
+  border-right: 5px solid ${(p) => p.theme.colors.primary_shadow};
+  border-bottom: 5px solid ${(p) => p.theme.colors.primary_shadow};
+  margin: 0 auto 20px;
   overflow: hidden;
 `;
 

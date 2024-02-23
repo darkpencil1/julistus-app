@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledIntroSidePane = styled.div`
+const StyledIntroText = styled.div`
   width: 600px;
   display: flex;
   flex-direction: column;
@@ -8,8 +8,7 @@ const StyledIntroSidePane = styled.div`
 
   .sidepane__text-container {
     text-align: center;
-    margin-top: 100px;
-    margin: 10px 10px 0 10px;
+    margin: 0;
   }
 
   .sidepane__title-container > h1 {
@@ -31,21 +30,16 @@ const StyledIntroSidePane = styled.div`
 
   @media (max-width: 1600px) {
     width: 500px;
-
-    .sidepane__title-container > h1 {
-      font-size: ${(p) => p.theme.fs.font_xl};
-    }
   }
 
   @media (max-width: 1450px) {
     width: 100%;
-    flex-direction: row;
-    margin: 0 auto;
+    flex-direction: column;
+    margin: 0 auto 100px auto;
 
     .sidepane__text-container {
       display: flex;
-      flex-direction: row;
-      gap: 50px;
+      flex-direction: column;
       margin: 0 50px;
 
       > p {
@@ -59,4 +53,4 @@ const StyledIntroSidePane = styled.div`
   }
 `;
 
-export default StyledIntroSidePane;
+export default StyledIntroText;

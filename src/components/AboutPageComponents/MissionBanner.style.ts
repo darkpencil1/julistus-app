@@ -16,8 +16,8 @@ const StyledMissionBanner = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
 
-  border-right: 10px solid ${(p) => p.theme.colors.primary_shadow};
-  border-bottom: 10px solid ${(p) => p.theme.colors.primary_shadow};
+  border-right: 5px solid ${(p) => p.theme.colors.primary_shadow};
+  border-bottom: 5px solid ${(p) => p.theme.colors.primary_shadow};
   border-radius: ${(p) => p.theme.br.br_large};
 
   overflow: hidden;

@@ -4,11 +4,11 @@ const StyledIntroCharacters = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex: 1;
 
   .char__container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: none;
     gap: -100px;
 
@@ -22,6 +22,8 @@ const StyledIntroCharacters = styled.div`
 
       h3 {
         max-width: 50px;
+        margin-left: -50px;
+        margin-right: 50px;
       }
     }
     .intro__heart-img-container {
@@ -38,8 +40,8 @@ const StyledIntroCharacters = styled.div`
     display: flex;
     flex-direction: row;
     align-self: center;
-    margin-left: -50px;
-    margin-top: -100px;
+    margin-left: 200px;
+    margin-top: -150px;
 
     h3 {
       margin-bottom: 0;
@@ -58,15 +60,6 @@ const StyledIntroCharacters = styled.div`
 
     > .swarm__icon-container--3 {
       margin-left: 40px;
-    }
-  }
-
-  @media (max-width: 1600px) {
-    > button {
-      margin-bottom: 0;
-    }
-    .char__heart {
-      width: 400px;
     }
   }
 `;

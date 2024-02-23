@@ -1,14 +1,14 @@
 import React from "react";
 import Link from "../baseComponents/Link";
-import StyledMission from "./Mission.style";
+import StyledWorld from "./World.style";
 
-const Mission: React.FC = () => {
+const World: React.FC = () => {
   return (
-    <StyledMission>
+    <StyledWorld>
       <h2>Sivu on kesken. Palaa myöhemmin näkemään oikea sisältö.</h2>
       <Link content="Kotiin" href="/" />
-    </StyledMission>
+    </StyledWorld>
   );
 };
 
-export default Mission;
+export default World;

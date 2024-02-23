@@ -26,8 +26,8 @@ const navItems: Array<NavItem> = [
     name: "Kauppa",
   },
   {
-    href: "missio",
-    name: "Missio",
+    href: "maailma",
+    name: "Maailma",
   },
   {
     href: "meistä",

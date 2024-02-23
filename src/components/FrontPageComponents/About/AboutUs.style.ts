@@ -5,7 +5,8 @@ const StyledAboutUs = styled(Row)`
   height: 60vh;
   flex-wrap: no-wrap;
   justify-content: center;
-  margin: 50px 50px 0 50px;
+  margin: 50px auto;
+  max-width: 1500px;
 
   .about-us__value-container {
     flex: 1;

@@ -1,9 +1,9 @@
 import Link from "../../baseComponents/Link";
-import StyledIntroSidePane from "./IntroSidePane.style";
+import StyledIntroText from "./IntroText.style";
 
-const IntroSidePane = () => {
+const IntroText = () => {
   return (
-    <StyledIntroSidePane>
+    <StyledIntroText>
       <div className="sidepane__text-container">
         <div className="sidepane__title-container">
           <h1>Tutustu maailmaamme</h1>
@@ -15,8 +15,8 @@ const IntroSidePane = () => {
         </p>
       </div>
       <Link href="/" content="Katso lisää" />
-    </StyledIntroSidePane>
+    </StyledIntroText>
   );
 };
 
-export default IntroSidePane;
+export default IntroText;

@@ -12,10 +12,9 @@ const StyledShopBanner = styled(Row)`
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: start;
-  border-radius: 50px;
-  border-right: 10px solid ${(p) => p.theme.colors.primary_shadow};
-  border-bottom: 10px solid ${(p) => p.theme.colors.primary_shadow};
-  box-shadow: 5px 5px 20px 10px ${(p) => p.theme.colors.gray};
+  border-radius: 30px;
+  border-right: 5px solid ${(p) => p.theme.colors.primary_shadow};
+  border-bottom: 5px solid ${(p) => p.theme.colors.primary_shadow};
 
   .banner__text-container {
     display: flex;
