@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/julistus-app/static/js/main.04dd7367.js",
+    "main.js": "/julistus-app/static/js/main.fbb79375.js",
     "static/js/787.b6158b6b.chunk.js": "/julistus-app/static/js/787.b6158b6b.chunk.js",
     "static/media/wide1.png": "/julistus-app/static/media/wide1.e74db32eb2fc81a6f2af.png",
     "static/media/tall1.png": "/julistus-app/static/media/tall1.40b47508fad98164d1d9.png",
@@ -26,10 +26,10 @@
     "static/media/heart-icon.svg": "/julistus-app/static/media/heart-icon.99a1f3a61e14a12f347e377a5fcc9c9b.svg",
     "static/media/plus-icon-no-container.svg": "/julistus-app/static/media/plus-icon-no-container.13a9cee53fae81cd3d5f4c579e9fee30.svg",
     "static/media/dropdown_arrow.svg": "/julistus-app/static/media/dropdown_arrow.340f99baa3240d0bbfe2f48752935321.svg",
-    "main.04dd7367.js.map": "/julistus-app/static/js/main.04dd7367.js.map",
+    "main.fbb79375.js.map": "/julistus-app/static/js/main.fbb79375.js.map",
     "787.b6158b6b.chunk.js.map": "/julistus-app/static/js/787.b6158b6b.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.04dd7367.js"
+    "static/js/main.fbb79375.js"
   ]
 }
