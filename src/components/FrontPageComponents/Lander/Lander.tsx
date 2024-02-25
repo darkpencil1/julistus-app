@@ -10,8 +10,9 @@ const Lander = () => {
         <h1 className="lander__title">Seikkailutaidetta</h1>
         <h3 className="lander__subtitle">kutsumuksen seuraamisesta</h3>
         <p>
-          Julisteita, pinnejä ja merkkejä. Esineitä, jotka kuvaavat kutsumustasi
-          asiaan kuuluvalla eeppisyydellä.
+          Tarjoamme kuvitettuina julisteina tehtäviä mitä kohtaat seuratessasi
+          kutsumustasi. Meillä on myös saavutusmerkkejä niiden suorittamisesta.
+          Kaikki tarjotaan asiaan kuuluvalla eeppisyydellä.
         </p>
         <Link content="Kauppaan" href="/kauppa" />
       </Col>

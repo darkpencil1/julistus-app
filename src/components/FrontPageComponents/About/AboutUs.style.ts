@@ -43,7 +43,7 @@ const StyledAboutUs = styled(Row)`
   }
 
   .link {
-    align-self: start;
+    align-self: center;
   }
 
   @media (max-width: 1400px) {

@@ -1,24 +1,21 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
-type StyledWIPProps = {
-  show: boolean;
-};
-const StyledWIP = styled(motion.div)<StyledWIPProps>`
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  border-radius: ${(p) => p.theme.br.br_large};
-  border: 2px solid ${(p) => p.theme.colors.primary};
+const StyledWIP = styled(motion.div)`
+  width: 100%;
+  height: 80px;
   padding: 10px;
-  width: ${(p) => (p.show ? "700px" : "fit-content")};
-  background-color: ${(p) => p.theme.colors.bg};
-  opacity: ${(p) => (p.show ? 1 : 0.5)};
-  z-index: 1000;
+  background-color: ${(p) => p.theme.colors.primary};
+  color: ${(p) => p.theme.colors.secondary};
+  text-align: center;
 
-  > span {
-    float: right;
-    cursor: pointer;
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: ${(p) => p.theme.colors.secondary};
+    underline: 1px solid ${(p) => p.theme.colors.secondary};
   }
 `;
 
