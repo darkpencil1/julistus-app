@@ -1,8 +1,8 @@
 import React from "react";
-import { Footer } from "./components/sharedComponents/Footer";
+import Footer from "./components/sharedComponents/Footer";
 import Header from "./components/sharedComponents/Header";
 import Router from "./Router";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { ProductProvider } from "./state/contexts/productContext";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./resources/styles/GlobalStyle";
@@ -12,8 +12,8 @@ import WIP from "./components/FrontPageComponents/WIP";
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <ProductProvider>
+      <ProductProvider>
+        <HashRouter>
           <div className="App">
             <GlobalStyle />
             <WIP />
@@ -21,8 +21,8 @@ const App: React.FC = () => {
             <Router />
             <Footer />
           </div>
-        </ProductProvider>
-      </BrowserRouter>
+        </HashRouter>
+      </ProductProvider>
     </ThemeProvider>
   );
 };

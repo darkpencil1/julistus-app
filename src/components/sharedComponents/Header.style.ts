@@ -54,6 +54,7 @@ const StyledHeader = styled(motion.header)<StyledHeaderProps>`
     color: ${(p) => p.theme.colors.primary};
     position: relative;
     text-decoration: none;
+    cursor: pointer;
   }
   /* Define the ::after pseudo-element */
   a::after {

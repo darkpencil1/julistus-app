@@ -19,7 +19,7 @@ const pageLinks: Array<FooterLink> = [
 
 const socialLinks: Array<FooterLink> = [{ text: "Instagram", link: "#" }];
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <StyledFooter>
       <div className="footer__links">
@@ -66,3 +66,4 @@ export const Footer = () => {
     </StyledFooter>
   );
 };
+export default Footer;

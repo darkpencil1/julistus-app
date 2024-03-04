@@ -100,8 +100,8 @@ const Header: React.FC = () => {
                   animate="animate"
                   exit="exit"
                   variants={navVariant}
+                  onClick={() => navigate(item.href)}
                   transition={{ delay: i * 0.1, duration: 0.2 }}
-                  href={item.href}
                   key={i}
                 >
                   {item.name}

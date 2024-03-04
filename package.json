@@ -1,7 +1,7 @@
 {
   "name": "julistus-app",
   "version": "0.1.0",
-  "homepage": "https://darkpencil1.github.io/julistus-app",
+  "homepage": "https://darkpencil1.github.io/julistus-app/#/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

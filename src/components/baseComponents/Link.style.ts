@@ -10,6 +10,7 @@ const StyledLink = styled(motion.div)`
     color: ${(p) => p.theme.colors.primary};
     text-decoration: none;
     margin-right: 5px;
+    cursor: pointer;
   }
 
   /* Define the ::after pseudo-element */
