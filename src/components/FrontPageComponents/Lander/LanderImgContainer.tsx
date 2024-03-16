@@ -1,4 +1,4 @@
-import heart from "../../../resources/images/sydän2.png";
+import heart from "../../../resources/images/big-heart.png";
 import StyledLanderImgContainer from "./LanderImgContainer.style";
 import { motion, Variants } from "framer-motion";
 import MapLine2 from "./MapLines/MapLine2";
