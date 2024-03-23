@@ -32,7 +32,7 @@ const StyledIntroCharacters = styled.div`
       flex-direction: row-reverse;
 
       .intro__heart-img {
-        height: 300px;
+        height: 250px;
       }
     }
   }

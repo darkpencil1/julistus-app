@@ -39,6 +39,12 @@ const StyledLanderQuestImg = styled(motion.div)`
     margin-right: -200px;
     margin-top: 200px;
   }
+
+  @media (max-width: 1200px) {
+    .lander__product-img {
+      width: 300px;
+    }
+  }
 `;
 
 export default StyledLanderQuestImg;

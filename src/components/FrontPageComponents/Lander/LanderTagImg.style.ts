@@ -33,6 +33,9 @@ const StyledLanderTagImg = styled(motion.div)`
     order: 3;
     margin-top: 100px;
   }
+
+  @media (max-width: 1200px) {
+  }
 `;
 
 export default StyledLanderTagImg;

@@ -1,5 +1,5 @@
 import character from "../../../resources/images/character-concept.png";
-import heart from "../../../resources/images/sydän1.png";
+import heart from "../../../resources/images/big-heart.png";
 import plusIcon from "../../../resources/images/plus-icon-no-container.svg";
 import StyledIntroCharacters from "./IntroCharacters.style";
 import { motion, useInView, Variants } from "framer-motion";

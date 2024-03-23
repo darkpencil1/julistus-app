@@ -2,31 +2,33 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const StyledLander = styled(motion.div)`
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   margin: 0 auto 100px auto;
   max-width: 2000px;
 
+  .lander__row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    justify-content: center;
+    margin-bottom: 100px;
+  }
+
+  .lander__row--gapped {
+    gap: 100px;
+  }
+
   .lander__text-container {
-    height: 80vh;
-    flex: 1;
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: end;
+    justify-content: center;
     text-align: center;
-    /*Allow images come closer*/
-    margin-right: -100px;
   }
 
   .lander__text-container > p {
     width: 80%;
-    max-width: 900px;
+    max-width: 700px;
   }
 
   .lander__title {
@@ -40,6 +42,13 @@ const StyledLander = styled(motion.div)`
   @media (max-width: 1600px) {
     flex-direction: column-reverse;
     gap: 50px;
+  }
+
+  @media (min-width: 2200px) {
+    gap: 150px;
+    .lander__text-container {
+      justify-content: center;
+    }
   }
 `;
 export default StyledLander;

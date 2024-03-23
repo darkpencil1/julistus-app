@@ -59,6 +59,12 @@ const StyledLanderTagImg = styled(motion.div)`
     order: 4;
     margin-top: -100px;
   }
+
+  @media (max-width: 1400px) {
+    .lander__more-img-container {
+      width: 250px;
+    }
+  }
 `;
 
 export default StyledLanderTagImg;

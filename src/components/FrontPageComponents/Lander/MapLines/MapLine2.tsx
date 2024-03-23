@@ -4,16 +4,16 @@ import StyledLines from "./MapLine.style";
 import Filter from "./Filter";
 
 const MapLine2 = () => {
-  const [size, setSize] = useState<700 | 500>(700);
+  const [size, setSize] = useState<350>(350);
 
   //Calculate the svg size ratio based on window width
   useEffect(() => {
     function calcSize() {
       if (window.innerWidth > 1400) {
-        setSize(700);
-      } else {
-        setSize(500);
-      }
+        setSize(350);
+      } else if (window.innerWidth > 1200) {
+        setSize(350);
+      } else setSize(350);
     }
 
     calcSize();
