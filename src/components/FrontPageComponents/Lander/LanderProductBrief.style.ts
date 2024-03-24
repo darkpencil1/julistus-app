@@ -5,12 +5,12 @@ const StyledLanderProductBrief = styled.div`
   flex-direction: row;
   flex-wrap: no-wrap;
   justify-content: center;
-  gap: 50px;
+  gap: 30px;
 
   min-height: 200px;
   height: 200px;
-  min-width: 700px;
-  width: 700px;
+  min-width: 600px;
+  width: 600px;
   border-bottom: 2px solid ${(props) => props.theme.colors.primary};
   border-right: 2px solid ${(props) => props.theme.colors.primary};
   box-shadow: 0 0 10px ${(props) => props.theme.colors.primary};
@@ -39,7 +39,7 @@ const StyledLanderProductBrief = styled.div`
       flex-direction: row;
       flex-wrap: no-wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 10px;
 
       /*Icon*/
       > div {

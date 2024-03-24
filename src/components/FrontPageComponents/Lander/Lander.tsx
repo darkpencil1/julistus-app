@@ -41,8 +41,8 @@ const Lander = () => {
         <LanderHeart />
       </div>
       <div className="lander__row lander__row--gapped">
-        {productTypes.map((item: LanderProductBriefProps, i: number) => {
-          return <LanderProductBrief {...item} />;
+        {productTypes.map((item: LanderProductBriefProps) => {
+          return <LanderProductBrief {...item} key={item.title} />;
         })}
       </div>
     </StyledLander>

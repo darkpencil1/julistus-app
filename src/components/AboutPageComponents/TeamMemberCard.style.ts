@@ -9,9 +9,10 @@ const StyledTeamMemberCard = styled(Card)`
   min-height: 320px;
   min-width: 750px;
   width: 750px;
-  border-bottom: 5px solid ${(props) => props.theme.colors.gray};
-  border-right: 5px solid ${(props) => props.theme.colors.gray};
-  box-shadow: 0 0 10px ${(props) => props.theme.colors.gray};
+  border-bottom: 2px solid ${(props) => props.theme.colors.primary};
+  border-right: 2px solid ${(props) => props.theme.colors.primary};
+  box-shadow: 0 0 10px ${(props) => props.theme.colors.primary};
+  background-color: ${(props) => props.theme.colors.bg};
   border-radius: 15px;
   padding: 0;
 

@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useAnimate, useInView } from "framer-motion";
 import StyledLine from "./Line.style";
 import ISvg from "../../resources/interfaces/SvgInterface";
+import colors from "../../resources/styles/baseColors";
+
+const lineColor = colors.secondary;
 
 type LineProps = {
   container: React.RefObject<HTMLDivElement | null>;
@@ -50,7 +53,7 @@ const Line = ({ container, svg }: LineProps) => {
         <motion.path
           ref={scope}
           d={svg.d}
-          stroke="#EFCE1E"
+          stroke={lineColor}
           strokeWidth={svg.strokeWidth ? svg.strokeWidth : 12}
           strokeLinecap="round"
           shapeRendering="crispEdges"

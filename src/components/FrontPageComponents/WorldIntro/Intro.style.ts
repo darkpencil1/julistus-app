@@ -6,11 +6,7 @@ const StyledIntro = styled(Row)`
   justify-content: center;
   height: 90vh;
   gap: 0;
-
-  @media (max-width: 1450px) {
-    flex-wrap: wrap-reverse;
-    margin-top: 400px;
-  }
+  align-items: center;
 `;
 
 export default StyledIntro;

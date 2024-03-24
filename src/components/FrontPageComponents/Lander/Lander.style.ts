@@ -11,7 +11,7 @@ const StyledLander = styled(motion.div)`
     flex-direction: row;
     flex-wrap: no-wrap;
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
   }
 
   .lander__row--gapped {
@@ -37,6 +37,14 @@ const StyledLander = styled(motion.div)`
 
   .lander__subtitle {
     margin: 0;
+  }
+
+  @media (max-width: 1400px) {
+    .lander__row--gapped {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
   }
 
   @media (max-width: 1600px) {

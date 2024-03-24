@@ -35,7 +35,6 @@ const StyledIntroText = styled.div`
   @media (max-width: 1450px) {
     width: 100%;
     flex-direction: column;
-    margin: 0 auto 100px auto;
 
     .sidepane__text-container {
       display: flex;
