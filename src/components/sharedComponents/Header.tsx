@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "../baseComponents/Image.style";
 import StyledHeader from "./Header.style";
-import logo from "../../resources/images/sydänlogo-viiva.png";
+import logo from "../../resources/images/logo.png";
 import { AnimatePresence, motion, useAnimation, Variants } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
@@ -73,7 +73,7 @@ const Header: React.FC = () => {
       shrink={scrollingUp}
     >
       <motion.div className="nav__logo" onClick={() => navigate("/")}>
-        <Image src={logo} alt="Julistus" width="70px" />
+        <Image src={logo} alt="Kuva & Kutsumus" width="60px" />
       </motion.div>
       <AnimatePresence>
         {scrollingUp && (
@@ -84,7 +84,7 @@ const Header: React.FC = () => {
             className="nav__name"
             key="header-title"
           >
-            KUTSUMUS KAUPPA
+            KUVA& KUTSUMUS
           </motion.span>
         )}
         {scrollingUp && (

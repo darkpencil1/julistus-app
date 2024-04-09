@@ -4,14 +4,14 @@ import LanderHeart from "./LanderHeart";
 import LanderProductBrief, {
   LanderProductBriefProps,
 } from "./LanderProductBrief";
-import wide from "../../../resources/images/wide1.png";
+import poster from "../../../resources/images/1-Taitoperhonen_thumbnail.jpg";
 import tag from "../../../resources/images/saavutusmerkki5.png";
 import tagIcon from "../../../resources/images/achievement-tag-icon.svg";
 import questIcon from "../../../resources/images/quest-icon.svg";
 
 const productTypes: Array<LanderProductBriefProps> = [
   {
-    img: wide,
+    img: poster,
     title: "Tehtäväjulisteet",
     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum.",
     icon: questIcon,

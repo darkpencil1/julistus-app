@@ -7,7 +7,7 @@ const StyledWIP = styled(motion.div)`
   padding: 10px;
   background-color: ${(p) => p.theme.colors.primary};
   color: ${(p) => p.theme.colors.secondary};
-  text-align: center;
+  text-align: start;
 
   p {
     margin: 0;

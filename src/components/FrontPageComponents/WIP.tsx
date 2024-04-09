@@ -6,11 +6,10 @@ const WIP = () => {
       <div className="wip__message">
         <p>
           Tämä on keskeneräinen prototyyppi eikä siten välttämättä edusta
-          lopullista tulosta. Sivu käyttää demotarkoituksessa kuvia, jotka ovat
-          &nbsp;
-          <a href="https://www.imadreamwalker.com/">imadreamwalker</a> ja&nbsp;
-          <a href="https://www.blizzard.com/en-us/">Blizzard Entertainment</a>
-          &nbsp; omaisuutta.
+          lopullista tulosta. Sivu käyttää demotarkoituksessa omien kuviensa
+          lisäksi kuvia, jotka ovat &nbsp;
+          <a href="https://www.imadreamwalker.com/">imadreamwalker</a>&nbsp;
+          omaisuutta.
         </p>
       </div>
     </StyledWIP>

@@ -15,7 +15,7 @@ const App: React.FC = () => {
       <ProductProvider>
         <HashRouter>
           <div className="App">
-            <GlobalStyle />
+            <GlobalStyle theme={theme} />
             <WIP />
             <Header />
             <Router />
