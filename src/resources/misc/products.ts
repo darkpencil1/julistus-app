@@ -1,4 +1,4 @@
-import tag from "../../resources/images/saavutusmerkki5.png";
+import tag from "../../resources/images/skill-tag-big.png";
 import tall1 from "../../resources/images/1_Taitoperhonen_sm.jpg";
 import tall2 from "../../resources/images/tall2.png";
 import IProduct, { Orientation } from "../interfaces/ProductInterface";
@@ -7,7 +7,7 @@ const products: Array<IProduct> = [
   {
     id: 1,
     name: "Pitele 1. taitoperhonen",
-    class: "poster",
+    productType: "poster",
     primer:
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit. Phasellus pretium congue venenatis.",
     snapshot:
@@ -20,8 +20,8 @@ const products: Array<IProduct> = [
   },
   {
     id: 3,
-    name: "Pidempi tuotteen nimi",
-    class: "poster",
+    name: "Alkuun päässyt perhostenkerääjä",
+    productType: "tag",
     primer:
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit. Phasellus pretium congue venenatis.",
     snapshot:
@@ -35,7 +35,7 @@ const products: Array<IProduct> = [
   {
     id: 2,
     name: "Pidempi tuotteen nimi",
-    class: "poster",
+    productType: "poster",
     primer:
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit. Phasellus pretium congue venenatis.",
     snapshot:

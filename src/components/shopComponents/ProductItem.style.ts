@@ -35,6 +35,10 @@ const StyledProductItem = styled(Card)`
     border-radius: ${(p) => p.theme.br.br_medium};
   }
 
+  .product__img--tag {
+    width: 300px;
+  }
+
   .product__text-container {
     width: calc(${(p) => p.theme.column.col_6} - ${content_gap});
     flex-direction: column;
@@ -51,6 +55,7 @@ const StyledProductItem = styled(Card)`
   .product__title {
     width: auto;
     margin: 0 auto ${(p) => p.theme.spacing.spacing_2};
+    font-size: ${(p) => p.theme.fs.font_lg};
   }
 
   .product__cta {

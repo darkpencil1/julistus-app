@@ -17,6 +17,7 @@ const Shop: React.FC = () => {
             images={product.images}
             name={product.name}
             snapshot={product.snapshot}
+            productType={product.productType}
             key={i}
           />
         ))}

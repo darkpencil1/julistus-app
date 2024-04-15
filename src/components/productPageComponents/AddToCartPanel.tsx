@@ -64,7 +64,7 @@ export const AddToCartPanel = () => {
   }, [options]);
 
   useEffect(() => {
-    if (product?.class === "poster") {
+    if (product?.productType === "poster") {
       setOptions(posterOptions);
     }
   }, [product]);

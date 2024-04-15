@@ -8,9 +8,9 @@ import IProduct from "../../resources/interfaces/ProductInterface";
 import StyledProductItem from "./ProductItem.style";
 
 const ProductItem = (
-  props: Pick<IProduct, "id" | "images" | "name" | "snapshot">
+  props: Pick<IProduct, "id" | "images" | "name" | "snapshot" | "productType">
 ) => {
-  const { id, images, name, snapshot } = props;
+  const { id, images, name, snapshot, productType } = props;
   const { selectProduct } = useProduct();
   const navigate = useNavigate();
 
@@ -22,7 +22,12 @@ const ProductItem = (
   return (
     <StyledProductItem>
       <Col className="product__img-container">
-        <Image className="product__img" src={images[0]} />
+        <Image
+          className={`product__img ${
+            productType === "tag" ? "product__img--tag" : ""
+          }`}
+          src={images[0]}
+        />
       </Col>
       <Row className="product__text-container">
         <h2 className="product__title">{name}</h2>
