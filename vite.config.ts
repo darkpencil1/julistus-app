@@ -6,6 +6,7 @@ export default defineConfig({
   server: {
     port: 3000,
   },
+  base: "https://darkpencil1.github.io/julistus-app/",
   plugins: [
     reactRefresh(),
     svgrPlugin({

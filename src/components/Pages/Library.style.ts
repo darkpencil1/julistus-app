@@ -1,12 +1,9 @@
 import styled from "styled-components";
 
-const StyledWorld = styled.div`
-  flex: 1 0 auto;
+const StyledLibrary = styled.div`
   margin: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
   height: 100vh;
 
   .link {
@@ -15,4 +12,4 @@ const StyledWorld = styled.div`
   }
 `;
 
-export default StyledWorld;
+export default StyledLibrary;

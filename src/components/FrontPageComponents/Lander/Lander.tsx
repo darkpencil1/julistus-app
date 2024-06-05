@@ -32,9 +32,8 @@ const Lander = () => {
           <h1 className="lander__title">Taidetta</h1>
           <h3 className="lander__subtitle">kutsumuksen seuraamisesta</h3>
           <p>
-            Tarjoamme kuvitettuina julisteina tehtäviä mitä kohtaat seuratessasi
-            kutsumustasi. Meillä on myös saavutusmerkkejä niiden
-            suorittamisesta. Kaikki tarjotaan asiaan kuuluvalla eeppisyydellä.
+            Kartoitamme ja kuvitamme kutsumuksen seuraamista roolipeleistä
+            inspiroituneena. Maastosta on jo löytynyt tehtäviä ja saavutuksia!
           </p>
           <Link content="Kauppaan" href="/kauppa" />
         </div>
