@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import AddToCartDropdown, { DropdownOption } from "./AddToCartDropdown";
-import { useProduct } from "../../state/contexts/productContext";
 import Button from "../baseComponents/Button";
 import StyledAddToCartPanel from "./AddToCartPanel.style";
 import posterOptions from "../../resources/productOptions/posterOptions";
 import quantities from "../../resources/productOptions/quantity";
 import { motion, useAnimation } from "framer-motion";
 import separator from "../../resources/images/addToCart__separator.png";
+import { useAppContext } from "../../state/contexts/AppContextProvider";
 
 export type AddToCartOption = {
   name: string;
@@ -25,7 +25,8 @@ export const AddToCartPanel = () => {
   const [selectedOptions, setSelectedOptions] = useState<SelectedOption[]>([]);
   const [options, setOptions] = useState<AddToCartOption[]>([]);
   const [price, setPrice] = useState<string>("-");
-  const { product } = useProduct();
+  const { state } = useAppContext();
+  const { product } = state;
   const controls = useAnimation();
 
   const addCartEntry = (option: SelectedOption): void => {
@@ -141,6 +142,11 @@ export const AddToCartPanel = () => {
           text="Lisää koriin"
           size="md"
           type={isSelectionDone() ? "primary" : "disabled"}
+          onClick={() => {
+            if (product) {
+              //dispatch({ type: "ADD_ITEM", product });
+            }
+          }}
         />
       </div>
     </StyledAddToCartPanel>

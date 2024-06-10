@@ -3,19 +3,17 @@ import Col from "../baseComponents/Col.style";
 import Row from "../baseComponents/Row.style";
 import Image from "../baseComponents/Image.style";
 import Button from "../baseComponents/Button";
-import { useProduct } from "../../state/contexts/productContext";
 import IProduct from "../../resources/interfaces/ProductInterface";
 import StyledProductItem from "./ProductItem.style";
+import { useAppContext } from "../../state/contexts/AppContextProvider";
 
-const ProductItem = (
-  props: Pick<IProduct, "id" | "images" | "name" | "snapshot" | "productType">
-) => {
-  const { id, images, name, snapshot, productType } = props;
-  const { selectProduct } = useProduct();
+const ProductItem: React.FC<{ product: IProduct }> = ({ product }) => {
+  const { id, images, name, snapshot, productType } = product;
+  const { setProduct } = useAppContext();
   const navigate = useNavigate();
 
   const handleClick = () => {
-    selectProduct(id);
+    setProduct(id);
     navigate(`/tuote?id=${id}`);
   };
 

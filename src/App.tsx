@@ -3,16 +3,16 @@ import Footer from "./components/sharedComponents/Footer";
 import Header from "./components/sharedComponents/Header";
 import Router from "./Router";
 import { HashRouter } from "react-router-dom";
-import { ProductProvider } from "./state/contexts/productContext";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./resources/styles/GlobalStyle";
 import theme from "./resources/styles/theme";
 import WIP from "./components/FrontPageComponents/WIP";
+import { AppContextProvider } from "./state/contexts/AppContextProvider";
 
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
-      <ProductProvider>
+      <AppContextProvider>
         <HashRouter>
           <div className="App">
             <GlobalStyle theme={theme} />
@@ -22,7 +22,7 @@ const App: React.FC = () => {
             <Footer />
           </div>
         </HashRouter>
-      </ProductProvider>
+      </AppContextProvider>
     </ThemeProvider>
   );
 };

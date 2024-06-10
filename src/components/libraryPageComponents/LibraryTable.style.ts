@@ -53,6 +53,7 @@ const StyledLibraryTable = styled.div`
     .library__row {
       display: flex;
       flex-direction: row;
+      align-items: center;
       position: relative;
       height: 100px;
       border-top: 1px solid ${(p) => p.theme.colors.primary};

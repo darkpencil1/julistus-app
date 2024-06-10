@@ -12,14 +12,7 @@ const Shop: React.FC = () => {
       {/* Product rows */}
       <Row className="product__wrapper">
         {products.map((product, i) => (
-          <ProductItem
-            id={product.id}
-            images={product.images}
-            name={product.name}
-            snapshot={product.snapshot}
-            productType={product.productType}
-            key={i}
-          />
+          <ProductItem product={product} key={i} />
         ))}
       </Row>
     </StyledShop>

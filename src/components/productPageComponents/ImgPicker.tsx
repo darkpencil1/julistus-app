@@ -1,6 +1,6 @@
-import { useProduct } from "../../state/contexts/productContext";
 import StyledImgPicker from "./ImgPicker.style";
 import { motion } from "framer-motion";
+import { useAppContext } from "../../state/contexts/AppContextProvider";
 
 type ImgPickerProps = {
   selectedImg: string | undefined;
@@ -9,7 +9,8 @@ type ImgPickerProps = {
 
 export const ImgPicker = (props: ImgPickerProps) => {
   const { setSelectedImg, selectedImg } = props;
-  const { product } = useProduct();
+  const { state } = useAppContext();
+  const { product } = state;
 
   const handleClick = (img: string, id: string) => {
     setSelectedImg(img);

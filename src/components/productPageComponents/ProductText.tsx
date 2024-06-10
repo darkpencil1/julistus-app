@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { useProduct } from "../../state/contexts/productContext";
+import { useAppContext } from "../../state/contexts/AppContextProvider";
 import StyledProductText from "./ProductText.style";
 
 const ProductText = () => {
   const [productClass, setProductClass] = useState<string>("");
-  const { product } = useProduct();
+  const { state } = useAppContext();
+  const { product } = state;
 
   useEffect(() => {
     if (product?.productType === "poster") return setProductClass("juliste");
