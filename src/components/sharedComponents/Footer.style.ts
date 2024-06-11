@@ -6,11 +6,12 @@ const StyledFooter = styled.footer`
 
   margin: 0;
   padding: 0;
-  background-color: ${(p) => p.theme.colors.primary};
+  background-color: ${(p) => p.theme.colors.white};
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-top: 4px solid ${(p) => p.theme.colors.primary};
 
   .footer__links {
     margin-top: 40px;
@@ -26,7 +27,7 @@ const StyledFooter = styled.footer`
     display: flex;
     flex-direction: column;
     > h3 {
-      color: ${(p) => p.theme.colors.secondary};
+      color: ${(p) => p.theme.colors.primary};
       margin: 0;
     }
   }
@@ -35,13 +36,14 @@ const StyledFooter = styled.footer`
     display: flex;
     justify-content: center;
     flex-direction: column;
+    list-style-type: none;
     padding-left: 0;
     padding-bottom: ${(p) => p.theme.spacing.spacing_3};
     margin-bottom: ${(p) => p.theme.spacing.spacing_3};
   }
 
   .footer__link > a {
-    color: ${(p) => p.theme.colors.secondary};
+    color: ${(p) => p.theme.colors.primary};
     text-decoration: none;
     position: relative;
   }
@@ -55,7 +57,7 @@ const StyledFooter = styled.footer`
     width: 0; /* Initially, the width is 0 */
     height: 3px; /* Set the height to create the border effect */
     background-color: ${(p) =>
-      p.theme.colors.secondary}; /* Set the border color */
+      p.theme.colors.primary}; /* Set the border color */
     transition: width 0.3s ease; /* Add a smooth transition for width */
   }
 
@@ -76,7 +78,7 @@ const StyledFooter = styled.footer`
   .copyright > span {
     margin: auto;
     margin-bottom: ${(p) => p.theme.spacing.spacing_1};
-    color: ${(p) => p.theme.colors.secondary};
+    color: ${(p) => p.theme.colors.primary};
   }
 `;
 

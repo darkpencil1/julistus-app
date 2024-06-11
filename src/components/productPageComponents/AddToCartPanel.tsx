@@ -25,7 +25,7 @@ export const AddToCartPanel = () => {
   const [selectedOptions, setSelectedOptions] = useState<SelectedOption[]>([]);
   const [options, setOptions] = useState<AddToCartOption[]>([]);
   const [price, setPrice] = useState<string>("-");
-  const { state } = useAppContext();
+  const { state, addItemToCart } = useAppContext();
   const { product } = state;
   const controls = useAnimation();
 
@@ -144,7 +144,7 @@ export const AddToCartPanel = () => {
           type={isSelectionDone() ? "primary" : "disabled"}
           onClick={() => {
             if (product) {
-              //dispatch({ type: "ADD_ITEM", product });
+              addItemToCart(product);
             }
           }}
         />

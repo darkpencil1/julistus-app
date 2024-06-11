@@ -38,6 +38,7 @@ const appReducer = (state: AppState, action: AppAction): AppState => {
 interface AppContextProps {
   state: AppState;
   setProduct: (productId: IProduct["id"]) => void;
+  addItemToCart: (product: IProduct) => void;
 }
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
@@ -50,8 +51,13 @@ const AppContextProvider: React.FC<{ children: ReactNode }> = ({
   const setProduct = (productId: IProduct["id"]) => {
     dispatch({ type: "VIEW_PRODUCT", productId });
   };
+
+  const addItemToCart = (product: IProduct) => {
+    dispatch({ type: "ADD_ITEM", product });
+  };
+
   return (
-    <AppContext.Provider value={{ state, setProduct }}>
+    <AppContext.Provider value={{ state, setProduct, addItemToCart }}>
       {children}
     </AppContext.Provider>
   );

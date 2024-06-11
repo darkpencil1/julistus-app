@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import theme from "./theme";
-import bg from "../images/taustagrafiikka8.png";
+import bg from "../images/website-bg-large.jpg";
 
 type GlobalProps = {
   theme: typeof theme;
@@ -20,7 +20,6 @@ html {
 }
 
 body {
-  background-color: ${(p) => p.theme.colors.bg};
   font-family: ${(props) => props.theme.fontFamily};
   color: ${(props) => props.theme.fontColor};
   background-image: url(${bg});
