@@ -56,7 +56,6 @@ const Line = ({ container, svg }: LineProps) => {
           stroke={lineColor}
           strokeWidth={svg.strokeWidth ? svg.strokeWidth : 12}
           strokeLinecap="round"
-          shapeRendering="crispEdges"
         />
       </g>
       <defs>

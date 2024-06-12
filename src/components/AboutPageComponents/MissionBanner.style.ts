@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import bg from "../../resources/images/map-banner.png";
+import bg from "../../resources/images/website-banner-lg.jpg";
 
 const StyledMissionBanner = styled.div`
   height: 40vh;

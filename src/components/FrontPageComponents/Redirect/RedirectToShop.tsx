@@ -1,6 +1,7 @@
 import StyledRedirectToShop from "./RedirectToShop.style";
 import Button from "../../baseComponents/Button";
-import Line from "./Line";
+import Line from "../../baseComponents/Line";
+import redirectToShopSvg from "./redirectToShopLine";
 import { useRef } from "react";
 
 const RedirectToShop = () => {
@@ -14,7 +15,7 @@ const RedirectToShop = () => {
         type="secondary"
         text="Siirry kauppaan"
       />
-      <Line container={containerRef} />
+      <Line container={containerRef} svg={redirectToShopSvg} />
     </StyledRedirectToShop>
   );
 };

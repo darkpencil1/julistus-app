@@ -1,12 +1,8 @@
 import MapLine2 from "./MapLines/MapLine2";
-import heart from "../../../resources/images/big-heart.png";
+import heart from "../../../resources/images/lander-heart-named-lg.png";
 import StyledLanderHeart from "./LanderHeart.style";
 import { motion, Variants } from "framer-motion";
 import { useState } from "react";
-
-type LanderHeartProps = {
-  size: number;
-};
 
 const heartVariant: Variants = {
   animate: {
