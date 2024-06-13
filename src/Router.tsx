@@ -7,6 +7,7 @@ import Shop from "./components/Pages/Shop";
 import About from "./components/Pages/About";
 import Library from "./components/Pages/Library";
 import ProductPage from "./components/Pages/ProductPage";
+import Cart from "./components/Pages/Cart";
 
 const Router: React.FC = () => {
   const pathName = useLocation();
@@ -23,6 +24,7 @@ const Router: React.FC = () => {
       <Route path="/tuote" element={<ProductPage />} />
       <Route path="/meistä" element={<About />} />
       <Route path="/arkisto" element={<Library />} />
+      <Route path="/ostoskori" element={<Cart />} />
     </Routes>
   );
 };
