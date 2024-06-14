@@ -1,9 +1,10 @@
-import React, { ReactNode, useReducer, createContext } from "react";
+import React, { ReactNode, useReducer, createContext, useEffect } from "react";
 
 import cartReducer, {
   initialCartState,
   CartAction,
   CartState,
+  CartItem,
 } from "../reducers/cartReducer";
 
 import productReducer, {
@@ -39,6 +40,7 @@ interface AppContextProps {
   state: AppState;
   setProduct: (productId: IProduct["id"]) => void;
   addItemToCart: (product: IProduct) => void;
+  changeItemQuantity: (addItem: boolean, cartItem: CartItem) => void;
 }
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
@@ -46,7 +48,15 @@ const AppContext = createContext<AppContextProps | undefined>(undefined);
 const AppContextProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [state, dispatch] = useReducer(appReducer, initialState);
+  //Initialize state and get cart state from localStorage if available
+  const [state, dispatch] = useReducer(appReducer, initialState, (initial) => {
+    const savedCart = localStorage.getItem("cart");
+    return savedCart ? { ...initial, cart: JSON.parse(savedCart) } : initial;
+  });
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(state.cart));
+  }, [state.cart]);
 
   const setProduct = (productId: IProduct["id"]) => {
     dispatch({ type: "VIEW_PRODUCT", productId });
@@ -56,8 +66,16 @@ const AppContextProvider: React.FC<{ children: ReactNode }> = ({
     dispatch({ type: "ADD_ITEM", product });
   };
 
+  const changeItemQuantity = (addItem: boolean, cartItem: CartItem) => {
+    addItem
+      ? dispatch({ type: "INCREASE_QUANTITY", productId: cartItem.id })
+      : dispatch({ type: "DECREASE_QUANTITY", productId: cartItem.id });
+  };
+
   return (
-    <AppContext.Provider value={{ state, setProduct, addItemToCart }}>
+    <AppContext.Provider
+      value={{ state, setProduct, addItemToCart, changeItemQuantity }}
+    >
       {children}
     </AppContext.Provider>
   );

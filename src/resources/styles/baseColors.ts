@@ -9,6 +9,7 @@ const colors = {
   white_muted: "#f2f2f2",
   gray: "#9E9E9E",
   light_gray: "#E0E0E0",
+  semidark_gray: "#F0F0F0",
 };
 
 export default colors;

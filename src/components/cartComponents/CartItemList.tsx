@@ -6,6 +6,7 @@ import CartQuantityOption from "./CartQuantityOption";
 const CartItemList = () => {
   const { state } = useAppContext();
   const { cart } = state;
+
   return (
     <StyledCartItemList>
       {cart.items.map((item: CartItem) => {
@@ -15,7 +16,7 @@ const CartItemList = () => {
             <div className="cart__item-text-container">
               <h4>{item.name}</h4>
               <p>{item.productType}</p>
-              <p>{item.price}</p>
+              <p>{item.price}€</p>
             </div>
             <CartQuantityOption cartItem={item} />
           </div>
