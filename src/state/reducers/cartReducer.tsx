@@ -1,7 +1,14 @@
+import { DropdownOption } from "../../components/productPageComponents/AddToCartDropdown";
 import IProduct from "../../resources/interfaces/ProductInterface";
 
-export interface CartItem extends IProduct {
+export type CartProduct = Pick<
+  IProduct,
+  "id" | "name" | "productType" | "images" | "price"
+>;
+
+export interface CartItem extends CartProduct {
   quantity: number;
+  specs: DropdownOption["name"][];
 }
 
 export type CartState = {
@@ -13,7 +20,7 @@ export const initialCartState: CartState = {
 };
 
 export type CartAction =
-  | { type: "ADD_ITEM"; product: IProduct }
+  | { type: "ADD_ITEM"; cartItem: CartItem }
   | { type: "REMOVE_ITEM"; productId: number }
   | { type: "INCREASE_QUANTITY"; productId: number }
   | { type: "DECREASE_QUANTITY"; productId: number };
@@ -22,21 +29,22 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
   switch (action.type) {
     case "ADD_ITEM":
       const existingItem = state.items.find(
-        (item) => item.id === action.product.id
+        (item) => item.id === action.cartItem.id
       );
       if (existingItem) {
         return {
           ...state,
           items: state.items.map((item) =>
-            item.id === action.product.id
+            item.id === action.cartItem.id
               ? { ...item, quantity: item.quantity + 1 }
               : item
           ),
         };
       }
+
       return {
         ...state,
-        items: [...state.items, { ...action.product, quantity: 1 }],
+        items: [...state.items, { ...action.cartItem }],
       };
     case "REMOVE_ITEM":
       return {

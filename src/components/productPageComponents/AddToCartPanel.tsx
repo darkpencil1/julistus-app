@@ -3,10 +3,12 @@ import AddToCartDropdown, { DropdownOption } from "./AddToCartDropdown";
 import Button from "../baseComponents/Button";
 import StyledAddToCartPanel from "./AddToCartPanel.style";
 import posterOptions from "../../resources/productOptions/posterOptions";
+import tagOptions from "../../resources/productOptions/tagOptions";
 import quantities from "../../resources/productOptions/quantity";
 import { motion, useAnimation } from "framer-motion";
 import separator from "../../resources/images/addToCart__separator.png";
 import { useAppContext } from "../../state/contexts/AppContextProvider";
+import { CartItem } from "../../state/reducers/cartReducer";
 
 export type AddToCartOption = {
   name: string;
@@ -24,7 +26,8 @@ export type SelectedOption = DropdownOption & {
 export const AddToCartPanel = () => {
   const [selectedOptions, setSelectedOptions] = useState<SelectedOption[]>([]);
   const [options, setOptions] = useState<AddToCartOption[]>([]);
-  const [price, setPrice] = useState<string>("-");
+  const [price, setPrice] = useState<number>(0);
+  const [quantity, setQuantity] = useState<number>(1);
   const { state, addItemToCart } = useAppContext();
   const { product } = state;
   const controls = useAnimation();
@@ -68,6 +71,9 @@ export const AddToCartPanel = () => {
     if (product?.productType === "poster") {
       setOptions(posterOptions);
     }
+    if (product?.productType === "tag") {
+      setOptions(tagOptions);
+    }
   }, [product]);
 
   useEffect(() => {
@@ -94,20 +100,57 @@ export const AddToCartPanel = () => {
     if (isSelectionDone()) {
       //Sum the prices of items and multiply with quantity
       let quantityMultiplier = 1;
-      let totalPrice: number = selectedOptions.reduce(
-        (accumulator: number, currentOption: SelectedOption) => {
-          //If handling a quantity option store it as multiplier and dont add it to price yet
-          if (currentOption.dropdownId === quantities.id) {
-            quantityMultiplier = currentOption.price;
-            return accumulator;
-          } else return accumulator + currentOption.price;
-        },
-        0
-      );
+      let totalPrice: number = 0;
+      if (selectedOptions.length > 1) {
+        totalPrice = selectedOptions.reduce(
+          (accumulator: number, currentOption: SelectedOption) => {
+            //If handling a quantity option store it as multiplier and dont add it to price yet
+            if (currentOption.dropdownId === quantities.id) {
+              quantityMultiplier = currentOption.price;
+              return accumulator;
+            } else return accumulator + currentOption.price;
+          },
+          0
+        );
+      } else if (selectedOptions.length === 1) {
+        //If only 1 option available it is the quantity.
+        //Use product price as the total price
+        if (selectedOptions[0].dropdownId === quantities.id) {
+          if (product) totalPrice = product.price;
+          quantityMultiplier = selectedOptions[0].price;
+        }
+      }
       //Return price of item multiplied by the quantity
-      totalPrice = totalPrice * quantityMultiplier;
-      setPrice(totalPrice + "€");
-    } else setPrice("-");
+      //totalPrice = totalPrice * quantityMultiplier;
+      setQuantity(quantityMultiplier);
+      setPrice(totalPrice);
+    }
+  };
+
+  //Extract name field from all selected dropdowns to display them in shopping cart
+  const getProductSpecs = () => {
+    let details: DropdownOption["name"][] = [];
+
+    selectedOptions.map((option: SelectedOption) => {
+      if (option.dropdownId !== quantities.id) details.push(option.name);
+    });
+    return details;
+  };
+
+  const pushToCart = () => {
+    if (product) {
+      let cartItem: CartItem = {
+        id: product.id,
+        name: product.name,
+        productType: product.productType,
+        images: product.images,
+        price: price,
+        quantity: quantity,
+        specs: getProductSpecs(),
+      };
+
+      addItemToCart(cartItem);
+    }
   };
 
   return (
@@ -135,18 +178,14 @@ export const AddToCartPanel = () => {
             animate={controls}
             transition={{ duration: 0.2, ease: "easeOut" }}
           >
-            {price}
+            {price === 0 ? "-" : `${price * quantity}€`}
           </motion.p>
         </div>
         <Button
           text="Lisää koriin"
           size="md"
           type={isSelectionDone() ? "primary" : "disabled"}
-          onClick={() => {
-            if (product) {
-              addItemToCart(product);
-            }
-          }}
+          onClick={() => pushToCart()}
         />
       </div>
     </StyledAddToCartPanel>

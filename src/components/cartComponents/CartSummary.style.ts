@@ -5,7 +5,6 @@ const StyledCartSummary = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 1px solid ${(p) => p.theme.colors.primary};
     margin-bottom: 20px;
 
     > p {
@@ -13,7 +12,12 @@ const StyledCartSummary = styled.div`
     }
   }
 
-  .cart__summary-row-title {
+  .cart__summary-row:not(:last-of-type) {
+    border-bottom: 1px solid ${(p) => p.theme.colors.primary};
+  }
+
+  .cart__summary-row-title--bold {
+    font-weight: ${(p) => p.theme.fw.fw_semibold};
   }
 
   .cart__summary-row-price {

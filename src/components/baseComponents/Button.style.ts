@@ -15,7 +15,7 @@ const StyledButton = styled(motion.button)<StyledButtonProps>`
   justify-content: center;
   flex-wrap: nowrap;
   align-items: center;
-  background-color: ${(p) => p.theme.colors.bg};
+  background-color: ${(p) => p.theme.colors.white};
   color: ${(p) => p.theme.colors.primary};
   font-weight: ${(p) => p.theme.fw.fw_bold};
   font-size: ${(p) => p.theme.fs.fs_xl};
@@ -26,7 +26,7 @@ const StyledButton = styled(motion.button)<StyledButtonProps>`
   /*Effects*/
   &:active {
     background-color: ${(p) => p.theme.colors.primary};
-    color: ${(p) => p.theme.colors.secondary};
+    color: ${(p) => p.theme.colors.white};
   }
   &:hover {
     cursor: pointer;
@@ -46,6 +46,9 @@ const StyledButton = styled(motion.button)<StyledButtonProps>`
           border-radius: ${theme.br.br_full};
           background-color: ${theme.colors.primary};
           color: ${theme.colors.secondary};
+          &:active {
+            color: ${theme.colors.secondary};
+          }
         `;
       case "white":
         return `

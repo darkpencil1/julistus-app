@@ -39,7 +39,7 @@ const appReducer = (state: AppState, action: AppAction): AppState => {
 interface AppContextProps {
   state: AppState;
   setProduct: (productId: IProduct["id"]) => void;
-  addItemToCart: (product: IProduct) => void;
+  addItemToCart: (cartItem: CartItem) => void;
   changeItemQuantity: (addItem: boolean, cartItem: CartItem) => void;
 }
 
@@ -62,8 +62,8 @@ const AppContextProvider: React.FC<{ children: ReactNode }> = ({
     dispatch({ type: "VIEW_PRODUCT", productId });
   };
 
-  const addItemToCart = (product: IProduct) => {
-    dispatch({ type: "ADD_ITEM", product });
+  const addItemToCart = (cartItem: CartItem) => {
+    dispatch({ type: "ADD_ITEM", cartItem });
   };
 
   const changeItemQuantity = (addItem: boolean, cartItem: CartItem) => {

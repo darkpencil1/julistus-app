@@ -16,6 +16,9 @@ const CartItemList = () => {
             <div className="cart__item-text-container">
               <h4>{item.name}</h4>
               <p>{item.productType}</p>
+              {item.specs.map((spec) => {
+                return <p>{spec}</p>;
+              })}
               <p>{item.price}€</p>
             </div>
             <CartQuantityOption cartItem={item} />
