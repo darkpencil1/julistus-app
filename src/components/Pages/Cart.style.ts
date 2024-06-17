@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledCart = styled.div`
-  .cart__wrapper {
+  .cart {
     margin: auto;
     margin-bottom: 100px;
     padding: 20px;
@@ -19,8 +19,17 @@ const StyledCart = styled.div`
   .cart__container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: no-wrap;
+    padding: 0 30px;
+  }
+  .cart__empty-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    > h3 {
+      margin-top: 0;
+    }
   }
 `;
 

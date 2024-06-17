@@ -137,9 +137,14 @@ export const AddToCartPanel = () => {
     return details;
   };
 
+  const generateUniqueId = (): string => {
+    return `${Date.now()}-${Math.floor(Math.random() * 1e9)}`;
+  };
+
   const pushToCart = () => {
     if (product) {
       let cartItem: CartItem = {
+        cartId: generateUniqueId(),
         id: product.id,
         name: product.name,
         productType: product.productType,
@@ -148,7 +153,6 @@ export const AddToCartPanel = () => {
         quantity: quantity,
         specs: getProductSpecs(),
       };
-
       addItemToCart(cartItem);
     }
   };

@@ -41,6 +41,7 @@ interface AppContextProps {
   setProduct: (productId: IProduct["id"]) => void;
   addItemToCart: (cartItem: CartItem) => void;
   changeItemQuantity: (addItem: boolean, cartItem: CartItem) => void;
+  removeCartItem: (cartItem: CartItem) => void;
 }
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
@@ -68,13 +69,23 @@ const AppContextProvider: React.FC<{ children: ReactNode }> = ({
 
   const changeItemQuantity = (addItem: boolean, cartItem: CartItem) => {
     addItem
-      ? dispatch({ type: "INCREASE_QUANTITY", productId: cartItem.id })
-      : dispatch({ type: "DECREASE_QUANTITY", productId: cartItem.id });
+      ? dispatch({ type: "INCREASE_QUANTITY", cartId: cartItem.cartId })
+      : dispatch({ type: "DECREASE_QUANTITY", cartId: cartItem.cartId });
+  };
+
+  const removeCartItem = (cartItem: CartItem) => {
+    dispatch({ type: "REMOVE_ITEM", cartId: cartItem.cartId });
   };
 
   return (
     <AppContext.Provider
-      value={{ state, setProduct, addItemToCart, changeItemQuantity }}
+      value={{
+        state,
+        setProduct,
+        addItemToCart,
+        changeItemQuantity,
+        removeCartItem,
+      }}
     >
       {children}
     </AppContext.Provider>

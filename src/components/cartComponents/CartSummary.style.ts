@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 const StyledCartSummary = styled.div`
+  > h3 {
+    margin-top: 0;
+  }
+
   .cart__summary-row {
     display: flex;
     flex-direction: row;

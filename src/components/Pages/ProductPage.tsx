@@ -10,15 +10,10 @@ import { useAppContext } from "../../state/contexts/AppContextProvider";
 const ProductPage = () => {
   const [searchParams] = useSearchParams();
   const id = searchParams.get("id");
-  const { state, setProduct } = useAppContext();
+  const { setProduct } = useAppContext();
 
-  //Set product if none is set
-  //eg. when user navigates via url instead of shop
   useEffect(() => {
-    if (!state.product) {
-      //Conversion to number can throw an error.
-      setProduct(Number(id));
-    }
+    setProduct(Number(id));
   }, []);
 
   return (
