@@ -8,7 +8,7 @@ import quantities from "../../resources/productOptions/quantity";
 import { motion, useAnimation } from "framer-motion";
 import separator from "../../resources/images/addToCart__separator.png";
 import { useAppContext } from "../../state/contexts/AppContextProvider";
-import { CartItem } from "../../state/reducers/cartReducer";
+import { CartItem, SecondaryProduct } from "../../state/reducers/cartReducer";
 
 export type AddToCartOption = {
   name: string;
@@ -58,7 +58,7 @@ export const AddToCartPanel = () => {
             return {
               dropdownId: option.id,
               id: -1,
-              name: -1,
+              name: "-1",
               price: -1,
             };
         }
@@ -127,14 +127,23 @@ export const AddToCartPanel = () => {
     }
   };
 
-  //Extract name field from all selected dropdowns to display them in shopping cart
-  const getProductSpecs = () => {
-    let details: DropdownOption["name"][] = [];
+  const getSecondaryProducts = () => {
+    let secondaryProducts: SecondaryProduct = { frame: "" };
 
     selectedOptions.map((option: SelectedOption) => {
-      if (option.dropdownId !== quantities.id) details.push(option.name);
+      if (option.dropdownId === "FRAME" && option.name !== "Ei kehystä")
+        secondaryProducts.frame = option.name;
     });
-    return details;
+    return secondaryProducts;
+  };
+
+  const getProductSize = () => {
+    let size: string | undefined;
+
+    selectedOptions.map((option: SelectedOption) => {
+      if (option.dropdownId === "SIZE") size = option.name;
+    });
+    return size;
   };
 
   const generateUniqueId = (): string => {
@@ -151,7 +160,8 @@ export const AddToCartPanel = () => {
         images: product.images,
         price: price,
         quantity: quantity,
-        specs: getProductSpecs(),
+        size: getProductSize(),
+        secondaryProducts: getSecondaryProducts(),
       };
       addItemToCart(cartItem);
     }

@@ -9,7 +9,7 @@ import dropdownArrow from "../../resources/images/dropdown_arrow.svg";
 
 export type DropdownOption = {
   id: number;
-  name: string | number;
+  name: string;
   price: number;
   specs?: string;
 };

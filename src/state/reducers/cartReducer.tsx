@@ -6,10 +6,15 @@ export type CartProduct = Pick<
   "id" | "name" | "productType" | "images" | "price"
 >;
 
+const availableSecondaryProducts = ["frame"] as const;
+type secondaryProductsUnion = (typeof availableSecondaryProducts)[number];
+export type SecondaryProduct = { [K in secondaryProductsUnion]: string };
+
 export interface CartItem extends CartProduct {
   cartId: string; //Unique id for a cart item
   quantity: number;
-  specs: DropdownOption["name"][];
+  size?: string;
+  secondaryProducts?: SecondaryProduct;
 }
 
 export type CartState = {
@@ -64,6 +69,7 @@ function doesItemExist(obj1: CartItem, obj2: CartItem): boolean {
 const cartReducer = (state: CartState, action: CartAction): CartState => {
   switch (action.type) {
     case "ADD_ITEM":
+      console.log("Adding product to cart: ", action.cartItem);
       let existingItem;
       //Check if identical item has already been placed to cart
       for (const item of state.items) {

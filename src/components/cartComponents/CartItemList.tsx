@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useAppContext } from "../../state/contexts/AppContextProvider";
-import { CartItem } from "../../state/reducers/cartReducer";
+import { CartItem, SecondaryProduct } from "../../state/reducers/cartReducer";
 import StyledCartItemList from "./CartItemList.style";
 import CartQuantityOption from "./CartQuantityOption";
 
@@ -14,6 +14,11 @@ const CartItemList = () => {
     navigate(productHref);
   };
 
+  const convertFieldToFinnish = (field: string) => {
+    if (field === "poster") return "Juliste";
+    else if (field === "tag") return "Merkki";
+  };
+
   return (
     <StyledCartItemList>
       {cart.items.map((item: CartItem) => {
@@ -24,10 +29,20 @@ const CartItemList = () => {
               <h4>
                 <a onClick={() => navigateToProduct(item)}>{item.name}</a>
               </h4>
-              <p>{item.productType}</p>
-              {item.specs.map((spec) => {
-                return <p>{spec}</p>;
-              })}
+              <p>{convertFieldToFinnish(item.productType)}</p>
+              <p>{item.size}</p>
+              {item.secondaryProducts &&
+                Object.entries(item.secondaryProducts).map(([key, value]) => {
+                  if (value !== "") {
+                    //Before using react-intl use this hardcoded version of translation
+                    const convertedKey = key === "frame" ? "kehykset" : key;
+                    return (
+                      <p>
+                        + {value} -{convertedKey}
+                      </p>
+                    );
+                  }
+                })}
               <p className="cart__item-price">{item.price}€</p>
             </div>
             <div className="cart__item-quantity-container">

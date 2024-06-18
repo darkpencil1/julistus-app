@@ -37,41 +37,10 @@ const navItems: Array<NavItem> = [
 const Header: React.FC = () => {
   const [scrollingUp, setScrollingUp] = useState(true);
   const controls = useAnimation();
-  const yScroll = useRef(0);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > yScroll.current && window.scrollY > 200) {
-        setScrollingUp(false);
-        yScroll.current = window.scrollY;
-      } else {
-        setScrollingUp(true);
-        yScroll.current = window.scrollY;
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (scrollingUp) {
-      controls.start({ width: "45%" });
-    } else {
-      controls.start({ width: "140px" });
-    }
-  }, [scrollingUp, controls]);
-
   return (
-    <StyledHeader
-      animate={controls}
-      transition={{ duration: 0.4 }}
-      shrink={scrollingUp}
-    >
+    <StyledHeader animate={controls} transition={{ duration: 0.4 }}>
       <motion.div className="nav__logo" onClick={() => navigate("/")}>
         <Image src={logo} alt="Kuva & Kutsumus" width="60px" />
       </motion.div>

@@ -8,7 +8,7 @@ const makeQuantityOptions = (): AddToCartOption => {
   const data: DropdownOption[] = numbers.map((num: number) => {
     return {
       id: num,
-      name: num,
+      name: num.toString(),
       price: num,
     };
   });

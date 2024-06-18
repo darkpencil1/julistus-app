@@ -1,21 +1,18 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-type StyledHeaderProps = {
-  shrink: boolean;
-};
-const StyledHeader = styled(motion.header)<StyledHeaderProps>`
-  width: 900px;
-  min-width: ${(p) => (p.shrink ? "850px" : "140px")};
-  max-width: 900px;
+const StyledHeader = styled(motion.header)`
+  width: 95%;
   height: 90px;
-  margin: 20px auto 20px 10px;
+  margin: 20px auto;
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: ${(p) => p.theme.colors.bg};
-  border: 3px solid ${(p) => p.theme.primary};
-  border-radius: ${(p) => p.theme.br.br_full};
+  background-color: ${(p) => p.theme.colors.white};
+  border-bottom: 2px solid ${(props) => props.theme.colors.primary};
+  border-right: 2px solid ${(props) => props.theme.colors.primary};
+  box-shadow: 0 0 10px ${(props) => props.theme.colors.primary};
+  border-radius: ${(p) => p.theme.br.br_large};
   position: sticky;
   top: 20px;
   z-index: 1000;

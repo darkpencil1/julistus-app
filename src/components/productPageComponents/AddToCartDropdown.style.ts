@@ -58,7 +58,7 @@ const StyledAddToCartDropdown = styled.div<StyledDropdownProps>`
           text-align: center;
         `}
 
-      :hover {
+      &:hover {
         background-color: ${(p) => p.theme.colors.bg};
       }
     }
