@@ -8,9 +8,9 @@ const StyledCart = styled.div`
     background-color: ${(p) => p.theme.colors.white};
     min-width: 50%;
     max-width: 60%;
-    border-bottom: 2px solid ${(props) => props.theme.colors.gray};
-    border-right: 2px solid ${(props) => props.theme.colors.gray};
-    box-shadow: 0 0 10px ${(props) => props.theme.colors.gray};
+    border-bottom: 2px solid ${(props) => props.theme.colors.primary};
+    border-right: 2px solid ${(props) => props.theme.colors.primary};
+    box-shadow: 0 0 10px ${(props) => props.theme.colors.primary};
     border-radius: 15px;
     > h1 {
       margin: 0 0 40px 0;

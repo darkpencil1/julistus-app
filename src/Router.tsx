@@ -8,6 +8,7 @@ import About from "./components/Pages/About";
 import Library from "./components/Pages/Library";
 import ProductPage from "./components/Pages/ProductPage";
 import Cart from "./components/Pages/Cart";
+import Miscellaneous from "./components/Pages/Miscellaneous";
 
 const Router: React.FC = () => {
   const pathName = useLocation();
@@ -25,6 +26,7 @@ const Router: React.FC = () => {
       <Route path="/meistä" element={<About />} />
       <Route path="/arkisto" element={<Library />} />
       <Route path="/ostoskori" element={<Cart />} />
+      <Route path="/sekalainen" element={<Miscellaneous />} />
     </Routes>
   );
 };

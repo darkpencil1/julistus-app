@@ -6,9 +6,9 @@ type FooterLink = {
   link: string;
 };
 const links: Array<FooterLink> = [
-  { text: "UKK", link: "#" },
-  { text: "Palautukset", link: "#" },
-  { text: "Ota yhteyttä", link: "#" },
+  { text: "UKK", link: "#/sekalainen" },
+  { text: "Palautukset", link: "#/sekalainen" },
+  { text: "Ota yhteyttä", link: "#/sekalainen" },
   { text: "Tietosuojaseloste", link: "#" },
 ];
 const pageLinks: Array<FooterLink> = [

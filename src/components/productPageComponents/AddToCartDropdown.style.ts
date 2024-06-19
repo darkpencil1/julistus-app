@@ -9,6 +9,7 @@ const StyledAddToCartDropdown = styled.div<StyledDropdownProps>`
   height: 50px;
   width: ${(p) => (p.size === "normal" ? "250" : "70")}px;
   font-weight: ${(p) => p.theme.fw.fw_semibold};
+  cursor: pointer;
   position: relative;
 
   .addToCart__selected {

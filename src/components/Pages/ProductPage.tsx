@@ -18,13 +18,15 @@ const ProductPage = () => {
 
   return (
     <StyledProductPage>
-      <Row className="product__container">
-        <div className="product__img-container">
-          <ProductImgContainer />
-        </div>
-        <ProductText />
-      </Row>
-      <AddToCartPanel />
+      <div className="product__wrapper">
+        <Row className="product__container">
+          <div className="product__img-container">
+            <ProductImgContainer />
+          </div>
+          <ProductText />
+        </Row>
+        <AddToCartPanel />
+      </div>
     </StyledProductPage>
   );
 };

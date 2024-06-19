@@ -5,6 +5,7 @@ const StyledHeader = styled(motion.header)`
   width: 95%;
   height: 90px;
   margin: 20px auto;
+  padding-right: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;

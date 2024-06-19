@@ -6,12 +6,9 @@ const StyledAddToCartPanel = styled.div`
   margin: 20px auto;
 
   .addToCart__panel {
-    padding: 0 20px;
-    border-bottom: 5px solid ${(props) => props.theme.colors.gray};
-    border-right: 5px solid ${(props) => props.theme.colors.gray};
-    box-shadow: 0 0 10px ${(props) => props.theme.colors.gray};
+    padding: 0px 20px;
+    border: 3px solid ${(props) => props.theme.colors.primary};
     border-radius: 15px;
-    background-color: ${(p) => p.theme.colors.white};
 
     display: flex;
     flex-direction: row;

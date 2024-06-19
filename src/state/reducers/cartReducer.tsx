@@ -1,5 +1,6 @@
 import { DropdownOption } from "../../components/productPageComponents/AddToCartDropdown";
 import IProduct from "../../resources/interfaces/ProductInterface";
+import _ from "lodash";
 
 export type CartProduct = Pick<
   IProduct,
@@ -31,14 +32,6 @@ export type CartAction =
   | { type: "INCREASE_QUANTITY"; cartId: CartItem["cartId"] }
   | { type: "DECREASE_QUANTITY"; cartId: CartItem["cartId"] };
 
-function arraysEqual(
-  arr1: DropdownOption["name"][],
-  arr2: DropdownOption["name"][]
-): boolean {
-  if (arr1.length !== arr2.length) return false;
-  return arr1.every((item, index) => item === arr2[index]);
-}
-
 function doesItemExist(obj1: CartItem, obj2: CartItem): boolean {
   const quantityField: keyof CartItem = "quantity";
   const cartIdField: keyof CartItem = "cartId";
@@ -57,9 +50,9 @@ function doesItemExist(obj1: CartItem, obj2: CartItem): boolean {
     const value1 = obj1[field];
     const value2 = obj2[field];
 
-    //Spec arrays need to be checked separatedly because arrays are seen as different instances even if their contents are same
-    if (Array.isArray(value1) && Array.isArray(value2)) {
-      return arraysEqual(value1, value2);
+    //Compare SecondaryProducts
+    if (typeof value1 === "object" && typeof value2 === "object") {
+      return _.isEqual(value1, value2);
     }
 
     return value1 === value2;
