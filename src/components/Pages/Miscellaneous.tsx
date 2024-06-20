@@ -1,6 +1,5 @@
 import React from "react";
 import questions, { QA } from "../../resources/misc/questions";
-import MiscContactForm from "../miscPageComponents/MiscContactForm";
 import MiscQuestion from "../miscPageComponents/MiscQuestion";
 import StyledMiscellaneousPage from "./Miscellaneous.style";
 
