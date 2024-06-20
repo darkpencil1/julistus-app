@@ -24,6 +24,7 @@ const StyledProductText = styled.div`
 
   > h2 {
     margin-top: 0;
+    margin-bottom: 1rem;
   }
 `;
 

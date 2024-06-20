@@ -47,6 +47,10 @@ const StyledProductItem = styled(Card)`
     padding: 30px;
     border-radius: 0 15px 15px 0;
   }
+  .product__type {
+    margin: 0;
+    font-weight: ${(p) => p.theme.fw.fw_light};
+  }
 
   .product__text {
     margin: 0 auto ${(p) => p.theme.spacing.spacing_1};
@@ -55,11 +59,24 @@ const StyledProductItem = styled(Card)`
   .product__title {
     width: auto;
     margin: 0 auto ${(p) => p.theme.spacing.spacing_2};
+    margin-bottom: 0;
     font-size: ${(p) => p.theme.fs.font_lg};
+    line-height: 1.2;
   }
 
   .product__cta {
     margin: 0 auto;
+  }
+  .product__price-and-button {
+    justify-content: space-between;
+    .product__price {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      > h4 {
+        margin: 0;
+      }
+    }
   }
 `;
 

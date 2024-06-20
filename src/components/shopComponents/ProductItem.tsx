@@ -8,13 +8,17 @@ import StyledProductItem from "./ProductItem.style";
 import { useAppContext } from "../../state/contexts/AppContextProvider";
 
 const ProductItem: React.FC<{ product: IProduct }> = ({ product }) => {
-  const { id, images, name, snapshot, productType } = product;
+  const { id, images, name, snapshot, productType, price } = product;
   const { setProduct } = useAppContext();
   const navigate = useNavigate();
 
   const handleClick = () => {
     setProduct(id);
     navigate(`/tuote?id=${id}`);
+  };
+
+  const setProductType = () => {
+    return productType === "poster" ? "Tehtäväjuliste" : "Saavutusmerkki";
   };
 
   return (
@@ -29,15 +33,21 @@ const ProductItem: React.FC<{ product: IProduct }> = ({ product }) => {
       </Col>
       <Row className="product__text-container">
         <h2 className="product__title">{name}</h2>
+        <small className="product__type">- {setProductType()} -</small>
         <div className="product__text">{snapshot}</div>
-        {/*<div className="product__price">alkaen {props.price}€</div>*/}
-        <Button
-          className="product__cta"
-          type="white"
-          size="md"
-          text="Katso"
-          onClick={handleClick}
-        />
+        <Row className="product__price-and-button">
+          <div className="product__price">
+            <span>alkaen &nbsp;</span>
+            <h4>{price}€</h4>
+          </div>
+          <Button
+            className="product__cta"
+            type="white"
+            size="md"
+            text="Katso"
+            onClick={handleClick}
+          />
+        </Row>
       </Row>
     </StyledProductItem>
   );

@@ -8,8 +8,10 @@ const ProductText = () => {
   const { product } = state;
 
   useEffect(() => {
-    if (product?.productType === "poster") return setProductClass("juliste");
-    else if (product?.productType === "tag") return setProductClass("merkki");
+    if (product?.productType === "poster")
+      return setProductClass("Tehtäväjuliste");
+    else if (product?.productType === "tag")
+      return setProductClass("Saavutusmerkki");
   }, [product]);
 
   return (

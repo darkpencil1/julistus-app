@@ -1,5 +1,6 @@
 import React from "react";
 import questions, { QA } from "../../resources/misc/questions";
+import MiscContactForm from "../miscPageComponents/MiscContactForm";
 import MiscQuestion from "../miscPageComponents/MiscQuestion";
 import StyledMiscellaneousPage from "./Miscellaneous.style";
 
@@ -16,7 +17,26 @@ const Miscellaneous: React.FC = () => {
           excepteur.
         </p>
       </div>
-      <div className="misc__qa-container">
+
+      <div id="yhteydenotto" className="misc__contact-container">
+        <div className="misc__banner">
+          <h3>Ota yhteyttä</h3>
+        </div>
+        <div className="misc__contact-text-container">
+          <h4>
+            Kysymyksiä, ideoita, palautetta, mitä vain - laita viestiä tähän
+            luukkuun:{" "}
+            <a href="mailto:ville&#64;yritys&#46;com">
+              ville&#64;yritys&#46;fi
+            </a>
+          </h4>
+        </div>
+      </div>
+
+      <div id="ukk" className="misc__qa-container">
+        <div className="misc__banner">
+          <h3>UKK</h3>
+        </div>
         {questions.map((qa: QA) => {
           return <MiscQuestion qa={qa} />;
         })}
