@@ -22,17 +22,11 @@ const StyledHeader = styled(motion.header)`
     width: 70px;
     max-width: 70px;
     margin-left: ${(p) => p.theme.spacing.spacing_3};
+    margin-right: ${(p) => p.theme.spacing.spacing_3};
     cursor: pointer;
   }
 
-  .nav__name {
-    font-size: ${(p) => p.theme.fs.font_md};
-    font-family: ${(p) => p.theme.ff.title};
-    max-width: 30px;
-    line-height: 0.8;
-    color: ${(p) => p.theme.colors.primary};
-    margin: ${(p) => p.theme.spacing.spacing_2}
-      ${(p) => p.theme.spacing.spacing_3};
+  .header__logo-name {
     cursor: pointer;
   }
 

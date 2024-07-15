@@ -4,8 +4,8 @@ import LanderHeart from "./LanderHeart";
 import LanderProductBrief, {
   LanderProductBriefProps,
 } from "./LanderProductBrief";
-import poster from "../../../resources/images/1-Taitoperhonen_thumbnail.jpg";
-import tag from "../../../resources/images/skill-tag.png";
+import poster from "../../../resources/images/Taidonjahti_thumbnail.jpg";
+import tag from "../../../resources/images/taidonjahti-merkki-teksti.png";
 import tagIcon from "../../../resources/images/achievement-tag-icon.svg";
 import questIcon from "../../../resources/images/quest-icon.svg";
 
@@ -30,9 +30,9 @@ const Lander = () => {
       <div className="lander__row">
         <div className="lander__text-container">
           <h1 className="lander__title">Taidetta</h1>
-          <h3 className="lander__subtitle">kutsumuksen seuraamisesta</h3>
+          <h3 className="lander__subtitle">elämän tutkimiseen</h3>
           <p>
-            Kartoitamme ja kuvitamme kutsumuksen seuraamista roolipeleistä
+            Kartoitamme ja kuvitamme elämän tutkimista roolipeleistä
             inspiroituneena. Maastosta on jo löytynyt tehtäviä ja saavutuksia!
           </p>
           <Link content="Kauppaan" href="/kauppa" />

@@ -1,6 +1,7 @@
 import Image from "../baseComponents/Image.style";
 import StyledHeader from "./Header.style";
 import logo from "../../resources/images/logo.png";
+import herequest from "../../resources/images/herequest.png";
 import { AnimatePresence, motion, useAnimation, Variants } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import CartIcon from "../cartComponents/CartIcon";
@@ -51,16 +52,13 @@ const Header: React.FC = () => {
         />
       </motion.div>
       <AnimatePresence>
-        <motion.span
-          animate="animate"
-          exit="exit"
-          variants={navVariant}
-          className="nav__name"
+        <Image
+          src={herequest}
+          className="header__logo-name"
           key="header-title"
           onClick={() => navigate("/")}
-        >
-          KUVA& KUTSUMUS
-        </motion.span>
+          width="150px"
+        />
         <motion.nav
           animate="animate"
           exit="exit"

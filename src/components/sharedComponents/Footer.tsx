@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
       </div>
       <Col className="copyright">
-        <span>&copy; 2024 Kuva & Kutsumus</span>
+        <span>&copy; 2024 Herequest</span>
       </Col>
     </StyledFooter>
   );
