@@ -10,10 +10,11 @@ import { useAppContext } from "../../state/contexts/AppContextProvider";
 const ProductPage = () => {
   const [searchParams] = useSearchParams();
   const id = searchParams.get("id");
-  const { setProduct } = useAppContext();
+  const { fetchProduct } = useAppContext();
 
   useEffect(() => {
-    setProduct(Number(id));
+    console.log("fetching product with id ", id);
+    fetchProduct(Number(id));
   }, []);
 
   return (

@@ -5,20 +5,12 @@ import Image from "../baseComponents/Image.style";
 import Button from "../baseComponents/Button";
 import IProduct from "../../../../shared/types/ProductInterface";
 import StyledProductItem from "./ProductItem.style";
-import { useAppContext } from "../../state/contexts/AppContextProvider";
-import { useEffect } from "react";
 
 const ProductItem: React.FC<{ product: IProduct }> = ({ product }) => {
   const { id, imageUrl, name, snapshot, productType, price } = product;
-  const { setProduct } = useAppContext();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    console.log("product", product);
-  }, [product]);
-
   const handleClick = () => {
-    setProduct(id);
     navigate(`/tuote?id=${id}`);
   };
 
@@ -33,7 +25,7 @@ const ProductItem: React.FC<{ product: IProduct }> = ({ product }) => {
           className={`product__img ${
             productType === "tag" ? "product__img--tag" : ""
           }`}
-          src={`http://localhost:8080${imageUrl}`}
+          src={`${imageUrl}`}
           alt={name}
         />
       </Col>

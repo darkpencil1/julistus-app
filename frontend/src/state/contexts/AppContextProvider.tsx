@@ -38,7 +38,7 @@ const appReducer = (state: AppState, action: AppAction): AppState => {
 
 interface AppContextProps {
   state: AppState;
-  setProduct: (productId: IProduct["id"]) => void;
+  fetchProduct: (productId: IProduct["id"]) => void;
   addItemToCart: (cartItem: CartItem) => void;
   changeItemQuantity: (addItem: boolean, cartItem: CartItem) => void;
   removeCartItem: (cartItem: CartItem) => void;
@@ -59,8 +59,15 @@ const AppContextProvider: React.FC<{ children: ReactNode }> = ({
     localStorage.setItem("cart", JSON.stringify(state.cart));
   }, [state.cart]);
 
-  const setProduct = (productId: IProduct["id"]) => {
-    dispatch({ type: "VIEW_PRODUCT", productId });
+  const fetchProduct = async (id: number) => {
+    dispatch({ type: "FETCH_PRODUCT_REQUEST", productId: id });
+    try {
+      const response = await fetch(`http://localhost:8080/api/product/${id}`);
+      const data: IProduct = await response.json();
+      dispatch({ type: "FETCH_PRODUCT_SUCCESS", payload: data });
+    } catch (error) {
+      dispatch({ type: "FETCH_PRODUCT_FAILURE", payload: error });
+    }
   };
 
   const addItemToCart = (cartItem: CartItem) => {
@@ -81,7 +88,7 @@ const AppContextProvider: React.FC<{ children: ReactNode }> = ({
     <AppContext.Provider
       value={{
         state,
-        setProduct,
+        fetchProduct,
         addItemToCart,
         changeItemQuantity,
         removeCartItem,

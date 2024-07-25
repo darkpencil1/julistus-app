@@ -1,4 +1,3 @@
-//import IProduct, { Orientation } from "@shared/types/ProductInterface";
 import IProduct, { Orientation } from "../../../shared/types/ProductInterface";
 
 const baseUrl = "/api/product/image/";
@@ -15,6 +14,7 @@ const products: Array<IProduct> = [
       Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.`,
     price: 20.0,
     imageUrl: `${baseUrl}Taidonjahti_thumbnail.jpg`,
+    images: [`${baseUrl}Taidonjahti_thumbnail.jpg`],
     orientation: Orientation.PORTRAIT,
   },
   {
@@ -29,6 +29,7 @@ const products: Array<IProduct> = [
       Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.`,
     price: 20.0,
     imageUrl: `${baseUrl}vaivojen-koulu_thumbnail.jpg`,
+    images: [`${baseUrl}vaivojen-koulu_thumbnail.jpg`],
     orientation: Orientation.PORTRAIT,
   },
   {
@@ -43,6 +44,7 @@ const products: Array<IProduct> = [
       Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.`,
     price: 12.0,
     imageUrl: `${baseUrl}taidonjahti-merkki-teksti.png`,
+    images: [`${baseUrl}taidonjahti-merkki-teksti.png`],
     orientation: Orientation.LANDSCAPE,
   },
   {
@@ -57,6 +59,7 @@ const products: Array<IProduct> = [
       Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.`,
     price: 12.0,
     imageUrl: `${baseUrl}vaivojen-koulu-merkki-teksti.png`,
+    images: [`${baseUrl}vaivojen-koulu-merkki-teksti.png`],
     orientation: Orientation.LANDSCAPE,
   },
 ];

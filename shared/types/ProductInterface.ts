@@ -13,6 +13,7 @@ interface IProduct {
   description: string;
   snapshot: string; //Description displayed in shop
   imageUrl: string;
+  images: string[];
   price: number;
   orientation: Orientation;
 }
