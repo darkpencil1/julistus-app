@@ -1,6 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import StyledLibraryTable from "./LibraryTable.style";
 import dropdownArrow from "../../resources/images/dropdown_arrow.svg";
 import { RowEntry } from "@shared/types/LibraryInterface";

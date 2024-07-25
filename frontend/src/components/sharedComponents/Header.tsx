@@ -28,8 +28,8 @@ const navItems: Array<NavItem> = [
     name: "Kauppa",
   },
   {
-    href: "arkisto",
-    name: "Arkisto",
+    href: "catalog",
+    name: "Catalog",
   },
   {
     href: "meistä",

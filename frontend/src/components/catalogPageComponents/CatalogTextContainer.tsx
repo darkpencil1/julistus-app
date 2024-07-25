@@ -1,17 +1,17 @@
-import StyledLibraryTextContainer from "./LibraryTextContainer.style";
+import StyledCatalogTextContainer from "./CatalogTextContainer.style";
 
-const LibraryTextContainer = () => {
+const CatalogTextContainer = () => {
   return (
-    <StyledLibraryTextContainer>
-      <h1>Arkisto</h1>
+    <StyledCatalogTextContainer>
+      <h1>Quests</h1>
       <h3>Lorem ipsum dolor sit amet, qui minim labore adipisicint.</h3>
       <p>
         Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
         cillum sint consectetur cupidatat. Lorem ipsum dolor sit amet, qui minim
         labore adipisicing minim sint cillum sint consectetur cupidatat.
       </p>
-    </StyledLibraryTextContainer>
+    </StyledCatalogTextContainer>
   );
 };
 
-export default LibraryTextContainer;
+export default CatalogTextContainer;

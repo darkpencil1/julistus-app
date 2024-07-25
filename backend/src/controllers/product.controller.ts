@@ -15,11 +15,9 @@ export const getProductWithId = (req: Request, res: Response) => {
   const id = req.params.id;
 
   try {
-    console.log("[getProductWithId] product requested with id: ", id);
     const product = products.find(
       (product: IProduct) => product.id.toString() === id
     ) as IProduct;
-    console.log("[getProductWithId] product: ", product);
     if (product) res.json(product);
     else res.send("No product found with provided id.");
   } catch (e) {
@@ -29,6 +27,7 @@ export const getProductWithId = (req: Request, res: Response) => {
 
 export const getImage = (req: Request, res: Response) => {
   const imageName = req.params.imageName;
+
   const imagePath = path.join(
     __dirname,
     "..",
@@ -39,7 +38,6 @@ export const getImage = (req: Request, res: Response) => {
     imageName
   );
   console.log("imagePath", imagePath);
-  //const imagePath = path.join(__dirname, "public", "images", imageName);
 
   res.sendFile(imagePath, (err) => {
     if (err) {

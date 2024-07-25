@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./components/Pages/Home";
 import Shop from "./components/Pages/Shop";
 import About from "./components/Pages/About";
-import Library from "./components/Pages/Library";
+import Catalog from "./components/Pages/Catalog";
 import ProductPage from "./components/Pages/ProductPage";
 import Cart from "./components/Pages/Cart";
 import Miscellaneous from "./components/Pages/Miscellaneous";
@@ -24,7 +24,7 @@ const Router: React.FC = () => {
       <Route path="/kauppa" element={<Shop />} />
       <Route path="/tuote" element={<ProductPage />} />
       <Route path="/meistä" element={<About />} />
-      <Route path="/arkisto" element={<Library />} />
+      <Route path="/catalog" element={<Catalog />} />
       <Route path="/ostoskori" element={<Cart />} />
       <Route path="/sekalainen" element={<Miscellaneous />} />
     </Routes>
