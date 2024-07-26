@@ -7,15 +7,13 @@ const StyledWIP = styled(motion.div)`
   padding: 10px;
   background-color: ${(p) => p.theme.colors.primary};
   color: ${(p) => p.theme.colors.secondary};
-  text-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   p {
-    margin: 0;
-  }
-
-  a {
-    color: ${(p) => p.theme.colors.secondary};
-    underline: 1px solid ${(p) => p.theme.colors.secondary};
+    margin: auto;
+    font-size: ${(p) => p.theme.fs.font_md};
   }
 `;
 

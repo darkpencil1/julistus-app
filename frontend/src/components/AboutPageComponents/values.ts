@@ -11,22 +11,22 @@ export type Value = {
 
 const values: Array<Value> = [
   {
-    name: "Kutsumus",
+    name: "Go deep",
     icon: heart,
     desc: "Lorem ipsum dolor sit amet, qui minim labore",
   },
   {
-    name: "Kotimaisuus",
+    name: "Roots",
     icon: finland,
     desc: "Lorem ipsum dolor sit amet, qui minim labore. Sit amet, qui.",
   },
   {
-    name: "Moninaisuus",
+    name: "Diversity",
     icon: multiplicity,
     desc: "Lorem ipsum dolor sit amet, qui minim labore",
   },
   {
-    name: "Yritä olla mestari",
+    name: "Try to be a master",
     icon: mastery,
     desc: "Lorem ipsum dolor sit amet, qui minim labore",
   },

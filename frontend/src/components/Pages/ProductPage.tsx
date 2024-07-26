@@ -13,7 +13,6 @@ const ProductPage = () => {
   const { fetchProduct } = useAppContext();
 
   useEffect(() => {
-    console.log("fetching product with id ", id);
     fetchProduct(Number(id));
   }, []);
 

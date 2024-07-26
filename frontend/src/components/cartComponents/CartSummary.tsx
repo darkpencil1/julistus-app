@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useAppContext } from "../../state/contexts/AppContextProvider";
-import { CartItem } from "../../state/reducers/cartReducer";
 import Button from "../baseComponents/Button";
 import StyledCartSummary from "./CartSummary.style";
 
@@ -25,22 +24,22 @@ const CartSummary = () => {
 
   return (
     <StyledCartSummary>
-      <h3>Yhteenveto</h3>
+      <h3>Summary</h3>
       <div className="cart__summary-row">
-        <p className="cart__summary-row-title">Ostokset</p>
+        <p className="cart__summary-row-title">Products</p>
         <p className="cart__summary-row-price">{itemPrice}€</p>
       </div>
       <div className="cart__summary-row">
-        <p className="cart__summary-row-title">Postitus</p>
+        <p className="cart__summary-row-title">Postal</p>
         <p className="cart__summary-row-price">{postalPrice}€</p>
       </div>
       <div className="cart__summary-row">
         <p className="cart__summary-row-title cart__summary-row-title--bold">
-          Yhteensä
+          Total
         </p>
         <p className="cart__summary-row-price">{itemPrice + postalPrice}€</p>
       </div>
-      <Button text="Siirry kassalle" type="primary" size="md" />
+      <Button text="Proceed to checkout" type="primary" size="md" />
     </StyledCartSummary>
   );
 };

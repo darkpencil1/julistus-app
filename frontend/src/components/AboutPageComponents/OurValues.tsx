@@ -4,7 +4,7 @@ import StyledOurValues from "./OurValues.style";
 const OurValues = () => {
   return (
     <StyledOurValues>
-      <h1>Arvot</h1>
+      <h1>Values</h1>
       <p>
         Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
         cillum sint consectetur cupidatat.

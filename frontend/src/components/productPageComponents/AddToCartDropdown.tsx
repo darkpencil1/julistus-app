@@ -41,7 +41,7 @@ const AddToCartDropdown = ({
   useEffect(() => {
     if (options.default) {
       setSelectedOption(options.default);
-    } else setPlaceholder(`Valitse ${options.name.toLowerCase()}...`);
+    } else setPlaceholder(`Choose ${options.name.toLowerCase()}...`);
 
     const handleClickOutside = (event: MouseEvent) => {
       if (

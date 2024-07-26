@@ -196,7 +196,7 @@ export const AddToCartPanel = () => {
           </motion.p>
         </div>
         <Button
-          text="Lisää koriin"
+          text="Add to cart"
           size="md"
           type={isSelectionDone() ? "primary" : "disabled"}
           onClick={() => pushToCart()}

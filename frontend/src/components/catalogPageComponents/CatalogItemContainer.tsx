@@ -1,11 +1,17 @@
 import { ICatalogItem } from "@shared/types/CatalogInterface";
-import { useQuests } from "../../hooks/useQuests";
 import CatalogItem from "./CatalogItem";
 import StyledCatalogItemContainer from "./CatalogItemContainer.style";
 
-const CatalogItemContainer = () => {
-  const { data, isLoading, isError } = useQuests();
-
+type CatalogItemContainerProps = {
+  data: ICatalogItem[];
+  isLoading: boolean;
+  isError: boolean;
+};
+const CatalogItemContainer = ({
+  data,
+  isLoading,
+  isError,
+}: CatalogItemContainerProps) => {
   return (
     <StyledCatalogItemContainer>
       {!isLoading &&

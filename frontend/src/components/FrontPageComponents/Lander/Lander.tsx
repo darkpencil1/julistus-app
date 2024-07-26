@@ -12,13 +12,13 @@ import questIcon from "../../../resources/images/quest-icon.svg";
 const productTypes: Array<LanderProductBriefProps> = [
   {
     img: poster,
-    title: "Tehtäväjulisteet",
+    title: "Quest poster",
     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum.",
     icon: questIcon,
   },
   {
     img: tag,
-    title: "Saavutusmerkit",
+    title: "Achievement tag",
     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum.",
     icon: tagIcon,
   },
@@ -30,7 +30,7 @@ const Lander = () => {
       <div className="lander__row">
         <div className="lander__text-container">
           <h1 className="lander__title">Illustrated quests</h1>
-          <h3 className="lander__subtitle">from various aspects of life</h3>
+          <h3 className="lander__subtitle">for various aspects of life</h3>
           <p>
             Hi, I'm an artist who illustrates quests from various aspects of
             life. Feel free to browse the quest catalog!

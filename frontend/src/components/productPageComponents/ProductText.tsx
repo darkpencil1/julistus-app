@@ -9,9 +9,9 @@ const ProductText = () => {
 
   useEffect(() => {
     if (product?.productType === "poster")
-      return setProductClass("Tehtäväjuliste");
+      return setProductClass("Quest poster");
     else if (product?.productType === "tag")
-      return setProductClass("Saavutusmerkki");
+      return setProductClass("Achievement tag");
   }, [product]);
 
   return (

@@ -15,8 +15,8 @@ const CartItemList = () => {
   };
 
   const convertFieldToFinnish = (field: string) => {
-    if (field === "poster") return "Juliste";
-    else if (field === "tag") return "Merkki";
+    if (field === "poster") return "Poster";
+    else if (field === "tag") return "Tag";
   };
 
   return (
@@ -34,11 +34,9 @@ const CartItemList = () => {
               {item.secondaryProducts &&
                 Object.entries(item.secondaryProducts).map(([key, value]) => {
                   if (value !== "") {
-                    //Before using react-intl use this hardcoded version of translation
-                    const convertedKey = key === "frame" ? "kehykset" : key;
                     return (
                       <p>
-                        + {value} -{convertedKey}
+                        + {value} -{key}
                       </p>
                     );
                   }
@@ -50,7 +48,7 @@ const CartItemList = () => {
                 className="cart__item-remove"
                 onClick={() => removeCartItem(item)}
               >
-                Poista
+                Remove
               </span>
               <CartQuantityOption cartItem={item} />
             </div>

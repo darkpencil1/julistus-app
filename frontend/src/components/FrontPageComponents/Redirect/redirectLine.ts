@@ -1,6 +1,6 @@
 import ISvg from "../../../resources/interfaces/SvgInterface";
 
-const redirectToShopSvg: ISvg = {
+const redirectSvg: ISvg = {
   width: 2258,
   height: 444,
   viewBox: "70 70 2258 444",
@@ -9,4 +9,4 @@ const redirectToShopSvg: ISvg = {
   position: { top: 0, left: 0 },
 };
 
-export default redirectToShopSvg;
+export default redirectSvg;

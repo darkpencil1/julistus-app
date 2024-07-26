@@ -6,15 +6,15 @@ type FooterLink = {
   link: string;
 };
 const links: Array<FooterLink> = [
-  { text: "UKK", link: "#/sekalainen#ukk" },
-  { text: "Palautukset", link: "#/sekalainen#qa-1" },
-  { text: "Ota yhteyttä", link: "#/sekalainen#yhteydenotto" },
+  { text: "FAQ", link: "#/misc#ukk" },
+  { text: "Returns", link: "#/misc#qa-1" },
+  { text: "Contact", link: "#/misc#yhteydenotto" },
 ];
 const pageLinks: Array<FooterLink> = [
-  { text: "Koti", link: "/" },
-  { text: "Kauppa", link: "/kauppa" },
-  { text: "Arkisto", link: "/Arkisto" },
-  { text: "Meistä", link: "/meista" },
+  { text: "Home", link: "/" },
+  { text: "Catalog", link: "/catalog" },
+  { text: "About", link: "/about" },
+  { text: "Shop", link: "/shop" },
 ];
 
 const socialLinks: Array<FooterLink> = [{ text: "Instagram", link: "#" }];
@@ -24,7 +24,7 @@ const Footer = () => {
     <StyledFooter>
       <div className="footer__links">
         <div className="footer__link-container">
-          <h3>Yleistä</h3>
+          <h3>General</h3>
           <ul>
             {links.map((link: FooterLink, i: number) => {
               return (
@@ -36,7 +36,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="footer__link-container">
-          <h3>Sivut</h3>
+          <h3>Pages</h3>
           <ul className="footer__page-links">
             {pageLinks.map((link: FooterLink, i: number) => {
               return (
@@ -48,7 +48,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="footer__link-container">
-          <h3>Some</h3>
+          <h3>Social</h3>
           <ul className="footer__page-links">
             {socialLinks.map((link: FooterLink, i: number) => {
               return (

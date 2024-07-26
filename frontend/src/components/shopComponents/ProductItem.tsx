@@ -15,7 +15,7 @@ const ProductItem: React.FC<{ product: IProduct }> = ({ product }) => {
   };
 
   const setProductType = () => {
-    return productType === "poster" ? "Tehtäväjuliste" : "Saavutusmerkki";
+    return productType === "poster" ? "Quest poster" : "Achievement tag";
   };
 
   return (
@@ -35,14 +35,14 @@ const ProductItem: React.FC<{ product: IProduct }> = ({ product }) => {
         <div className="product__text">{snapshot}</div>
         <Row className="product__price-and-button">
           <div className="product__price">
-            <span>alkaen &nbsp;</span>
+            <span>from &nbsp;</span>
             <h4>{price}€</h4>
           </div>
           <Button
             className="product__cta"
             type="white"
             size="md"
-            text="Katso"
+            text="Open"
             onClick={handleClick}
           />
         </Row>

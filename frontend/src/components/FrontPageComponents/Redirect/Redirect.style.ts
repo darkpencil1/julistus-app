@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import bg from "../../../resources/images/website-banner-lg.jpg";
 
-const StyledRedirectToShop = styled.div`
+const StyledRedirect = styled.div`
   height: 35vh;
   max-width: 2000px;
   display: flex;
@@ -19,4 +19,4 @@ const StyledRedirectToShop = styled.div`
   overflow: hidden;
 `;
 
-export default StyledRedirectToShop;
+export default StyledRedirect;

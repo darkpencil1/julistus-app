@@ -9,11 +9,13 @@ const StyledCatalog = styled.div`
     margin: auto;
     margin-top: 10px;
     text-align: center;
-    > h1 {
-      margin: 0;
-    }
+    width: 50%;
     > h3 {
       margin-top: 10px;
+      margin-bottom: 0;
+    }
+    > .catalog__title-img {
+      height: 200px;
     }
   }
 `;

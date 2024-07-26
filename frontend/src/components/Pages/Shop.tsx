@@ -7,7 +7,7 @@ import { useProducts } from "../../hooks/useProducts";
 import IProduct from "@shared/types/ProductInterface";
 
 const Shop: React.FC = () => {
-  const { data, error, isLoading, isError } = useProducts();
+  const { data } = useProducts();
 
   return (
     <StyledShop>

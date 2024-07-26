@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import productRouter from "./routers/product.router";
 import questRouter from "./routers/quest.router";
+import achievementRouter from "./routers/achievement.router";
 
 const app = express();
 app.use(cors());
@@ -13,6 +14,7 @@ app.use(express.static("resources/images/"));
 
 app.use("/api/product", productRouter);
 app.use("/api/quest", questRouter);
+app.use("/api/achievement", achievementRouter);
 
 // Start server
 app.listen(PORT, () => {

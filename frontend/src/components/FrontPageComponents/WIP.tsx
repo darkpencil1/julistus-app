@@ -5,9 +5,9 @@ const WIP = () => {
     <StyledWIP>
       <div className="wip__message">
         <p>
-          Tämä on keskeneräinen prototyyppi eikä siten välttämättä edusta
-          lopullista tulosta. Sivu ei tue vielä mobiilinäytönleveyksiä, joten
-          käytäthän vähintään kannettavaa sen katsomiseen.
+          This site serves as proof-of-concept and has not been optimized for
+          mobile widths. Please use a laptop or a larger screen to view the
+          page.
         </p>
       </div>
     </StyledWIP>

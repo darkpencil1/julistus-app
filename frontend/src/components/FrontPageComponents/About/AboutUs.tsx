@@ -12,23 +12,23 @@ type Value = {
 };
 
 const values: Array<Value> = [
-  { name: "Kutsumus", icon: heart },
-  { name: "Kotimaisuus", icon: finland },
-  { name: "Moninaisuus", icon: multiplicity },
-  { name: "Yritä olla mestari", icon: mastery },
+  { name: "Go deep", icon: heart },
+  { name: "Roots", icon: finland },
+  { name: "Diversity", icon: multiplicity },
+  { name: "Try to be a master", icon: mastery },
 ];
 
 const AboutUs = () => {
   return (
     <StyledAboutUs>
       <div className="about-us__text-container">
-        <h1>Taidettamme ohjaa selkeät arvot</h1>
+        <h1>Read the story behind the art</h1>
         <p>
-          Moni asia muuttuu luovassa prosessissa. Arvomme on yksi asioista,
-          jotka pysyivät samoina ja ohjasivat alusta loppuun taidettamme. Lue
-          lisää arvoista, visiosta ja tiimistä, jotka rakensivat tuotteemme.
+          Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
+          enim labore culpa sint ad nisi Lorem pariatur mollit ex esse
+          exercitation amet. Nisi anim cupidatat excepteur officia.
         </p>
-        <Link href="meistä" content="Lue lisää" />
+        <Link href="about" content="Read more" />
       </div>
       <div className="about-us__value-container">
         {values.map((value: Value, i: number) => {

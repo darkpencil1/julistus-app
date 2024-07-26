@@ -1,7 +1,6 @@
 import Image from "../baseComponents/Image.style";
 import StyledHeader from "./Header.style";
-//import logo from "..//resources/images/logo.png";
-import questIcon from "../../resources/images/quest-icon.svg";
+import logo from "../../resources/images/logo.png";
 import herequest from "../../resources/images/herequest.png";
 import { AnimatePresence, motion, useAnimation, Variants } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -24,16 +23,16 @@ type NavItem = {
 };
 const navItems: Array<NavItem> = [
   {
-    href: "kauppa",
-    name: "Kauppa",
-  },
-  {
     href: "catalog",
     name: "Catalog",
   },
   {
-    href: "meistä",
-    name: "Meistä",
+    href: "about",
+    name: "About",
+  },
+  {
+    href: "shop",
+    name: "Shop",
   },
 ];
 const Header: React.FC = () => {
@@ -47,7 +46,7 @@ const Header: React.FC = () => {
           whileHover={{ scale: 1.1 }} // Scale the image up by 10% on hover
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.1 }} // Add a smooth transition effect
-          src={questIcon}
+          src={logo}
           alt="questpen"
           width="60px"
         />

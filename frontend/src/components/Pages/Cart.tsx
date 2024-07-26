@@ -10,7 +10,7 @@ const Cart = () => {
   return (
     <StyledCart>
       <div className="cart">
-        <h1>Ostoskori</h1>
+        <h1>Cart</h1>
         {cart.items.length > 0 ? (
           <div className="cart__container">
             <div className="cart__item-wrapper">
@@ -20,8 +20,8 @@ const Cart = () => {
           </div>
         ) : (
           <div className="cart__empty-container">
-            <h3>Täällä ei ole vielä mitään.</h3>
-            <Link content="Kauppaan" href="/kauppa" />
+            <h3>Cart is empty.</h3>
+            <Link content="Go to shop" href="/shop" />
           </div>
         )}
       </div>

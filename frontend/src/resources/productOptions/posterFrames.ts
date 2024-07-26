@@ -1,22 +1,22 @@
 import { AddToCartOption } from "../../components/productPageComponents/AddToCartPanel";
 
 const posterFrames: AddToCartOption = {
-  name: "Kehykset",
+  name: "Frames",
   id: "FRAME",
   data: [
     {
       id: 0,
-      name: "Ei kehystä",
+      name: "No frames",
       price: 0,
     },
     {
       id: 1,
-      name: "Tumma puu",
+      name: "Dark wood",
       price: 10,
     },
     {
       id: 2,
-      name: "Vaalea puu",
+      name: "Light wood",
       price: 10,
     },
   ],

@@ -1,5 +1,5 @@
 import React from "react";
-import RedirectToShop from "../FrontPageComponents/Redirect/RedirectToShop";
+import Redirect from "../FrontPageComponents/Redirect/Redirect";
 import Lander from "../FrontPageComponents/Lander/Lander";
 import Intro from "../FrontPageComponents/WorldIntro/Intro";
 import AboutUs from "../FrontPageComponents/About/AboutUs";
@@ -9,9 +9,9 @@ const Home: React.FC = () => {
   return (
     <StyledHome>
       <Lander />
-      <Intro />
       <AboutUs />
-      <RedirectToShop />
+      <Intro />
+      <Redirect />
     </StyledHome>
   );
 };

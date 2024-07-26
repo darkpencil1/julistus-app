@@ -17,7 +17,7 @@ const IntroCharacters = () => {
     <div ref={charRef}>
       <motion.img
         src={character}
-        alt="Kutsumuksen seuraaja"
+        alt="Here was supposed to be an image of a mighty life explorer but we messed up."
         animate={charInView ? "animate" : "hidden"}
         transition={{
           delay: 0.5,

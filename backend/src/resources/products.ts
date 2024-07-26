@@ -4,7 +4,7 @@ const baseUrl = "/api/product/image/";
 const products: Array<IProduct> = [
   {
     id: 1,
-    name: "Taidonjahti",
+    name: "The Skillchase",
     productType: "poster",
     primer:
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit. Phasellus pretium congue venenatis.",
@@ -19,7 +19,7 @@ const products: Array<IProduct> = [
   },
   {
     id: 3,
-    name: "Vaivojen koulu",
+    name: "The School of Ailments",
     productType: "poster",
     primer:
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit. Phasellus pretium congue venenatis.",
@@ -34,7 +34,7 @@ const products: Array<IProduct> = [
   },
   {
     id: 2,
-    name: "Taitaa vähän taitaa",
+    name: "This one has started",
     productType: "tag",
     primer:
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit. Phasellus pretium congue venenatis.",
@@ -49,7 +49,7 @@ const products: Array<IProduct> = [
   },
   {
     id: 4,
-    name: "Kastettu, nokittu, opittu",
+    name: "Soaked, pecked, learned",
     productType: "tag",
     primer:
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit. Phasellus pretium congue venenatis.",

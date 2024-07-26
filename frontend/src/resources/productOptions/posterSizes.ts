@@ -22,7 +22,7 @@ const data = [
 ];
 
 const posterSizes: AddToCartOption = {
-  name: "Koko",
+  name: "Size",
   id: "SIZE",
   data: data,
   primary: true,

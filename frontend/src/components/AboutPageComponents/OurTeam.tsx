@@ -4,7 +4,7 @@ import TeamMemberContainer from "./TeamMemberContainer";
 const OurTeam = () => {
   return (
     <StyledOurTeam>
-      <h1>Tiimi</h1>
+      <h1>Artist</h1>
       <div className="content-container">
         <p>
           Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit

@@ -6,15 +6,15 @@ const IntroText = () => {
     <StyledIntroText>
       <div className="sidepane__text-container">
         <div className="sidepane__title-container">
-          <h1>Quests</h1>
-          <h3>what are they?</h3>
+          <h1>Shop</h1>
+          <h3>Cover the walls with your active quests!</h3>
         </div>
         <p>
           Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
           cillum sint consectetur cupidatat.
         </p>
       </div>
-      <Link href="/" content="Katso lisää" />
+      <Link href="/" content="To the shop" />
     </StyledIntroText>
   );
 };

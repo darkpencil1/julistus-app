@@ -14,7 +14,7 @@ const makeQuantityOptions = (): AddToCartOption => {
   });
 
   return {
-    name: "Määrä",
+    name: "Quantity",
     id: "QUANTITY",
     data: data,
     default: data[0],

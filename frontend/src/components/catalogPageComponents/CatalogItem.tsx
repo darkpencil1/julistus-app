@@ -1,13 +1,45 @@
 import { ICatalogItem } from "@shared/types/CatalogInterface";
-import { useEffect } from "react";
+import { useState } from "react";
 import Image from "../baseComponents/Image.style";
 import StyledCatalogItem from "./CatalogItem.style";
+import CatalogItemModal from "./CatalogItemModal";
+import quest from "../../resources/images/quest-icon.svg";
+import achievement from "../../resources/images/achievement-tag-icon.svg";
 
 const CatalogItem = ({ img, description, name }: ICatalogItem) => {
+  const [showModal, setShowModal] = useState<boolean>(false);
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
+  const isDefaultImg = (src: string) => {
+    if (
+      src.indexOf("default-quest") !== -1 ||
+      src.indexOf("default-achievement") !== -1
+    )
+      return true;
+    else return false;
+  };
+
   return (
-    <StyledCatalogItem>
-      <Image src={img} />
+    <StyledCatalogItem onClick={() => setShowModal(true)}>
+      <div className="catalog__img-container">
+        <Image
+          src={img}
+          className={`${isDefaultImg(img) ? "catalog__img--small" : ""}`}
+        />
+      </div>
       <h2>{name}</h2>
+      {showModal && (
+        <CatalogItemModal
+          img={img}
+          description={description}
+          name={name}
+          show={showModal}
+          onClose={handleCloseModal}
+        />
+      )}
     </StyledCatalogItem>
   );
 };

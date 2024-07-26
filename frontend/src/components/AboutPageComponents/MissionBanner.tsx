@@ -3,9 +3,10 @@ import StyledMissionBanner from "./MissionBanner.style";
 const MissionBanner = () => {
   return (
     <StyledMissionBanner>
-      <h1>Päätehtävä</h1>
+      <h1>Mission</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit., consectetur.
+        Build a catalog of illustrated quests for real life stuff, inspired RPG
+        quests.
       </p>
     </StyledMissionBanner>
   );

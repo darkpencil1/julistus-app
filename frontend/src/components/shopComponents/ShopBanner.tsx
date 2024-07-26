@@ -8,10 +8,9 @@ export const ShopBanner = () => {
   return (
     <StyledShopBanner ref={containerRef}>
       <div className="banner__text-container">
-        <h1 className="banner__title">Kauppa</h1>
+        <h1 className="banner__title">Shop</h1>
         <p className="banner__desc">
-          Kaupan idea vielä nopeasti parilla lauseella selittävä slogan tai idea
-          tähän.
+          Fancy a quest to cover your wall? Look no further!
         </p>
       </div>
       <ShopBannerLine container={containerRef} />

@@ -19,14 +19,11 @@ const StyledHeader = styled(motion.header)`
   z-index: 1000;
 
   .nav__logo {
-    width: 30px;
-    max-width: 30px;
+    width: 60px;
+    max-width: 60px;
     margin-left: ${(p) => p.theme.spacing.spacing_3};
     margin-right: ${(p) => p.theme.spacing.spacing_3};
     cursor: pointer;
-    > img {
-      width: 15px;
-    }
   }
 
   .header__logo-name {
