@@ -22,7 +22,7 @@ const Router: React.FC = () => {
       <Route path="/" element={<Home />} />
       <Route path="/julistus-app" element={<Home />} />
       <Route path="/shop" element={<Shop />} />
-      <Route path="/tuote" element={<ProductPage />} />
+      <Route path="/product" element={<ProductPage />} />
       <Route path="/about" element={<About />} />
       <Route path="/catalog" element={<Catalog />} />
       <Route path="/ostoskori" element={<Cart />} />

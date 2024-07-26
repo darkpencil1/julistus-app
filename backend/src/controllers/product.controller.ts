@@ -5,6 +5,7 @@ import IProduct from "@shared/types/ProductInterface";
 
 export const getAllProducts = (_: Request, res: Response) => {
   try {
+    res.status(200);
     res.json(products);
   } catch (e) {
     res.json(e);
@@ -37,7 +38,6 @@ export const getImage = (req: Request, res: Response) => {
     "images",
     imageName
   );
-  console.log("imagePath", imagePath);
 
   res.sendFile(imagePath, (err) => {
     if (err) {

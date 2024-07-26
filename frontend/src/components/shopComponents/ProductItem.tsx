@@ -11,7 +11,7 @@ const ProductItem: React.FC<{ product: IProduct }> = ({ product }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/tuote?id=${id}`);
+    navigate(`/product?id=${id}`);
   };
 
   const setProductType = () => {

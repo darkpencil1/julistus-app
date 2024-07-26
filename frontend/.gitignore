@@ -25,3 +25,6 @@ yarn-error.log*
 
 /src/resources/templates
 /src/album/
+
+# cypress
+./cypress/screenshots/
