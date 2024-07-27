@@ -3,7 +3,7 @@ import Col from "../baseComponents/Col.style";
 import Row from "../baseComponents/Row.style";
 import Image from "../baseComponents/Image.style";
 import Button from "../baseComponents/Button";
-import IProduct from "../../../../shared/types/ProductInterface";
+import IProduct from "@shared/types/ProductInterface";
 import StyledProductItem from "./ProductItem.style";
 
 const ProductItem: React.FC<{ product: IProduct }> = ({ product }) => {

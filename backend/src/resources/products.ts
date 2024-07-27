@@ -1,4 +1,4 @@
-import IProduct, { Orientation } from "../../../shared/types/ProductInterface";
+import IProduct, { Orientation } from "@shared/types/ProductInterface";
 
 const baseUrl = "/api/product/image/";
 const products: Array<IProduct> = [
