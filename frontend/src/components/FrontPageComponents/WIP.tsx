@@ -5,7 +5,7 @@ const WIP = () => {
     <StyledWIP>
       <div className="wip__message">
         <p>
-          This site serves as proof-of-concept and has not been optimized for
+          This site serves as a proof-of-concept and has not been optimized for
           mobile widths. Please use a laptop or a larger screen to view the
           page.
         </p>

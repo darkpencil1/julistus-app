@@ -1,9 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 
 export const useAchievements = () => {
   return useQuery({
     queryKey: ["achievements"],
-    queryFn: () =>
-      fetch("http://localhost:8080/api/achievement").then((res) => res.json()),
+    queryFn: () => axios.get("/api/achievement").then((res) => res.data),
   });
 };

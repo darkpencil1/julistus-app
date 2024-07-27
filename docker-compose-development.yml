@@ -11,6 +11,7 @@ services:
       - "3000:3000"
     environment:
       - NODE_ENV=development
+      - REACT_APP_BACKEND_URL=backend
 
   backend:
     build:
