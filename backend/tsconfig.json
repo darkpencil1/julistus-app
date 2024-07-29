@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "ES6",
     "module": "commonjs",
+    "moduleResolution": "node",
     "baseUrl": ".",
     "outDir": "./dist",
     "rootDirs": ["./src", "../shared/"],

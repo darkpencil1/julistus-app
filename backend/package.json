@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node -r tsconfig-paths/register ./dist/backend/src/index.js",
+    "start": "node -r ./tsconfig-paths-bootstrap.js ./dist/backend/src/index.js",
     "dev": "nodemon -e ts,js,json --watch ./src --exec ts-node -r tsconfig-paths/register ./src/index.ts",
-    "build": "cd ../frontend/ && npm run build && cd ../backend/ && tsc && mkdir -p dist/client/build && cp -R ../frontend/dist/* dist/client/build/ && npm run copy-resources",
+    "build": "cd ../frontend/ && npm run build && cd ../backend/ && tsc && mkdir -p dist/client/build && cp -R ../frontend/dist/* dist/client/build/ && npm run copy-resources && cp ./tsconfig-paths-bootstrap.js ./dist/backend/",
     "test": "jest",
     "copy-resources": "copyfiles -u 1 \"src/resources/**/*\" dist/backend/src/"
   },
@@ -16,18 +16,18 @@
   "dependencies": {
     "@types/cors": "^2.8.17",
     "cors": "^2.8.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "tsconfig-paths": "^4.2.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.14.11",
+    "ts-node": "^10.9.2",
     "copyfiles": "^2.4.1",
     "jest": "^29.7.0",
     "nodemon": "^3.1.4",
     "ts-jest": "^29.2.3",
-    "ts-node": "^10.9.2",
-    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.5.3"
   }
 }
