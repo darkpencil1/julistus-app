@@ -13,6 +13,7 @@ import productReducer, {
   ProductState,
 } from "../reducers/productReducer";
 import IProduct from "../../resources/interfaces/ProductInterface";
+import axios from "axios";
 
 // Define the combined state and action types
 type AppState = {
@@ -62,8 +63,8 @@ const AppContextProvider: React.FC<{ children: ReactNode }> = ({
   const fetchProduct = async (id: number) => {
     dispatch({ type: "FETCH_PRODUCT_REQUEST", productId: id });
     try {
-      const response = await fetch(`http://localhost:8080/api/product/${id}`);
-      const data: IProduct = await response.json();
+      const response = await axios.get(`/api/product/${id}`);
+      const data: IProduct = await response.data;
       dispatch({ type: "FETCH_PRODUCT_SUCCESS", payload: data });
     } catch (error) {
       dispatch({ type: "FETCH_PRODUCT_FAILURE", payload: error });
