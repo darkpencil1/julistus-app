@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: app-backend
+    env: node
+    plan: free
+    buildCommand: cd ./frontend/ && npm run build && cd ../backend/ && tsc && mkdir -p dist/client/build && cp -R ../frontend/dist/* dist/client/build/ && npm run copy-resources
+    startCommand: cd ./backend/ ts-node -r tsconfig-paths/register ./dist/backend/src/index.js

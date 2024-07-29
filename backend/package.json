@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node ./src/index",
+    "start": "ts-node -r tsconfig-paths/register ./dist/backend/src/index.js",
     "dev": "nodemon -e ts,js,json --watch ./src --exec ts-node -r tsconfig-paths/register ./src/index.ts",
-    "build": "tsc",
-    "test": "jest"
+    "build": "cd ../frontend/ && npm run build && cd ../backend/ && tsc && mkdir -p dist/client/build && cp -R ../frontend/dist/* dist/client/build/ && npm run copy-resources",
+    "test": "jest",
+    "copy-resources": "copyfiles -u 1 \"src/resources/**/*\" dist/backend/src/"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +22,7 @@
     "@types/express": "^4.17.21",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.14.11",
+    "copyfiles": "^2.4.1",
     "jest": "^29.7.0",
     "nodemon": "^3.1.4",
     "ts-jest": "^29.2.3",
